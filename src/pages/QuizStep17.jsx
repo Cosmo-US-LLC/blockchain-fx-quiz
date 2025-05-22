@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom"
 import QuizHeader from "../components/QuizHeader"
 import QuizSteps from "../components/QuizSteps"
 import Loading from "../components/Loading"
-import Step_17_1 from "../assets/step_17/step_17 (3).png"
-import Step_17_2 from "../assets/step_17/step_17 (2).png"
-import Step_17_3 from "../assets/step_17/step_17 (1).png"
+import Step_17_1 from "../assets/step_17/step_17 (1).png"
+import Step_17_2 from "../assets/step_17/step_17 (3).png"
+import Step_17_3 from "../assets/step_17/step_17 (2).png"
 
 const QuizStep17 = () => {
   const navigate = useNavigate()
@@ -41,14 +41,12 @@ const QuizStep17 = () => {
     navigate("/quiz/step=14")
   }
 
-  if (loading) {
-    return <Loading />
-  }
+  
 
   return (
     <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
-      <QuizHeader currentStep={18} totalSteps={28} />
-      <QuizSteps currentStep={18} totalSteps={28} />
+      <QuizHeader currentStep={17} totalSteps={28} />
+      <QuizSteps currentStep={17} totalSteps={28} />
 
       <div className="max-w-[750px] w-full text-center mt-12">
  <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">How confident are you about <br /> your financial future?</h1>

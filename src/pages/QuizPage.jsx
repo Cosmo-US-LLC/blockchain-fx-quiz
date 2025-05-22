@@ -35,9 +35,7 @@ const QuizPage = () => {
     navigate("/quiz/fact-check");
   };
 
-  if (loading) {
-    return <Loading />;
-  }
+ 
 
   return (
     <div className="quiz-container min-h-screen  flex flex-col items-center p-4">

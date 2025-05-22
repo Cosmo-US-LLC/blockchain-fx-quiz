@@ -26,21 +26,18 @@ const QuizStep16 = () => {
     navigate("/quiz/step=13");
   };
 
-  if (loading) {
-    return <Loading />;
-  }
 
   return (
     <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={"#Fact Check"} totalSteps={28} />
-      <QuizSteps currentStep={1} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={28} />
+      <QuizSteps currentStep={16} totalSteps={28} />
 
       <div className="flex items-center justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] space-y-[15px ] w-full ">
           <h1 className="text-[30px] text-[#fff] font-bold mb-4 ">
        It has never been easier to earn <br /> real passive income with crypto
           </h1>
-          <p className="text-[16px] font-[700] text-[#fff] mb-6 ">Fact Check: For example People who buy the new $BFX token during the presale get paid every time someone trades on BlockchainFX. As $BFX holders, they receive a share of the trading fees without having to trade themselves. <br /><br />
+          <p className="text-[16px] font-[700] text-[#fff] mb-6 ">For example People who buy the new $BFX token during the presale get paid every time someone trades on BlockchainFX. As $BFX holders, they receive a share of the trading fees without having to trade themselves. <br /><br />
 
 BlockchainFX is a fast growing crypto exchange and the first to bridge crypto with other financial markets like stocks, forex, ETFs, and more across 500+ different assets. 
           </p>

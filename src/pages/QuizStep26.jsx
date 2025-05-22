@@ -27,14 +27,11 @@ const QuizStep26 = () => {
     navigate("/quiz/fact-check-no=6");
   };
 
-  if (loading) {
-    return <Loading />;
-  }
-
+ 
   return (
     <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={"#Fact Check"} totalSteps={28} />
-      <QuizSteps currentStep={1} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={28} />
+      <QuizSteps currentStep={26} totalSteps={28} />
 
       <div className="mt-[2rem] w-[100%]">
 

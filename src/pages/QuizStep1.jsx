@@ -28,14 +28,12 @@ const QuizStep1 = () => {
     navigate("/quiz/step=2");
   };
 
-  if (loading) {
-    return <Loading />;
-  }
+ 
 
   return (
     <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={"#Fact Check"} totalSteps={28} />
-      <QuizSteps currentStep={1} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={28} />
+      <QuizSteps currentStep={2} totalSteps={28} />
 
       <div className="flex items-center justify-between w-[100%]">
         <div className="max-w-[600px] w-full  mt-[6rem]">
@@ -43,8 +41,8 @@ const QuizStep1 = () => {
             76,000,000 People have joined{" "}
           </h1>
           <p className="text-[16px] font-[400] text-[#fff] mb-6 ">
-            Fact Check: 76 million people invested in crypto for the first time
-            in 2024.  From January to December, the market grew by over 75
+            76 million people invested in crypto for the first time
+            in 2024. From January to December, the market grew by over 75
             percent, outperforming stocks, real estate, ETFs, and every other
             major financial market by a wide margin.
           </p>

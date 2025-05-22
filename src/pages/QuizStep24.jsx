@@ -26,21 +26,18 @@ const QuizStep24 = () => {
     navigate("/quiz/fact-check-no=6");
   };
 
-  if (loading) {
-    return <Loading />;
-  }
-
+ 
   return (
     <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={"#Fact Check"} totalSteps={28} />
-      <QuizSteps currentStep={1} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={28} />
+      <QuizSteps currentStep={24} totalSteps={28} />
 
       <div className="flex items-center justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] space-y-[15px ] w-full ">
           <h1 className="text-[30px] text-center text-[#fff] font-bold mb-4 ">
       Get In Before the 300% Surge
           </h1>
-          <p className="text-[16px] max-w-[400px] w-full mx-auto text-center font-[700] text-[#fff] mb-6 ">Fact Check: <span className="font-[400]">
+          <p className="text-[16px] max-w-[400px] w-full mx-auto text-center font-[700] text-[#fff] mb-6 "><span className="font-[400]">
             BlockchainFX’s $BFX token is still available in its presale phase for under $0.015. That’s far below its upcoming launch price of $0.05 on major exchanges, offering early buyers a guaranteed gain of more than 300% before it goes live.
           </span>
           </p>

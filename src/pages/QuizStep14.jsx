@@ -47,14 +47,12 @@ const QuizStep14 = () => {
     navigate("/quiz/step=12")
   }
 
-  if (loading) {
-    return <Loading />
-  }
+  
 
   return (
     <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
-      <QuizHeader currentStep={15} totalSteps={28} />
-      <QuizSteps currentStep={15} totalSteps={28} />
+      <QuizHeader currentStep={14} totalSteps={28} />
+      <QuizSteps currentStep={14} totalSteps={28} />
 
       <div className="max-w-[1000px] w-full text-center mt-12">
  <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">If you could earn (Number they added before) per month in <br /> additional income, what would you do first?</h1>

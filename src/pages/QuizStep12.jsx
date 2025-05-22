@@ -26,22 +26,19 @@ const QuizStep9 = () => {
     navigate("/quiz/step=10");
   };
 
-  if (loading) {
-    return <Loading />;
-  }
-
+ 
   return (
     <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={"#Fact Check"} totalSteps={28} />
-      <QuizSteps currentStep={1} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={""} />
+      <QuizSteps currentStep={12} totalSteps={28} />
 
       <div className="flex items-center justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] w-full text-center ">
           <h1 className="text-[30px] text-[#fff] font-bold mb-1 ">
-       How Millionaires Build <br /> Generational Wealth
+       How millionaires build <br /> generational wealth
           </h1>
           <p className="text-[16px] max-w-[380px] mx-auto font-[400] text-[#fff] mb-6 ">
-          <span className="font-[700]">Fact Check:</span> Most millionaires and Billionaires in the U.S. don’t rely on just one source of income. 
+          Most millionaires and Billionaires in the U.S. don’t rely on just one source of income. 
 On average, they have 7 different income streams, including business earnings, investments, crypto,  real estate, dividends, and more.
           </p>
           <button

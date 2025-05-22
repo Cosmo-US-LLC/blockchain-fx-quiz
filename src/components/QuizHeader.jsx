@@ -6,7 +6,13 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
   const location = useLocation();
   const isFact = location.pathname === "/quiz/fact-check";
   const isFactStep7 = location.pathname === "/quiz/fact-check-2";
-  
+  const isFactcheck3 = location.pathname === "/quiz/fact-check-3";
+  const isFactno3 = location.pathname === "/quiz/fact-check-no=3";
+  const isFactno4 = location.pathname === "/quiz/fact-check-no=4";
+  const isFactno5 = location.pathname === "/quiz/fact-check-no=5";
+  const isFactno6 = location.pathname === "/quiz/fact-check-no=6";
+  const isFactno7 = location.pathname === "/quiz/fact-check-no=7";
+
   const getPrevStepUrl = () => {
     navigate(-1);
   };
@@ -39,8 +45,10 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
         </div>
 
         <div className="text-white">
+     
           {currentStep}
-          {!isFact && !isFactStep7 &&`/${totalSteps}`}
+          {!isFact && !isFactStep7 && !isFactcheck3 && !isFactno3 && !isFactno4 && !isFactno5 && !isFactno6 && !isFactno7 &&`/${totalSteps}`}
+        
         </div>
       </div>
     </div>

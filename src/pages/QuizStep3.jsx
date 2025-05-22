@@ -46,9 +46,7 @@ const QuizStep3 = () => {
     navigate("/quiz/step=4")
   }
 
-  if (loading) {
-    return <Loading />
-  }
+  
 
   return (
     <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">

@@ -31,14 +31,11 @@ const QuizStep23 = () => {
     }
   }, [input1, input2, input3, input4, input5]);
 
-  if (loading) {
-    return <Loading />;
-  }
 
   return (
     <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
-      <QuizHeader currentStep={24} totalSteps={28} />
-      <QuizSteps currentStep={24} totalSteps={28} />
+      <QuizHeader currentStep={23} totalSteps={28} />
+      <QuizSteps currentStep={23} totalSteps={28} />
 
      <div className="mt-12 max-w-[1024px] w-[100%]">
          <div className="space-y-[25px] w-full ">

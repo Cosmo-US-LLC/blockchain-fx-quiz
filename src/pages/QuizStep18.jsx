@@ -41,14 +41,12 @@ const QuizStep18 = () => {
     navigate("/quiz/step=15")
   }
 
-  if (loading) {
-    return <Loading />
-  }
+  
 
   return (
     <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
-      <QuizHeader currentStep={19} totalSteps={28} />
-      <QuizSteps currentStep={19} totalSteps={28} />
+      <QuizHeader currentStep={18} totalSteps={28} />
+      <QuizSteps currentStep={18} totalSteps={28} />
 
       <div className="max-w-[750px] w-full text-center mt-12">
  <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">Do you want to retire wealthy?</h1>

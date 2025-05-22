@@ -23,7 +23,7 @@ const QuizStep11 = () => {
       img:Step_11_2
     },
      {
-      title:"Just one", 
+      title:"Two", 
       img:Step_11_3
     },
      {
@@ -45,14 +45,12 @@ const QuizStep11 = () => {
     navigate("/quiz/fact-check-no=3")
   }
 
-  if (loading) {
-    return <Loading />
-  }
+  
 
   return (
     <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
-      <QuizHeader currentStep={12} totalSteps={28} />
-      <QuizSteps currentStep={12} totalSteps={28} />
+      <QuizHeader currentStep={11} totalSteps={28} />
+      <QuizSteps currentStep={11} totalSteps={28} />
 
       <div className="max-w-[750px] w-full text-center mt-12">
  <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">How many sources of income <br /> do you currently have?</h1>
