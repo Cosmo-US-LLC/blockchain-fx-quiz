@@ -33,7 +33,7 @@ const QuizStep23 = () => {
 
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen flex flex-col items-center p-4">
       <QuizHeader currentStep={23} totalSteps={28} />
       <QuizSteps currentStep={23} totalSteps={28} />
 

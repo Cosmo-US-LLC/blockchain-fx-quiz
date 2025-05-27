@@ -34,6 +34,9 @@ const QuizStep14 = () => {
     },
   ]
 
+const goalIncome = localStorage.getItem("goalIncome") || "$10,000";
+
+
   // Simulate loading
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,12 +53,12 @@ const QuizStep14 = () => {
   
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen flex flex-col items-center p-4">
       <QuizHeader currentStep={14} totalSteps={28} />
       <QuizSteps currentStep={14} totalSteps={28} />
 
       <div className="max-w-[1000px] w-full text-center mt-12">
- <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">If you could earn (Number they added before) per month in <br /> additional income, what would you do first?</h1>
+ <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">If you could earn {goalIncome} per month in <br /> additional income, what would you do first?</h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">
             {options.map((option) => (
             <div

@@ -31,9 +31,11 @@ const QuizStep1 = () => {
  
 
   return (
-    <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={""} totalSteps={28} />
+    <div className="p-4">
+       <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={2} totalSteps={28} />
+    <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
+     
 
       <div className="flex items-center justify-between w-[100%]">
         <div className="max-w-[600px] w-full  mt-[6rem]">
@@ -65,6 +67,7 @@ const QuizStep1 = () => {
             />
         </div>
       </div>
+    </div>
     </div>
   );
 };

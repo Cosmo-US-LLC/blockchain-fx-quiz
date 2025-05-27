@@ -28,17 +28,18 @@ const QuizStep9 = () => {
 
 
   return (
-    <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
+   <div>
+     <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
       <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={9} totalSteps={28} />
 
-      <div className="flex items-center justify-between mt-[4rem] w-[100%]">
+      <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] w-full text-center ">
-          <h1 className="text-[30px] text-[#fff] font-bold mb-1 ">
+          <h1 className="text-[30px] text-[#fff] font-bold !mb-4 ">
        Inflation reduces your real wealth
           </h1>
           <p className="text-[16px] font-[400] text-[#fff] mb-6 ">
-          <span className="font-[700]">Fact Check:</span> The average global inflation rate <br /> ranges between 6–8% per year. <br /><br /> That means if you keep $1,000 in cash, it could lose up to 50% its value in just 9–10 years. In the U.S. alone, $100 in 2013 now has the same buying power as about $65 in 2025.
+           The average global inflation rate <br /> ranges between 6–8% per year. <br /><br /> That means if you keep $1,000 in cash, it could lose up to 50% its value in just 9–10 years. In the U.S. alone, $100 in 2013 now has the same buying power as about $65 in 2025.
           </p>
           <button
             onClick={handleNext}
@@ -60,6 +61,7 @@ const QuizStep9 = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

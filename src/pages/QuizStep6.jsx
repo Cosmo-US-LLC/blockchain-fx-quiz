@@ -3,16 +3,16 @@ import { useNavigate } from "react-router-dom";
 import QuizHeader from "../components/QuizHeader";
 import QuizSteps from "../components/QuizSteps";
 import Loading from "../components/Loading";
-import Step_6_1 from "../assets/step_6/step_6 (2).png";
-import Step_6_2 from "../assets/step_6/step_6 (1).png";
-import Step_6_3 from "../assets/step_6/step_6 (4).png";
-import Step_6_4 from "../assets/step_6/step_6 (3).png";
-import Step_6_5 from "../assets/step_6/step_6 (5).png";
-import Step_6_6 from "../assets/step_6/step_6 (6).png";
-import Step_6_7 from "../assets/step_6/step_6 (7).png";
-import Step_6_8 from "../assets/step_6/step_6 (8).png";
-import Step_6_9 from "../assets/step_6/step_6 (9).png";
-import Step_6_10 from "../assets/step_6/step_6 (10).png";
+import Step_6_1 from "../assets/step_6/step_6 (10).png";
+import Step_6_2 from "../assets/step_6/step_6 (9).png";
+import Step_6_3 from "../assets/step_6/step_6 (8).png";
+import Step_6_4 from "../assets/step_6/step_6 (7).png";
+import Step_6_5 from "../assets/step_6/step_6 (6).png";
+import Step_6_6 from "../assets/step_6/step_6 (5).png";
+import Step_6_7 from "../assets/step_6/step_6 (4).png";
+import Step_6_8 from "../assets/step_6/step_6 (3).png";
+import Step_6_9 from "../assets/step_6/step_6 (2).png";
+import Step_6_10 from "../assets/step_6/step_6 (1).png";
 
 const QuizStep6 = () => {
   const navigate = useNavigate();
@@ -32,14 +32,14 @@ const QuizStep6 = () => {
 
   const options = [
     { title: "Bitcoin", img: Step_6_1 },
-    { title: "Ethereum", img: Step_6_2 },
-    { title: "Solana", img: Step_6_3 },
-    { title: "BNB", img: Step_6_4 },
+    { title: "Ethereum", img: Step_6_6 },
+    { title: "Solana", img: Step_6_7 },
+    { title: "BNB", img: Step_6_9 },
     { title: "XRP", img: Step_6_5 },
-    { title: "PEPE", img: Step_6_6 },
-    { title: "DOGE", img: Step_6_7 },
-    { title: "TON", img: Step_6_8 },
-    { title: "KASPA", img: Step_6_9 },
+    { title: "PEPE", img: Step_6_3 },
+    { title: "DOGE", img: Step_6_8 },
+    { title: "TON", img: Step_6_2 },
+    { title: "KASPA", img: Step_6_4 },
     { title: "BGB", img: Step_6_10 },
   ];
 
@@ -64,7 +64,7 @@ const QuizStep6 = () => {
       key={option.title}
       onClick={() => handleSelect(option.title)}
       className={`option-card p-3 flex items-center justify-center gap-1 rounded-[33px] cursor-pointer transition-colors duration-200 ${
-        isSelected(option.title) ? "!bg-[#4A6BBE]" : "bg-[#252525]"
+        isSelected(option.title) ? "!bg-[#EAC05E]" : "bg-[#252525]"
       }`}
     >
       <img src={option.img} className="h-[20px]" alt={option.title} />
@@ -73,7 +73,7 @@ const QuizStep6 = () => {
   );
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen  flex flex-col items-center p-4">
       <QuizHeader currentStep={6} totalSteps={28} />
       <QuizSteps currentStep={6} totalSteps={28} />
 
@@ -96,16 +96,17 @@ const QuizStep6 = () => {
             {row3.map(renderCard)}
           </div>
 
-          <div className="text-center mt-8">
-            <button
-              onClick={handleNext}
-              style={{
-                background:"rgb(247 185 85 / var(--tw-bg-opacity, 1))"
-              }}
-              className="text-black option-card font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition"
-            >
-              Continue
-            </button>
+          <div className="text-center !mt-8">
+              <button
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500]`}
+          >
+            Continue
+          </button>
           </div>
         </div>
       </div>

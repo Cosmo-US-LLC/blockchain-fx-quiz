@@ -6,11 +6,11 @@ const AgeOption = ({ ageRange, imageUrl, isSelected, onClick }) => {
       className={`option-card !border !border-[#FCD24B] rounded-lg  cursor-pointer ${isSelected ? "selected" : ""}`}
       onClick={onClick}
     >
-      <div className="h-32 ">
+      <div className="h-32 relative ">
         <img
           src={imageUrl || "/placeholder.svg"}
           alt={`Person age ${ageRange}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover absolute h-[150px] top-[-17%] z-[99]"
         />
       </div>
       <div className="p-3 text-center bg-[#FCD24B]">

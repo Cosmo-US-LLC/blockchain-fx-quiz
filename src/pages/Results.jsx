@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import QuizHeader from "../components/QuizHeader";
 import QuizSteps from "../components/QuizSteps";
@@ -10,6 +10,7 @@ import result_icon_2 from "../assets/result/result_icons (2).png";
 import result_icon_3 from "../assets/result/result_icons (3).png";
 import result_icon_4 from "../assets/result/result_icons (4).png";
 import result_icon_5 from "../assets/result/result_icon.png";
+import copy_icon from "../assets/result/copy.png";
 
 const Results = () => {
   const navigate = useNavigate();
@@ -21,17 +22,12 @@ const Results = () => {
   const [purchasingPower1, setPurchasingPower1] = useState(40);
   const [purchasingPower2, setPurchasingPower2] = useState(70);
 
-  // Function to determine label based on value
-  const getInvestingLabel = (value) => {
-    if (value < 33) return "Beginner";
-    if (value < 66) return "Moderate";
-    return "High";
-  };
+  const textRef = useRef(null);
 
-  const getPurchasingLabel = (value) => {
-    if (value < 33) return "Limited";
-    if (value < 66) return "Moderate";
-    return "High";
+  const handleCopy = () => {
+    const text = textRef.current.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+    });
   };
 
   useEffect(() => {
@@ -42,173 +38,75 @@ const Results = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleNext = () => {
-    navigate("/quiz/fact-check-no=6");
+
+  const handleRoute = () => {
+    window.location.href = "https://blockchainfx.com/";
   };
 
 
   return (
     <div>
-      <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
-        <QuizHeader currentStep={"#Fact Check"} totalSteps={28} />
+      <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
+        <QuizHeader currentStep={""} totalSteps={28} />
         <QuizSteps currentStep={28} totalSteps={28} />
 
-        <div className="mt-[2rem] w-[100%]">
+        <div className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto">
           <div className="max-w-[1020px] mx-auto  w-full ">
             <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
               Congratulations! <br /> You’ve sucessfully passed the Quiz
             </h1>
             <p className="text-[20px]  text-center font-[700] text-[#fff] mb-6 ">
-              Here are the results
+              You’ve completed the challenge and unlocked this special offer.<br />Here’s your limited one-time bonus code to buy $BFX
             </p>
             <div className="flex items-center max-w-[578.2px] mx-auto mb-2">
-              <p className="w-[50%] text-[16px] flex justify-center !text-center font-[400] text-[#fff] border-r border-[#353535]">
-                Now
+              <p className="w-[50%] text-[16px] flex justify-start  font-[400] text-[#fff] ">
+                Your readiness: <span className="font-[700] text-[#D99A26] ">{" "}84%</span>
               </p>
-              <p className="w-[50%] text-[16px] flex justify-center !text-center font-[400] text-[#fff]">
-                Goal
-              </p>
-            </div>
-            <div className="max-w-[578.2px] mx-auto w-[100%] bg-[#353535]">
-              <img src={result} className="w-[100%]" alt="" />
-            </div>
-            <div className=" text-white flex flex-col items-center justify-center py-6">
-              <div className="max-w-[564.2px] w-full">
-                <div className="grid grid-cols-2 gap-6 mb-10">
-                  <div>
-                    <div className="text-white text-sm mb-2">
-                      Investing skills
-                    </div>
-                    <GradientRangeSlider
-                      value={investingSkill1}
-                      onChange={setInvestingSkill1}
-                      gradientColors="from-yellow-500 via-purple-500 to-pink-500"
-                      label={getInvestingLabel(investingSkill1)}
-                    />
-                  </div>
-                  <div>
-                    <div className="text-white text-sm mb-2">
-                      Investing skills
-                    </div>
-                    <GradientRangeSlider
-                      value={investingSkill2}
-                      onChange={setInvestingSkill2}
-                      gradientColors="from-yellow-500 via-purple-500 to-pink-500"
-                      label={getInvestingLabel(investingSkill2)}
-                    />
-                  </div>
-                </div>
 
-                {/* Purchasing Power Section */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-white text-sm mb-2">
-                      Purchasing power
-                    </div>
-                    <GradientRangeSlider
-                      value={purchasingPower1}
-                      onChange={setPurchasingPower1}
-                      gradientColors="from-yellow-500 to-white"
-                      label={getPurchasingLabel(purchasingPower1)}
-                    />
-                  </div>
-                  <div>
-                    <div className="text-white text-sm mb-2">
-                      Purchasing power
-                    </div>
-                    <GradientRangeSlider
-                      value={purchasingPower2}
-                      onChange={setPurchasingPower2}
-                      gradientColors="from-yellow-500 to-white"
-                      label={getPurchasingLabel(purchasingPower2)}
-                    />
-                  </div>
+            </div>
+            <div className="flex justify-evenly items-center max-w-[578.2px] mx-auto w-[100%] bg-[#353535] mb-4">
+              <div>
+                <h2 className="text-white font-[500] text-[24px] mb-4">
+                  Claim your personal <br /><span className="font-[700] text-[#D99A26] ">35%</span> BFX Bonus Code
+                </h2>
+                <div className="flex justify-around items-center border border-[#fff] rounded-[8px] px-2">
+                  <button
+                    ref={textRef}
+                    className="h-[40px] px-2 text-white"
+                    type="button"
+                  >
+                    upw8U2kbKCKzSZi
+                  </button>
+                  <img
+                    onClick={handleCopy}
+                    src={copy_icon}
+                    alt="copy"
+                    width={14}
+                    height={16}
+                    className="cursor-pointer"
+                  />
                 </div>
               </div>
-
-              <div className="max-w-[578.2px] space-y-[15px] mx-auto">
-                <div className="space-y-[10px]">
-                  <p className="text-[16px] font-[400] text-[#fff]">
-                    {" "}
-                    Your readiness: <span className="text-[#D99A26]">
-                       84%
-                    </span>{" "}
-                  </p>
-                  <div className="flex justify-between items-center py-[27px] px-[10px] rounded-[8px] border border-[#C4C7CC] bg-[#353535]">
-                    <p className="text-[16px] font-[400] text-[#fff]">
-                      {" "}
-                      <span className="text-[#D99A26] fofnt-[700]">
-                        4-week
-                      </span>{" "}
-                      program is enough for you to start your investment journey
-                    </p>
-                    <img src={result_icon_5} alt="" />
-                  </div>
-                </div>
-                <div className="flex justify-between space-x-2">
-                  <div className="w-[50%] py-[19px] px-[20px] bg-[#F1F1F1] rounded-[4px]">
-                    <div className="flex justify-center space-x-2">
-                      <img src={result_icon_1} alt="" />
-                      <p className="text-[12px] text-[#24234C] font-[400]">
-                        Your goal
-                      </p>
-                    </div>
-                    <p className="text-[14px] text-center text-[#24234C] font-[400]">
-                      Financial independence
-                    </p>
-                  </div>
-                  <div className="w-[50%] py-[19px] px-[20px] bg-[#F1F1F1] rounded-[4px]">
-                    <div className="flex justify-center space-x-2">
-                      <img src={result_icon_2} alt="" />
-                      <p className="text-[12px] text-[#24234C] font-[400]">
-                        Your goal
-                      </p>
-                    </div>
-                    <p className="text-[14px] text-center text-[#24234C] font-[400]">
-                      Financial independence
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="flex justify-center py-[8px] items-center space-x-2"
-                  style={{
-                    background: "rgba(217, 154, 38, 0.20)",
-                    borderRadius: "8px",
-                  }}
-                >
-                 <img src={result_icon_4} alt="" />
-                  <p className="text-[16px] text-center text-[#ffff] font-[400]">
-                    35% Bonus expires in{" "}
-                    <span className="font-[700] text-[D99A26] ">44:59 min</span>
-                  </p>
-                </div>
-              </div>
+              <img src={result} className="min-w-[290px] min-h-[225px]" alt="" />
             </div>
+          </div>
+          <div className="max-w-[578.2px] mx-auto my-6">
+
+            <p className="text-[16px] text-[#fff] font-[400] leading-[250%] text-center mb-4">*At 3insiders, our goal is to match you with the right project for your goals and secure exclusive deals you won’t find anywhere else through our industry connections. A win for everyone. </p>
+            <div className="flex justify-center items-center mb-6">
+              <img src={result_icon_3} className="h-[132px]" alt="" />
+            </div>
+            <button
+              style={{
+                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+
+              }}
+              onClick={handleRoute}
+              className="h-[40px]  w-[100%] text-[#000] rounded-[8px] mt-8 ">Visit Now: BlockchainFX.com</button>
           </div>
         </div>
       </div>
-      <div className="bg-[#353535] w-[100%] mb-12">
-        <div className="max-w-[578.2px] space-y-[20px] mx-auto py-[40px]">
-          <div className="flex justify-center items-center">
-           <img src={result_icon_3} className="h-[132px]" alt="" />
-          </div>
-          <div className="space-y-[10px]">
-            <h3 className="text-[24px] text-[#fff] font-[700] text-center">Claim your personal 35% BFX Bonus Code </h3>
-            <p className="text-[16px] text-[#fff] font-[400] text-center">You have successfully passed the challenge and are eligible for a one time 35% bonus code which will give you 35% more BFX when you buy now. </p>
-            <div className="max-w-[360px] space-y-[10px] mx-auto">
-              <p className="text-[16px] text-[#fff] font-[400] ">Get 35% More BFX Coins Now </p>
-              <div className="flex justify-between items-center">
-                <button className="h-[40px] max-w-[200px] w-[100%] border border-[#fff] rounded-[8px]">upw8U2kbKCKzSZi</button>
-                 <button
-                 style={{
-                  background:"linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)"
-                 }}
-                 className="h-[40px] max-w-[139px] w-[100%] text-[#000] rounded-[8px]">Buy BFX Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 };

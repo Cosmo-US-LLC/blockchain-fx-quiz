@@ -20,11 +20,11 @@ const QuizStep19 = () => {
     },
      {
       title:"Sometimes I’m a bit late — still trying to improve", 
-      img:Step_19_2
+      img:Step_19_3
     },
      {
-      title:"I really don’t want to miss the next big opportunity", 
-      img:Step_19_3
+      title:"Too late, I’ve already missed a lot of big opportunities", 
+      img:Step_19_2
     },
   ]
 
@@ -44,7 +44,7 @@ const QuizStep19 = () => {
   
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen flex flex-col items-center p-4">
       <QuizHeader currentStep={19} totalSteps={28} />
       <QuizSteps currentStep={19} totalSteps={28} />
 

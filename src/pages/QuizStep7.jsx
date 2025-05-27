@@ -28,13 +28,13 @@ const QuizStep7 = () => {
 
  
   return (
-    <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen overflow-hidden flex flex-col items-center p-4">
       <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={7} totalSteps={28} />
 
-      <div className="flex items-center justify-between mt-[4rem] w-[100%]">
+      <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] w-full text-center ">
-          <h1 className="text-[30px] text-[#fff] font-bold mb-1 uppercase">
+          <h1 className="text-[30px] text-[#fff] font-bold mb-4  leading-[130%]">
           We’ve all missed some major <br /> opportunities in crypto
           </h1>
           <p className="text-[16px] font-[400] text-[#fff] mb-6 ">

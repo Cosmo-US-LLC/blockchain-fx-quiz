@@ -47,14 +47,18 @@ const QuizStep13 = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleNext = () => {
-    navigate("/quiz/step=11")
-  }
-
+  // const handleNext = () => {
+  //   navigate("/quiz/step=11")
+  // }
+const handleOptionClick = (option) => {
+    setSelectedOption(option);
+  localStorage.setItem("goalIncome", option.title);
+  navigate("/quiz/step=11");
+};
   
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen flex flex-col items-center p-4">
       <QuizHeader currentStep={13} totalSteps={28} />
       <QuizSteps currentStep={13} totalSteps={28} />
 
@@ -68,7 +72,7 @@ const QuizStep13 = () => {
                 background:"rgba(245, 245, 245, 0.15)"
               }}
               className={`option-card py-6 px-6 flex items-center justify-between rounded-[8px] cursor-pointer ${selectedOption === option ? "selected" : ""}`}
-              onClick={handleNext}
+              onClick={() => handleOptionClick(option)}
             >
               <p className="w-[88%] text-white text-start font-medium">{option.title}</p>
             </div>

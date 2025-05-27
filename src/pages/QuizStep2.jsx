@@ -43,6 +43,13 @@ const QuizStep2 = () => {
     },
   ]
 
+const handleOptionClick = (option) => {
+    setSelectedOption(option);
+  localStorage.setItem("mainGoal", option.title);
+  navigate("/quiz/step=3");
+};
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
@@ -51,30 +58,31 @@ const QuizStep2 = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleNext = () => {
+  // const handleNext = () => {
 
-    navigate("/quiz/step=3")
-  }
+  //   navigate("/quiz/step=3")
+  // }
 
   
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen  flex flex-col items-center p-4">
      <QuizHeader currentStep={2} totalSteps={28} />
       <QuizSteps currentStep={2} totalSteps={28} />
 
-      <div className="w-[100%] max-w-[1000px] mt-12">
+      <div className="w-[100%] max-w-[1000px max-w-[1240px] mx-auto mt-12">
         <h1 className="text-[30px] font-[700] leading-[120%] mb-1 text-center">What is your main goal?</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
           {options.map((option) => (
             <div
               key={option}
+              value={option}
               style={{
                 background:"rgba(245, 245, 245, 0.15)"
               }}
               className={`option-card pr-4 flex items-center justify-between rounded-[8px] cursor-pointer ${selectedOption === option ? "selected" : ""}`}
-              onClick={handleNext}
+              onClick={() => handleOptionClick(option)}
             >
               <img src={option.img} className="h-[100px]" alt="" />
               <p className="w-[60%] text-white font-medium">{option.title}</p>

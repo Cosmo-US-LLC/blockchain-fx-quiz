@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom"
 import QuizHeader from "../components/QuizHeader"
 import QuizSteps from "../components/QuizSteps"
 import Loading from "../components/Loading"
-import Step_15_1 from "../assets/step_15/step_15 (1).png"
+import Step_15_1 from "../assets/step_15/step_15 (3).png"
 import Step_15_2 from "../assets/step_15/step_15 (2).png"
-import Step_15_3 from "../assets/step_15/step_15 (3).png"
+import Step_15_3 from "../assets/step_15/step_15 (1).png"
 
 
 const QuizStep15 = () => {
@@ -45,7 +45,7 @@ const QuizStep15 = () => {
   
 
   return (
-    <div className="quiz-container min-h-screen max-w-[1240px] mx-auto flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen flex flex-col items-center p-4">
       <QuizHeader currentStep={15} totalSteps={28} />
       <QuizSteps currentStep={15} totalSteps={28} />
 

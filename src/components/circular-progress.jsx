@@ -11,15 +11,89 @@ export default function CircularProgress({
   showPercentage = true,
   label = "Your results are loading",
 }) {
-  const [progress, setProgress] = useState(0)
+  const [progress, setProgress] = useState(0); 
+const [displayProgress, setDisplayProgress] = useState(0); 
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setProgress(percentage)
-    }, 100)
 
-    return () => clearTimeout(timer)
-  }, [percentage])
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setProgress(percentage)
+  //   }, 100)
+
+  //   return () => clearTimeout(timer)
+  // }, [percentage])
+
+// useEffect(() => {
+//   let current = 0;
+//   const upInterval = setInterval(() => {
+//     current += 2;
+//     setProgress(current);
+//     setDisplayProgress(current);
+
+//     if (current >= 100) {
+//       clearInterval(upInterval);
+
+//       // Step 2: Fill down to final target
+//       const downInterval = setInterval(() => {
+//         if (current > percentage) {
+//           current -= 2;
+//           setProgress(current);
+//           setDisplayProgress(current);
+//         } else {
+//           clearInterval(downInterval);
+//           setProgress(percentage);
+//           setDisplayProgress(percentage);
+//         }
+//       }, 100);
+//     }
+//   }, 100);
+
+//   return () => {
+//     clearInterval(upInterval);
+//   };
+// }, [percentage]);
+
+
+useEffect(() => {
+  let current = 0;
+
+  const upInterval = setInterval(() => {
+    current += 2;
+
+    if (current >= 100) {
+      current = 100;
+    }
+
+    setProgress(current);
+    setDisplayProgress(Math.round(current));
+
+    if (current === 100) {
+      clearInterval(upInterval);
+
+      const downInterval = setInterval(() => {
+        if (current > percentage) {
+          current -= 2;
+
+          if (current < percentage) {
+            current = percentage;
+          }
+
+          setProgress(current);
+          setDisplayProgress(Math.round(current));
+        } else {
+          clearInterval(downInterval);
+          setProgress(percentage);
+          setDisplayProgress(Math.round(percentage));
+        }
+      }, 120);
+    }
+  }, 120);
+
+  return () => {
+    clearInterval(upInterval);
+  };
+}, [percentage]);
+
 
   const radius = (size - strokeWidth) / 2
   const circumference = radius * 2 * Math.PI
@@ -49,13 +123,13 @@ export default function CircularProgress({
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
             strokeLinecap="round"
-            style={{ transition: "stroke-dashoffset 0.5s ease-in-out" }}
+            style={{ transition: "stroke-dashoffset 0.3s ease-in-out" }}
           />
         </svg>
 
         {showPercentage && (
           <div className="absolute inset-0 flex items-center justify-center" style={{ color: textColor }}>
-            <span className="text-[40px] font-bold">{Math.round(progress)}%</span>
+            <span className="text-[40px] font-bold">{Math.round(displayProgress)}%</span>
           </div>
         )}
       </div>

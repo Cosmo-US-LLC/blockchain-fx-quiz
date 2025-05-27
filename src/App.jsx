@@ -28,6 +28,9 @@ import QuizStep26 from "./pages/QuizStep26"
 import Results from "./pages/Results"
 import Loading from "./components/Loading"
 import QuizPage from "./pages/QuizPage"
+import QuizStep18_28 from "./pages/QuizStep18_28"
+import QuizStep19_28 from "./pages/QuizStep19_28"
+import QuizStep27 from "./pages/QuizStep27"
 
 function App() {
   return (
@@ -57,10 +60,13 @@ function App() {
         <Route path="/quiz/step=16" element={<QuizStep20 />} />
         <Route path="/quiz/step=17" element={<QuizStep21 />} />
         <Route path="/quiz/step=18" element={<QuizStep22 />} />
-        <Route path="/quiz/step=19" element={<QuizStep23 />} />
+        <Route path="/quiz/step=18_28" element={<QuizStep18_28 />} />
+        <Route path="/quiz/step=19_28" element={<QuizStep19_28 />} />
+        {/* <Route path="/quiz/step=19" element={<QuizStep23 />} /> */}
         <Route path="/quiz/fact-check-no=5" element={<QuizStep24 />} />
-        <Route path="/quiz/fact-check-no=6" element={<QuizStep25 />} />
-        <Route path="/quiz/fact-check-no=7" element={<QuizStep26 />} />
+        {/* <Route path="/quiz/fact-check-no=6" element={<QuizStep25 />} /> */}
+        <Route path="/quiz/fact-check-no=7_1" element={<QuizStep26 />} />
+        <Route path="/quiz/fact-check-no=7_2" element={<QuizStep27 />} />
         <Route path="/quiz/results" element={<Results />} />
         <Route path="/loading" element={<Loading />} />
       </Routes>

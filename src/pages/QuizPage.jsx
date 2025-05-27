@@ -4,9 +4,10 @@ import QuizHeader from "../components/QuizHeader";
 import QuizSteps from "../components/QuizSteps";
 import AgeOption from "../components/AgeOption";
 import Loading from "../components/Loading";
-import card_img1 from "../assets/quiz/card_image (1).webp"
-import card_img2 from "../assets/quiz/card_image (2).webp"
-import card_img3 from "../assets/quiz/card_image (3).webp"
+import card_img1 from "../assets/quiz/card_image (3).webp"
+import card_img2 from "../assets/quiz/card_image (1).webp"
+import card_img3 from "../assets/quiz/card_image (2).webp"
+import card_img4 from "../assets/quiz/card_image.png"
 
 
 
@@ -19,7 +20,7 @@ const QuizPage = () => {
     { range: "18-24", image: card_img1, },
     { range: "25-34", image: card_img2, },
     { range: "35-44", image: card_img3, },
-    { range: "45+", image: card_img1,},
+    { range: "45+", image: card_img4,},
   ];
 
   // Simulate loading
