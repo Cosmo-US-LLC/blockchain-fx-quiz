@@ -10,7 +10,7 @@ const AgeOption = ({ ageRange, imageUrl, isSelected, onClick }) => {
         <img
           src={imageUrl || "/placeholder.svg"}
           alt={`Person age ${ageRange}`}
-          className="w-full h-full object-cover absolute h-[150px] top-[-17%] z-[99]"
+          className="w-full h-full object-cover absolute !h-[150px] top-[-17%] z-[99]"
         />
       </div>
       <div className="p-3 text-center bg-[#FCD24B]">
