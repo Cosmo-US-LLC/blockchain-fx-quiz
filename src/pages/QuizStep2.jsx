@@ -67,7 +67,7 @@ const handleOptionClick = (option) => {
 
   return (
     <div className="quiz-container min-h-screen  flex flex-col items-center p-4">
-     <QuizHeader currentStep={2} totalSteps={28} />
+     <QuizHeader currentStep={2} totalSteps={18} />
       <QuizSteps currentStep={2} totalSteps={28} />
 
       <div className="w-[100%] max-w-[1000px max-w-[1240px] mx-auto mt-12">

@@ -53,7 +53,7 @@ const QuizStep18_28 = () => {
 
 const handleNext = (option) => {
   localStorage.setItem("specialWish", option.title);
-  navigate("/quiz/fact-check-no=7_1");
+  navigate("/quiz/fact-check-no=7_2");
 };
 
 
@@ -65,7 +65,7 @@ const handleNext = (option) => {
                 
               }}
     >
-      <QuizHeader currentStep={21} totalSteps={28} />
+      <QuizHeader currentStep={18} totalSteps={18} />
       <QuizSteps currentStep={21} totalSteps={28} />
 
       <div className="max-w-[1050px] w-full text-center mt-12">

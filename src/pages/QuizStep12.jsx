@@ -38,8 +38,7 @@ const QuizStep9 = () => {
        How millionaires build <br /> generational wealth
           </h1>
           <p className="text-[16px] max-w-[380px] mx-auto font-[400] text-[#fff] mb-6 ">
-          Most millionaires and Billionaires in the U.S. don’t rely on just one source of income. 
-On average, they have 7 different income streams, including business earnings, investments, crypto,  real estate, dividends, and more.
+         Most millionaires and billionaires don’t rely on just one source of income. On average, they have 7 different income streams, including business earnings, investments, crypto, real estate, dividends, and more.
           </p>
           <button
             onClick={handleNext}

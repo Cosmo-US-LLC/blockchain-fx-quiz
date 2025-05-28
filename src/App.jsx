@@ -65,7 +65,7 @@ function App() {
         {/* <Route path="/quiz/step=19" element={<QuizStep23 />} /> */}
         <Route path="/quiz/fact-check-no=5" element={<QuizStep24 />} />
         {/* <Route path="/quiz/fact-check-no=6" element={<QuizStep25 />} /> */}
-        <Route path="/quiz/fact-check-no=7_1" element={<QuizStep26 />} />
+        {/* <Route path="/quiz/fact-check-no=7_1" element={<QuizStep26 />} /> */}
         <Route path="/quiz/fact-check-no=7_2" element={<QuizStep27 />} />
         <Route path="/quiz/results" element={<Results />} />
         <Route path="/loading" element={<Loading />} />

@@ -46,7 +46,7 @@ const QuizStep15 = () => {
 
   return (
     <div className="quiz-container min-h-screen flex flex-col items-center p-4">
-      <QuizHeader currentStep={15} totalSteps={28} />
+      <QuizHeader currentStep={12} totalSteps={18} />
       <QuizSteps currentStep={15} totalSteps={28} />
 
       <div className="max-w-[1000px] w-full text-center mt-12">

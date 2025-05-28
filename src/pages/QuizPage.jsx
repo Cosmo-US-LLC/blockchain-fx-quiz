@@ -7,14 +7,14 @@ import Loading from "../components/Loading";
 import card_img1 from "../assets/quiz/card_image (3).webp"
 import card_img2 from "../assets/quiz/card_image (1).webp"
 import card_img3 from "../assets/quiz/card_image (2).webp"
-import card_img4 from "../assets/quiz/card_image.png"
+import card_img4 from "../assets/quiz/card_image.webp"
 
 
 
 const QuizPage = () => {
-  const navigate = useNavigate();
+ const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [selectedOption, setSelectedOption] = useState();
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const ageOptions = [
     { range: "18-24", image: card_img1, },
@@ -32,15 +32,17 @@ const QuizPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleNext = () => {
-    navigate("/quiz/fact-check");
+ const handleSelect = (range, image) => {
+    setSelectedOption(range);
+    localStorage.setItem("selectedImage", image); 
+    navigate("/quiz/fact-check"); 
   };
 
  
 
   return (
     <div className="quiz-container min-h-screen  flex flex-col items-center p-4">
-      <QuizHeader currentStep={1} totalSteps={28} />
+      <QuizHeader currentStep={1} totalSteps={18} />
             <QuizSteps currentStep={1} totalSteps={28} />
       <div className="max-w-2xl w-full text-center mb-8 mt-8">
         <div className="space-y-[10px]">
@@ -64,7 +66,7 @@ const QuizPage = () => {
               ageRange={option.range}
               imageUrl={option.image}
               isSelected={selectedOption === option.range}
-              onClick={handleNext}
+              onClick={() => handleSelect(option.range, option.image)}
             />
           ))}
         </div>

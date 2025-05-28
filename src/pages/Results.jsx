@@ -11,24 +11,25 @@ import result_icon_3 from "../assets/result/result_icons (3).png";
 import result_icon_4 from "../assets/result/result_icons (4).png";
 import result_icon_5 from "../assets/result/result_icon.png";
 import copy_icon from "../assets/result/copy.png";
+import { toast, ToastContainer } from 'react-toastify';
+
 
 const Results = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [selectedOption, setSelectedOption] = useState();
-
-  const [investingSkill1, setInvestingSkill1] = useState(50);
-  const [investingSkill2, setInvestingSkill2] = useState(90);
-  const [purchasingPower1, setPurchasingPower1] = useState(40);
-  const [purchasingPower2, setPurchasingPower2] = useState(70);
+const [timeLeft, setTimeLeft] = useState(45 * 60);
 
   const textRef = useRef(null);
 
   const handleCopy = () => {
-    const text = textRef.current.innerText;
-    navigator.clipboard.writeText(text).then(() => {
-    });
-  };
+  const text = textRef.current.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    toast("Copied!");
+  }).catch((err) => {
+    toast.error("Failed to copy text");
+    console.error("Copy failed", err);
+  });
+};
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,25 +41,63 @@ const Results = () => {
 
 
   const handleRoute = () => {
-    window.location.href = "https://blockchainfx.com/";
+    window.location.href = "https://presale.blockchainfx.com/";
   };
 
 
+
+   useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft((prevTime) => {
+        if (prevTime <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prevTime - 1;
+      });
+    }, 1000); 
+
+    return () => clearInterval(interval); 
+  }, []);
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+  };
+
   return (
     <div>
-      <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
+      <div className="quiz-container   min-h-screen overflow-hidden flex flex-col items-center p-4"
+      style={{
+                 backgroundColor:"#000000"
+                
+              }}
+      >
         <QuizHeader currentStep={""} totalSteps={28} />
         <QuizSteps currentStep={28} totalSteps={28} />
+        <div className="mb-4 !mt-[-22px] bg-[#D99A2633] w-[100%] flex justify-center items-center rounded-[8px]">
+          <img src={result_icon_4} alt="results" 
+           
+            className=" px-[10px] text-white" />
+          <h3 className=" text-white font-[500] text-[16px] py-[5px] ">
 
+            35% Bonus expires in
+            <span className="font-[700] text-[#D99A26] text-Manrope ">
+              {" "} {formatTime(timeLeft)} min
+            </span>
+          </h3>
+        </div>
         <div className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto">
+
           <div className="max-w-[1020px] mx-auto  w-full ">
             <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
-              Congratulations! <br /> You’ve sucessfully passed the Quiz
+              Congratulations! 🎉 <br />You’ve sucessfully passed the Quiz
             </h1>
-            <p className="text-[20px]  text-center font-[700] text-[#fff] mb-6 ">
+            <p className="text-[20px]  text-center font-[700] text-[#fff] mb-[53px] ">
               You’ve completed the challenge and unlocked this special offer.<br />Here’s your limited one-time bonus code to buy $BFX
             </p>
-            <div className="flex items-center max-w-[578.2px] mx-auto mb-2">
+            <div className="flex items-center max-w-[578.2px] mx-auto mb-[25px]">
               <p className="w-[50%] text-[16px] flex justify-start  font-[400] text-[#fff] ">
                 Your readiness: <span className="font-[700] text-[#D99A26] ">{" "}84%</span>
               </p>
@@ -85,6 +124,7 @@ const Results = () => {
                     height={16}
                     className="cursor-pointer"
                   />
+                  <ToastContainer position="top-right" />
                 </div>
               </div>
               <img src={result} className="min-w-[290px] min-h-[225px]" alt="" />
@@ -96,13 +136,18 @@ const Results = () => {
             <div className="flex justify-center items-center mb-6">
               <img src={result_icon_3} className="h-[132px]" alt="" />
             </div>
-            <button
-              style={{
-                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+           
 
-              }}
-              onClick={handleRoute}
-              className="h-[40px]  w-[100%] text-[#000] rounded-[8px] mt-8 ">Visit Now: BlockchainFX.com</button>
+               <button
+            onClick={handleRoute}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+          >
+           Visit Now: BlockchainFX.com
+          </button>
           </div>
         </div>
       </div>

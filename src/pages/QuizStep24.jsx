@@ -30,7 +30,7 @@ const QuizStep24 = () => {
   return (
     <div className="quiz-container min-h-screen overflow-hidden flex flex-col items-center p-4">
       <QuizHeader currentStep={""} totalSteps={28} />
-      <QuizSteps currentStep={24} totalSteps={28} />
+      <QuizSteps currentStep={25} totalSteps={28} />
 
       <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] space-y-[15px ] w-full ">
@@ -48,9 +48,9 @@ const QuizStep24 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700]`}
           >
-            Continue
+            Unlock Special Bonus
           </button>
          </div>
         </div>

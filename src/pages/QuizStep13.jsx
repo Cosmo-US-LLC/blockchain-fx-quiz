@@ -16,22 +16,22 @@ const QuizStep13 = () => {
       title:"Less than $10,000", 
     },
      {
-      title:"$10,000 - 20,000", 
+      title:"$10,000 - $20,000", 
     },
      {
       title:"$20,000 - $50,000", 
     },
      {
-      title:"$50,000 - 100,000", 
+      title:"$50,000 - $100,000", 
     },
      {
-      title:"$100,000 - 250,000", 
+      title:"$100,000 - $250,000", 
     },
      {
-      title:"$500,000 - 1,000,000", 
+      title:"$500,000 - $1,000,000", 
     },
      {
-      title:"$250,000 - 500,000", 
+      title:"$250,000 - $500,000", 
     },
       {
       title:"More than $1,000,000", 
@@ -59,7 +59,7 @@ const handleOptionClick = (option) => {
 
   return (
     <div className="quiz-container min-h-screen flex flex-col items-center p-4">
-      <QuizHeader currentStep={13} totalSteps={28} />
+      <QuizHeader currentStep={10} totalSteps={18} />
       <QuizSteps currentStep={13} totalSteps={28} />
 
       <div className="max-w-[1000px] w-full text-center mt-12">

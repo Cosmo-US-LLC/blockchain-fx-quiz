@@ -47,12 +47,12 @@ const formatNumber = (value) => {
   const handleInput1Change = (e) => {
     setInput1Error(false);
    const raw = e.target.value.replace(/[^0-9]/g, "");
-  const formatted = formatNumber(raw);
+  const formatted = raw ? `$${formatNumber(raw)}` : "";
   setInput1(formatted);
   };
 
  useEffect(() => {
-  const investment = parseFloat(input1.replace(/,/g, ""));
+  const investment = parseFloat(input1.replace(/[$,]/g, ""));
   if (!isNaN(investment) && investment > 0) {
     setInput1Error(false);
     const bfx = investment / 0.0145;
@@ -76,13 +76,13 @@ const formatNumber = (value) => {
 
   return (
     <div className="quiz-container min-h-screen flex flex-col items-center p-4">
-      <QuizHeader currentStep={22} totalSteps={28} />
-      <QuizSteps currentStep={22} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={""} />
+      <QuizSteps currentStep={24} totalSteps={28} />
 
-      <div className="flex justify-between max-w-[1000px] w-[100%] mx-auto items-center mt-12">
-        <div className="max-w-[505px] space-y-[18px] w-full ">
+      <div className="flex justify-between max-w-[1160px] w-[100%] mx-auto items-center mt-12">
+        <div className="max-w-[475px] space-y-[18px] w-full ">
           <h1 className="text-[30px] font-[700] leading-[120%] mb-1 ">
-            Ready to see how much <br /> you could earn with BFX
+            Ready to see how much <br/>you could earn with BFX
           </h1>
           <div
             className=" p-[13px]"
@@ -92,7 +92,7 @@ const formatNumber = (value) => {
             }}
           >
             <p className="text-[16px] font-[700] text-[#fff] leading-[150%] text-[#000]">
-              Based on your Goal Income: {goalIncome}
+              Based on your Goal income: XY  {goalIncome}
             </p>
           </div>
           <div className="space-y-[15px]">
@@ -104,7 +104,7 @@ const formatNumber = (value) => {
                 How much do you want to invest in BFX
               </label>
               <input
-               value={input1}
+               value={`${input1}`}
         onChange={handleInput1Change}
                 type="text"
                 className={` w-[100%] px-2 outline-none h-[50px] ${
@@ -129,7 +129,7 @@ const formatNumber = (value) => {
               </label>
              
               <p
-               className={` w-[100%] text-[#FED34C] overflow-hidden text-nowrap flex items-center px-2 outline-none h-[50px]`}
+               className={` w-[100%] text-[#FED34C] overflow-hidden text-nowrap font-[700] flex items-center px-2 outline-none h-[50px]`}
                 style={{
                   border: "1px solid #737373",
                   borderRadius: "6px",
@@ -161,19 +161,21 @@ const formatNumber = (value) => {
             </div>
           </div>
            <div className="!mt-6 w-[]">
+        
+
         <button
-          onClick={handleNext}
-          style={{
-            borderRadius: "10px",
-            background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
-          }}
-          className={`py-[13px]  w-[100%] text-[#000] text-[24px] font-[700]`}
-        >
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+          >
           Continue
-        </button>
-      </div>
+          </button>
+       </div>
         </div>
-        <div className="max-w-[600.434px] w-[100%]">
+        <div className="max-w-[650.434px] w-[100%] ">
           <img src={Step_22} alt="" />
         </div>
       </div>

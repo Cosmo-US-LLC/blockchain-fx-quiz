@@ -14,6 +14,8 @@ import icons8 from "../assets/QuizStep19_28/19_28 (3).svg"
 import icons9 from "../assets/QuizStep19_28/19_28 (4).svg"
 
 const QuizStep19_28 = ({ targetPercentage = 60 }) => {
+ const [image, setImage] = useState(null);
+
  const [progress, setProgress] = useState(0)
    const navigate = useNavigate();
   const location = useLocation();
@@ -23,6 +25,12 @@ const QuizStep19_28 = ({ targetPercentage = 60 }) => {
 const goalIncome = localStorage.getItem("goalIncome") || "$10,000";
 const specialWish = localStorage.getItem("specialWish") || "Buy a House";
 const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
+
+ useEffect(() => {
+    const savedImage = localStorage.getItem("selectedImage");
+    setImage(savedImage);
+  }, []);
+
 
   useEffect(() => {
    
@@ -78,7 +86,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
         <div>
           <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
             <QuizHeader currentStep={""} totalSteps={28} />
-                    <QuizSteps currentStep={28} totalSteps={28} />
+                    <QuizSteps currentStep={23} totalSteps={28} />
               <div  className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto">
                  <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
              Here's your crypto profile
@@ -98,7 +106,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
             background:"rgba(255, 255, 255, 0.31)",
             border:"1px solid rgba(230, 232, 236, 0.31)"
           }}
-          className="text-[14.1px] text-[#fff] px-2 py-1 rounded absolute right-[9%] top-[-6%]">Results Portfolio</span>
+          className="text-[14.1px] text-[#fff] px-2 py-1 rounded absolute right-[9%] top-[-6%]">Your Results</span>
         </div>
       </div>
 
@@ -190,7 +198,13 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
             </div>
           </div>
           <div>
-            <img src={icons1} className="mb-[-15px]" alt="" />
+            {image && (
+        <img
+          src={image}
+          alt="Selected"
+          className="flex mb-[-10px] max-w-[220px] justify-center items-center"
+        />
+      )}
           </div>
         </div>
       
@@ -244,9 +258,17 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
            <span className=" text-[16px] font-[700] text-[#E6B004]">{goalIncome}</span>
         </div>
 
-        <button onClick={handleNext} className="w-full bg-[#E6B004] hover:opacity-[0.8] text-[#17181D] font-[700] py-4 px-4 rounded-lg transition-all duration-200 text-[22px] shadow-lg">
-          Discover How Much you Could Earn with BFX
-        </button>
+        
+        <button
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+          >
+           Discover How Much you Could Earn with BFX
+          </button>
     </div>
                 
             </div>

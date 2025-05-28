@@ -55,11 +55,11 @@ const QuizStep10 = () => {
 
   return (
     <div className="quiz-container min-h-screen  flex flex-col items-center p-4">
-      <QuizHeader currentStep={10} totalSteps={28} />
+      <QuizHeader currentStep={8} totalSteps={18} />
       <QuizSteps currentStep={10} totalSteps={28} />
 
       <div className="max-w-[750px] w-full text-center mt-12">
- <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">What's stopping you from becoming <br/> the best version of yourself?</h1>
+ <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">What’s holding you back <br /> from living the life you want?</h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">
             {options.map((option) => (
             <div

@@ -7,6 +7,7 @@ import Loading from "../components/Loading"
 import Step_4_1 from "../assets/step_4/step_4 (1).png"
 import Step_4_2 from "../assets/step_4/step_4 (2).png"
 import Step_4_3 from "../assets/step_4/step_4 (3).png"
+import Step_4_4 from "../assets/step_4/step_4 (4).png"
 
 const QuizStep4 = () => {
   const navigate = useNavigate()
@@ -25,6 +26,10 @@ const QuizStep4 = () => {
      {
       title:"Few times a week", 
       img:Step_4_3
+    },
+     {
+      title:"I haven’t started investing yet, but I want to", 
+      img:Step_4_4
     },
   ]
 
@@ -45,7 +50,7 @@ const QuizStep4 = () => {
 
   return (
     <div className="quiz-container min-h-screen flex flex-col items-center p-4">
-      <QuizHeader currentStep={4} totalSteps={28} />
+      <QuizHeader currentStep={4} totalSteps={18} />
       <QuizSteps currentStep={4} totalSteps={28} />
 
       <div className="max-w-[750px] w-full text-center mt-12">
