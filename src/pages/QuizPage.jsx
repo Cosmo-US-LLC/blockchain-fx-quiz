@@ -80,9 +80,9 @@ const QuizPage = () => {
         </button> */}
         <div className="space-y-[15px]">
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
-            By clicking on an age group, you agree with <span>Terms</span>{" "}
-            <br /> <span>and Conditions</span> <span>Privacy Policy, </span>{" "}
-            <span>Subscription Terms</span>{" "}
+             By clicking on an age group, you agree with <a href="https://blockchainfx.io/terms-of-service" target="_blank">Terms{" "}
+            <br /> and Conditions</a> <a href="https://blockchainfx.io/privacy-policy" target="_blank">Privacy Policy, </a>{" "}
+            <span>Subscription Terms</span>{" "}  
           </p>
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
             BlockchainFX 2025 ©All Rights Reserved.
