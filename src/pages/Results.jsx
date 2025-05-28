@@ -41,7 +41,7 @@ const [timeLeft, setTimeLeft] = useState(45 * 60);
 
 
   const handleRoute = () => {
-    window.location.href = "https://presale.blockchainfx.com/";
+    window.location.href = "https://presale.blockchainfx.com/?utm_source=quiz+page&utm_medium=landing&utm_campaign=Blockchain+FX+marketing";
   };
 
 
