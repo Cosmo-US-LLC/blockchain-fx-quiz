@@ -156,7 +156,7 @@ const Results = () => {
                             </svg>
                           </div>
                           <span className="text-sm font-medium">
-                            Copy Successfully
+                            Copied Successfully
                           </span>
                         </div>
                       </div>
