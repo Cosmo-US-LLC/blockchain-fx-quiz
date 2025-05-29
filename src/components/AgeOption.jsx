@@ -13,7 +13,7 @@ const AgeOption = ({ ageRange, imageUrl, isSelected, onClick }) => {
           className="w-full h-full object-cover absolute !h-[150px] top-[-17%] z-[99]"
         />
       </div>
-      <div className="p-3 text-center bg-[#FCD24B]">
+      <div className="p-3 text-center bg-[#FCD24B] rounded-b-[5px]">
         <p className="text-[#000] flex text-center items-center justify-center font-medium">
           Age: {ageRange}  
         <div className="pl-3">

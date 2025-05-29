@@ -81,7 +81,7 @@ const QuizPage = () => {
         <div className="space-y-[15px]">
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
              By clicking on an age group, you agree with <a className="underline" href="https://blockchainfx.io/terms-of-service" target="_blank">Terms
-            <br /> and Conditions</a> <a className="underline" href="https://blockchainfx.io/privacy-policy" target="_blank">Privacy Policy, </a>
+            <br /> and Conditions</a>, <a className="underline" href="https://blockchainfx.io/privacy-policy" target="_blank">Privacy Policy</a>.
           </p>
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
             BlockchainFX 2025 ©All Rights Reserved.

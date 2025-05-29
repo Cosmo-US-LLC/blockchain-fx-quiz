@@ -9,7 +9,7 @@ import Step_22 from "../assets/step_22/step_22.png";
 const QuizStep22 = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [input1, setInput1] = useState("");
+  const [input1, setInput1] = useState("$10,000");
   const [input2, setInput2] = useState("");
 
   const [input1Error, setInput1Error] = useState(false);
@@ -92,7 +92,7 @@ const formatNumber = (value) => {
             }}
           >
             <p className="text-[16px] font-[700] text-[#fff] leading-[150%] text-[#000]">
-              Based on your Goal income: XY  {goalIncome}
+              Based on your Goal income: {goalIncome}
             </p>
           </div>
           <div className="space-y-[15px]">
