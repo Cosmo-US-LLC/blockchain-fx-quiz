@@ -169,21 +169,21 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
         <div className="flex justify-between items-center">
           <div className="space-y-[15px] pb-4">
             <div className="flex items-center space-x-2">
-              <img src={icons6} alt="" />
+              <img src={icons9} alt="" />
               <div>
                 <p className="text-[#8C8CA1] text-[11px] font-[400]">Motivation</p>
                 <h4 className="text-[14.5px] text-[#fff] font-[500]">High</h4>
               </div>
             </div>
               <div className="flex items-center space-x-2">
-              <img src={icons7} alt="" />
+              <img src={icons8} alt="" />
               <div>
                 <p className="text-[#8C8CA1] text-[11px] font-[400]">Potential</p>
                 <h4 className="text-[14.5px] text-[#fff] font-[500]">High</h4>
               </div>
             </div>
               <div className="flex items-center space-x-2">
-              <img src={icons8} alt="" />
+              <img src={icons7} alt="" />
               <div>
                 <p className="text-[#8C8CA1] text-[11px] font-[400]">Income</p>
                 <h4 className="text-[14.5px] text-[#fff] font-[500]">Fit for investing</h4>

@@ -85,11 +85,8 @@ const formatNumber = (value) => {
             Ready to see how much <br/>you could earn with BFX
           </h1>
           <div
-            className=" p-[13px]"
-            style={{
-              border: "1px solid #FCD048",
-              borderRadius: "6px",
-            }}
+            className="py-[10px]"
+           
           >
             <p className="text-[16px] font-[700] text-[#fff] leading-[150%] text-[#000]">
               Based on your Goal income: {goalIncome}

@@ -40,13 +40,10 @@ const QuizStep1 = () => {
       <div className="flex items-center justify-between w-[100%]">
         <div className="max-w-[600px] w-full  mt-[6rem]">
           <h1 className="text-[30px] text-[#fff] font-bold mb-1 uppercase">
-            76,000,000 People have joined{" "}
+           The 2025 Crypto Bull Market Has Just Started
           </h1>
           <p className="text-[16px] font-[400] text-[#fff] mb-6 ">
-            76 million people invested in crypto for the first time
-            in 2024. From January to December, the market grew by over 75
-            percent, outperforming stocks, real estate, ETFs, and every other
-            major financial market by a wide margin.
+         In May 2025, Bitcoin reached a new all-time high of $112,000, marking the start of a new bull market cycle. With global financial markets stabilizing, crypto is once again leading the way, outpacing traditional assets and capturing the attention of millions.
           </p>
           <button
             onClick={handleNext}
