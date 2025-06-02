@@ -1,3 +1,4 @@
+ import { useEffect, useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import QuizStep1 from "./pages/QuizStep1"
 import QuizStep2 from "./pages/QuizStep2"
@@ -31,43 +32,80 @@ import QuizPage from "./pages/QuizPage"
 import QuizStep18_28 from "./pages/QuizStep18_28"
 import QuizStep19_28 from "./pages/QuizStep19_28"
 import QuizStep27 from "./pages/QuizStep27"
+import MobileQuizPage from "./mobile/MobileQuizPage"
+import MobileQuizStep1 from "./mobile/MobileQuizStep1"
+import MobileQuizStep2 from "./mobile/MobileQuizStep2"
+import MobileQuizStep3 from "./mobile/MobileQuizStep3"
+import MobileQuizStep4 from "./mobile/MobileQuizStep4"
+import MobileQuizStep5 from "./mobile/MobileQuizStep5"
+import MobileQuizStep6 from "./mobile/MobileQuizStep6"
+import MobileQuizStep7 from "./mobile/MobileQuizStep7"
+import MobileQuizStep8 from "./mobile/MobileQuizStep8"
+import MobileQuizStep9 from "./mobile/MobileQuizStep9"
+import MobileQuizStep10 from "./mobile/MobileQuizStep10"
+import MobileQuizStep11 from "./mobile/MobileQuizStep11"
+import MobileQuizStep12 from "./mobile/MobileQuizStep12"
+import MobileQuizStep13 from "./mobile/MobileQuizStep13"
+import MobileQuizStep14 from "./mobile/MobileQuizStep14"
+import MobileQuizStep15 from "./mobile/MobileQuizStep15"
+import MobileQuizStep16 from "./mobile/MobileQuizStep16"
+import MobileQuizStep17 from "./mobile/MobileQuizStep17"
+import MobileQuizStep18 from "./mobile/MobileQuizStep18"
+
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= breakpoint)
+    }
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [breakpoint])
+
+  return isMobile
+}
 
 function App() {
+ 
+ const isMobile = useIsMobile()
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<QuizPage />} />
-        <Route path="/quiz/step=1" element={<QuizPage />} />
-        <Route path="/quiz/fact-check" element={<QuizStep1 />} />
-        <Route path="/quiz/step=2" element={<QuizStep2 />} />
-        <Route path="/quiz/step=3" element={<QuizStep3 />} />
-        <Route path="/quiz/step=4" element={<QuizStep4 />} />
-        <Route path="/quiz/step=5" element={<QuizStep5 />} />
-        <Route path="/quiz/step=6" element={<QuizStep6 />} />
-        <Route path="/quiz/fact-check-2" element={<QuizStep7 />} />
-        <Route path="/quiz/step=7" element={<QuizStep8 />} />
-        <Route path="/quiz/fact-check-3" element={<QuizStep9 />} />
-        <Route path="/quiz/step=8" element={<QuizStep10 />} />
-        <Route path="/quiz/step=9" element={<QuizStep11 />} />
-        <Route path="/quiz/fact-check-no=3" element={<QuizStep12 />} />
-        <Route path="/quiz/step=10" element={<QuizStep13 />} />
-        <Route path="/quiz/step=11" element={<QuizStep14 />} />
-        <Route path="/quiz/step=12" element={<QuizStep15 />} />
-        <Route path="/quiz/fact-check-no=4" element={<QuizStep16 />} />
-        <Route path="/quiz/step=13" element={<QuizStep17 />} />
-        <Route path="/quiz/step=14" element={<QuizStep18 />} />
-        <Route path="/quiz/step=15" element={<QuizStep19 />} />
-        <Route path="/quiz/step=16" element={<QuizStep20 />} />
-        <Route path="/quiz/step=17" element={<QuizStep21 />} />
-        <Route path="/quiz/step=18" element={<QuizStep22 />} />
-        <Route path="/quiz/step=18_28" element={<QuizStep18_28 />} />
-        <Route path="/quiz/step=19_28" element={<QuizStep19_28 />} />
+        <Route path="/" element={!isMobile ? <QuizPage /> : <MobileQuizPage />}/>
+        <Route path="/quiz/step=1" element={!isMobile ? <QuizPage /> : <MobileQuizPage />} />
+        <Route path="/quiz/fact-check" element={!isMobile ? <QuizStep1 /> : <MobileQuizStep1 />} />
+        <Route path="/quiz/step=2" element={!isMobile ? <QuizStep2 /> : <MobileQuizStep2 />} />
+        <Route path="/quiz/step=3" element={!isMobile ? <QuizStep3 /> : <MobileQuizStep3 />} />
+        <Route path="/quiz/step=4" element={!isMobile ? <QuizStep4 /> : <MobileQuizStep4 />} />
+        <Route path="/quiz/step=5" element={!isMobile ? <QuizStep5 /> : <MobileQuizStep5 />} />
+        <Route path="/quiz/step=6" element={!isMobile ? <QuizStep6 /> : <MobileQuizStep6 />} />
+        <Route path="/quiz/fact-check-2" element={!isMobile ? <QuizStep7 /> : <MobileQuizStep7 />} />
+        <Route path="/quiz/step=7" element={!isMobile ? <QuizStep8 /> : <MobileQuizStep8 />} />
+        <Route path="/quiz/fact-check-3" element={!isMobile ? <QuizStep9 /> : <MobileQuizStep9 />} />
+        <Route path="/quiz/step=8" element={!isMobile ? <QuizStep10 /> : <MobileQuizStep10 />} />
+        <Route path="/quiz/step=9" element={!isMobile ? <QuizStep11 /> : <MobileQuizStep11 />} />
+        <Route path="/quiz/fact-check-no=3" element={!isMobile ? <QuizStep12 /> : <MobileQuizStep12 />} />
+        <Route path="/quiz/step=10" element={!isMobile ? <QuizStep13 /> : <MobileQuizStep13 />} />
+        <Route path="/quiz/step=11" element={!isMobile ? <QuizStep14 /> : <MobileQuizStep14 />} />
+        <Route path="/quiz/step=12" element={!isMobile ? <QuizStep15 /> : <MobileQuizStep15 />} />
+        <Route path="/quiz/fact-check-no=4" element={!isMobile ? <QuizStep16 /> : <MobileQuizStep16 />} />
+        <Route path="/quiz/step=13" element={!isMobile ? <QuizStep17 /> : <MobileQuizStep17 />} />
+        <Route path="/quiz/step=14" element={!isMobile ? <QuizStep18 /> : <MobileQuizStep18 />} />
+        <Route path="/quiz/step=15" element={!isMobile ? <QuizStep19 /> : ""} />
+        <Route path="/quiz/step=16" element={!isMobile ? <QuizStep20 /> : ""} />
+        <Route path="/quiz/step=17" element={!isMobile ? <QuizStep21 /> : ""} />
+        <Route path="/quiz/step=18" element={!isMobile ? <QuizStep22 /> : ""} />
+        <Route path="/quiz/step=18_28" element={!isMobile ? <QuizStep18_28 /> : ""} />
+        <Route path="/quiz/step=19_28" element={!isMobile ? <QuizStep19_28 /> : ""} />
         {/* <Route path="/quiz/step=19" element={<QuizStep23 />} /> */}
-        <Route path="/quiz/fact-check-no=5" element={<QuizStep24 />} />
+        <Route path="/quiz/fact-check-no=5" element={!isMobile ? <QuizStep24 /> : ""} />
         {/* <Route path="/quiz/fact-check-no=6" element={<QuizStep25 />} /> */}
         {/* <Route path="/quiz/fact-check-no=7_1" element={<QuizStep26 />} /> */}
-        <Route path="/quiz/fact-check-no=7_2" element={<QuizStep27 />} />
-        <Route path="/quiz/results" element={<Results />} />
+        <Route path="/quiz/fact-check-no=7_2" element={!isMobile ? <QuizStep27 /> : ""} />
+        <Route path="/quiz/results" element={!isMobile ? <Results /> : ""} />
         <Route path="/loading" element={<Loading />} />
       </Routes>
     </Router>
