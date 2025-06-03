@@ -70,7 +70,7 @@ const handleNext = (option) => {
 
       <div className="max-w-[1050px] w-full text-center mt-6">
         <h1 className="text-[28px] font-[700] leading-[120%] mb-1  text-center">
-          Is there something special <br /> you wish to achive?  
+          Is there something special you wish to achive?  
         </h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 my-8">
           {options.map((option) => (
