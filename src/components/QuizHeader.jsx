@@ -17,6 +17,8 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
     const isFactno10 = location.pathname === "/quiz/step=19_28";
 
   const isResults= location.pathname === "/quiz/results";
+  const isHome= location.pathname === "/";
+  const isStep1= location.pathname === "/quiz/step=1";
 
   const getPrevStepUrl = () => {
     navigate(-1);
@@ -25,6 +27,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
   return (
     <div className="w-full ">
       <div className="flex justify-between items-center mb-4">
+        {!isHome && !isStep1 &&
         <button
           onClick={getPrevStepUrl}
           className="text-white bg-[#444444] rounded-[12px] py-2 px-3"
@@ -44,15 +47,16 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
             />
           </svg>
         </button>
+        }
 
-        <div className="flex items-center">
-          <img src={Logo} className="h-[100%] w-[100%] bg-cover" alt="" />
+        <div className="flex justify-center w-[100%] items-center">
+          <img src={Logo} className=" bg-cover" alt="" />
         </div>
 
         <div className="text-white">
      
           {currentStep}
-          {!isFact && !isFactStep7 && !isResults && !isFactcheck3 && !isFactno3 && !isFactno4 && !isFactno5 && !isFactno6 && !isFactno7 && !isFactno8 && !isFactno9 && !isFactno10 &&`/${totalSteps}`}
+          {!isFact && !isStep1 && !isFactStep7 && !isResults && !isFactcheck3 && !isFactno3 && !isFactno4 && !isFactno5 && !isFactno6 && !isFactno7 && !isFactno8 && !isFactno9 && !isFactno10 &&`/${totalSteps}`}
         
         </div>
       </div>

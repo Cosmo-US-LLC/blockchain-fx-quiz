@@ -38,7 +38,6 @@ const QuizStep10 = () => {
     },
   ]
 
-  // Simulate loading
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)

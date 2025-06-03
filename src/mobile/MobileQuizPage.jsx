@@ -42,18 +42,17 @@ const MobileQuizPage = () => {
 
   return (
     <div className="quiz-container bg-[red] min-h-screen  flex flex-col items-center p-4">
-      <QuizHeader currentStep={1} totalSteps={18} />
+      <QuizHeader currentStep={""} totalSteps={18} />
             <QuizSteps currentStep={1} totalSteps={28} />
       <div className="max-w-2xl w-full text-center mb-4 mt-8">
         <div className="space-y-[15px]">
-          <h1 className="text-[30px] font-[700] leading-[120%] text-[#fff] tracking-[-2px] ">
-            CRYPTO WEALTH <br /> GROWTH CHALLENGE
+          <h1 className="text-[30px] uppercase font-[700] leading-[120%] text-[#fff] tracking-[-2px] ">
+            What’s Your Crypto <br /> Potential in 2025?
           </h1>
 
-          <p className="text-[15px] font-[400] leading-[150%] text-[#fff]">
+          <p className="text-[15px] font-[400] leading-[150%] uppercase text-[#fff]">
             {" "}
-            <span className="font-[700]">1-MINUTE QUIZ:</span> DISCOVER YOUR
-            CRYPTO POTENTIAL IN 2025
+            Take <span className="font-[700]">the 1-minute quiz:</span> and discover now
           </p>
           <h2 className="text-[16px] font-[400] leading-[150%] text-[#fff]">
             SELECT YOUR <span className="font-[700]">AGE</span>
