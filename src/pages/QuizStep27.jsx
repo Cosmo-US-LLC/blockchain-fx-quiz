@@ -48,7 +48,7 @@ const QuizStep27 = () => {
         </div>
         <div className="max-w-[1020px] mx-auto  w-full ">
           <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
-            $2.2 Million Raised In 4 Weeks
+            Analysing your profile 
           </h1>
           <p className="text-[16px]  text-center font-[400] text-[#fff] mb-6 ">
            BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users <br/>to become a part of its next generation crypto exchange, all within the past 4 weeks.
