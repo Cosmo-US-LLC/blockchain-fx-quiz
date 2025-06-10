@@ -40,7 +40,6 @@ const QuizStep18_28 = () => {
       title: "Other",
       img: Step_21_6,
     },
-    
   ];
 
   useEffect(() => {
@@ -51,39 +50,36 @@ const QuizStep18_28 = () => {
     return () => clearTimeout(timer);
   }, []);
 
-const handleNext = (option) => {
-  localStorage.setItem("specialWish", option.title);
-  navigate("/quiz/fact-check-no=7_2");
-};
-
-
+  const handleNext = (option) => {
+    localStorage.setItem("specialWish", option.title);
+    navigate("/quiz/fact-check-no=7_2");
+  };
 
   return (
-    <div className="quiz-container min-h-screen flex flex-col items-center p-4"
-     style={{
-                 backgroundColor:"#000000"
-                
-              }}
+    <div
+      className="flex flex-col items-center min-h-screen p-4 quiz-container"
+      style={{
+        backgroundColor: "#000000",
+      }}
     >
       <QuizHeader currentStep={18} totalSteps={18} />
       <QuizSteps currentStep={21} totalSteps={28} />
 
       <div className="max-w-[1050px] w-full text-center mt-12">
         <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">
-          Is there something special <br /> you wish to achive?  
+          Is there something special <br /> you wish to achive?
         </h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 my-8">
           {options.map((option) => (
             <div
               key={option}
               style={{
-                 background: "rgba(245, 245, 245, 0.15)",
-                
+                background: "rgba(245, 245, 245, 0.15)",
               }}
               className={`option-card py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer ${
                 selectedOption === option ? "selected" : ""
               }`}
-             onClick={() => handleNext(option)}
+              onClick={() => handleNext(option)}
             >
               <img src={option.img} className="h-[40px]" alt="" />
               <p className="w-[88%] text-white text-start font-medium">

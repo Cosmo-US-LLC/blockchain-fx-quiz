@@ -74,12 +74,12 @@ const Results = () => {
   return (
     <div>
       <div
-        className="quiz-container   min-h-screen overflow-hidden flex flex-col items-center p-4"
+        className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container"
         style={{
           backgroundColor: "#000000",
         }}
       >
-        <QuizHeader currentStep={""} totalSteps={28} />
+        <QuizHeader currentStep={"Special Bonus"} totalSteps={28} />
         <QuizSteps currentStep={28} totalSteps={28} />
         <div className="mb-4 !mt-[-22px] bg-[#D99A2633] w-[100%] flex justify-center items-center rounded-[8px]">
           <img
@@ -139,7 +139,7 @@ const Results = () => {
                     {showPopup && (
                       <div className="fixed bottom-[8%] z-[99] shadow left-1/2 transform -translate-x-1/2 animate-in fade-in-0 zoom-in-95 duration-200">
                         <div className="bg-[#353535] text-white px-4 py-4 rounded-lg shadow-lg flex items-center gap-2 whitespace-nowrap">
-                          <div className="w-5 h-5  rounded-full flex items-center justify-center">
+                          <div className="flex items-center justify-center w-5 h-5 rounded-full">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
@@ -178,7 +178,7 @@ const Results = () => {
                   anywhere else through our industry connections. A win for
                   everyone.{" "}
                 </p>
-                <div className="flex justify-center items-center mb-6">
+                <div className="flex items-center justify-center mb-6">
                   <img src={result_icon_3} className="h-[132px]" alt="" />
                 </div>
               </div>
@@ -225,7 +225,7 @@ function GradientRangeSlider({ value, onChange, gradientColors, label }) {
           max="100"
           value={value}
           onChange={handleChange}
-          className="appearance-none bg-transparent absolute top-0 left-0 w-full h-full z-10 cursor-pointer"
+          className="absolute top-0 left-0 z-10 w-full h-full bg-transparent appearance-none cursor-pointer"
           style={{
             // Hide the default appearance but keep functionality
             WebkitAppearance: "none",
@@ -238,7 +238,7 @@ function GradientRangeSlider({ value, onChange, gradientColors, label }) {
 
         {/* Custom thumb/handle */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 h-5 w-5 rounded-full border-2 border-white bg-yellow-500 shadow-md pointer-events-none"
+          className="absolute w-5 h-5 -translate-y-1/2 bg-yellow-500 border-2 border-white rounded-full shadow-md pointer-events-none top-1/2"
           style={{
             left: `calc(${value}% - 10px)`,
           }}

@@ -30,8 +30,8 @@ const MobileQuizStep27 = () => {
   }, [navigate]);
 
   return (
-    <div className="quiz-container min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={""} totalSteps={""} />
+    <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
+      <QuizHeader currentStep={"Loading"} totalSteps={""} />
       <QuizSteps currentStep={22} totalSteps={28} />
 
       <div className="mt-6 w-[100%] max-w-[1240px] mx-auto ">
@@ -48,10 +48,10 @@ const MobileQuizStep27 = () => {
         </div>
         <div className="max-w-[1020px] mx-auto  w-full ">
           <h1 className="text-[28px] text-center text-[#fff] font-bold mb-4 ">
-            $2.2 Million Raised <br /> In 4 Weeks
+            Analysing your results 
           </h1>
-          <p className="text-[16px]  text-center font-[400] text-[#fff] mb-6 ">
-           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users <br/>to become a part of its next generation crypto exchange, all within the past 4 weeks.
+          <p className="text-[15px] leading-[26px] text-center font-[400] text-[#fff] mb-6 ">
+           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users to become <br/> a part of its next generation crypto exchange, all within the past 4 weeks.
           </p>
           <div>
             <div className="bg-[#4B4B4B] space-y-[5px] mx-auto rounded-[4px] p-8 mt-8 max-w-[458px] w-[100%]">

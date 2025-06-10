@@ -37,10 +37,10 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="quiz-container min-h-screen  flex flex-col items-center p-4">
-      <QuizHeader currentStep={""} totalSteps={18} />
+    <div className="flex flex-col items-center min-h-screen p-4 quiz-container">
+      <QuizHeader currentStep={"Quiz"} totalSteps={18} />
       <QuizSteps currentStep={1} totalSteps={28} />
-      <div className="max-w-2xl w-full text-center mb-8 mt-8">
+      <div className="w-full max-w-2xl mt-6 mb-6 text-center">
         <div className="space-y-[10px]">
           <h1 className="text-[40px] font-[700] uppercase leading-[120%] text-[#fff] tracking-[-2px] ">
             What’s Your Crypto <br /> Potential in 2025?
@@ -48,13 +48,14 @@ const QuizPage = () => {
 
           <p className="text-[14px] font-[400] leading-[150%] uppercase text-[#fff]">
             {" "}
-            Take <span className="font-[700]">the 1-minute quiz:</span> and find out now    
+            Take <span className="font-[700]">the 1-minute quiz:</span> and find
+            out now
           </p>
           <h2 className="text-[16px] font-[400] leading-[150%] text-[#fff]">
             SELECT YOUR <span className="font-[700]">AGE</span>
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 mt-8">
+        <div className="grid grid-cols-2 gap-4 mt-8 mb-8 md:grid-cols-4">
           {ageOptions.map((option) => (
             <AgeOption
               key={option.range}

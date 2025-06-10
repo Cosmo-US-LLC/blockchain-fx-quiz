@@ -28,12 +28,12 @@ const MobileQuizStep12 = () => {
 
  
   return (
-    <div className="quiz-container min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={""} totalSteps={""} />
+    <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
+      <QuizHeader currentStep={"Facts"} totalSteps={""} />
       <QuizSteps currentStep={12} totalSteps={28} />
 
       <div className=" max-w-[1240px] mx-auto mt-6 w-[100%]">
-        <div className=" w-full text-center ">
+        <div className="w-full text-center ">
           <h1 className="text-[28px] text-center text-[#fff] font-bold mb-4 ">
        How millionaires build <br /> generational wealth
           </h1>
