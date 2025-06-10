@@ -28,8 +28,8 @@ const MobileQuizStep16 = () => {
 
 
   return (
-    <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
-      <QuizHeader currentStep={""} totalSteps={28} />
+    <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
+      <QuizHeader currentStep={"Facts"} totalSteps={28} />
       <QuizSteps currentStep={16} totalSteps={28} />
 
       <div className=" max-w-[1240px] mx-auto  mt-6 w-[100%]">
@@ -44,7 +44,7 @@ const MobileQuizStep16 = () => {
           <div className="bg-[#252525] mt-8  w-[100%] flex justify-center items-center rounded-[8px]">
             <img
               src={Step_16}
-              className=" object-cover "
+              className="object-cover "
               alt=""
             />
         </div>

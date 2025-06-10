@@ -84,8 +84,8 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
     return(
 
         <div>
-          <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
-            <QuizHeader currentStep={""} totalSteps={28} />
+          <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
+            <QuizHeader currentStep={"Results"} totalSteps={28} />
                     <QuizSteps currentStep={23} totalSteps={28} />
               <div  className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto">
                  <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
@@ -98,7 +98,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
                 }}
                 className=" max-w-[548px]  pt-8 mx-auto text-white rounded-lg overflow-hidden">
       {/* Header */}
-      <div className="px-12 py-4 relative">
+      <div className="relative px-12 py-4">
         <div className="flex items-center justify-between">
           <h2 className="text-white font-[500] text-[19.6px] ">Readiness Score</h2>
           <span
@@ -117,24 +117,24 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
           <div className="relative mb-2">
             <div className="w-full h-3 rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 opacity-30"></div>
 
-            <div className="absolute top-0 left-0 h-3 rounded-full overflow-hidden">
+            <div className="absolute top-0 left-0 h-3 overflow-hidden rounded-full">
               <div
-                className="h-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 transition-all duration-100 ease-out"
+                className="h-full transition-all duration-100 ease-out bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"
                 style={{ width: `${(progress / 100) * 100}%` }}
               />
             </div>
 
             {progress > 0 && (
               <div
-                className="absolute top-0 transform -translate-x-1/2 transition-all duration-100 ease-out"
+                className="absolute top-0 transition-all duration-100 ease-out transform -translate-x-1/2"
                 style={{ left: `${progress}%` }}
               >
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                <div className="absolute transform -translate-x-1/2 -top-8 left-1/2">
+                  <div className="px-2 py-1 text-xs text-white bg-gray-800 rounded whitespace-nowrap">
                     {/* {getProgressLabel(progress)} */}
                     Moderate
                   </div>
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800"></div>
+                  <div className="absolute w-0 h-0 transform -translate-x-1/2 border-t-2 border-l-2 border-r-2 border-transparent top-full left-1/2 border-t-gray-800"></div>
                 </div>
 
                 <div className="w-4 h-4 bg-white rounded-full border-2 border-gray-600 shadow-lg transform -translate-y-0.5"></div>
@@ -142,31 +142,31 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
             )}
 
           </div>
-             <div className="flex justify-between text-xs mb-2 text-gray-400">
+             <div className="flex justify-between mb-2 text-xs text-gray-400">
             <span className="text-[12.2px] font-[400] text-[#fff]">Low</span>
             <span className="text-[12.2px] font-[400] text-[#fff]">Intermediate</span>
             <span className="text-[12.2px] font-[400] text-[#fff]">High</span>
           </div>
-          {/* <div className="text-xs text-gray-400 text-center">{Math.round(progress)}%</div> */}
+          {/* <div className="text-xs text-center text-gray-400">{Math.round(progress)}%</div> */}
         </div>
 
         <div 
         style={{
           background:"rgba(241, 240, 240, 0.10)"
         }}
-        className=" rounded-lg p-4 mb-6">
+        className="p-4 mb-6 rounded-lg ">
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0 mt-0.5">
               <img src={icons5} alt="" />
             </div>
             <div className="text-sm">
-              <p className="text-white font-medium mb-2">Impressive score to succeed in crypto</p>
-              <p className="text-gray-300 leading-relaxed">In 2024, cryptos like Bitcoin and Solana gained over 150%. You can benefit too by staying informed, spotting undervalued projects early, and getting in before the next bull run begins.
+              <p className="mb-2 font-medium text-white">Impressive score to succeed in crypto</p>
+              <p className="leading-relaxed text-gray-300">In 2024, cryptos like Bitcoin and Solana gained over 150%. You can benefit too by staying informed, spotting undervalued projects early, and getting in before the next bull run begins.
               </p>
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <div className="space-y-[15px] pb-4">
             <div className="flex items-center space-x-2">
               <img src={icons9} alt="" />
@@ -225,13 +225,13 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
           </p>
           <img src={icons4} alt="" />
         </div>
-          <div className="flex items-center space-x-2 mb-6 justify-between">
+          <div className="flex items-center justify-between mb-6 space-x-2">
             <div className="space-y-[8px] py-[15px] flex flex-col items-center max-w-[273.94px] w-[100%] rounded-[4px]"
             style={{
               background:"rgba(255, 255, 255, 0.10)"
             }}
             >
-              <div className="flex space-x-2 items-center">
+              <div className="flex items-center space-x-2">
                 <img src={icons2} alt="" />
                 <p className="text-[12px] txet-[#fff] font-[400]">Your goal</p>
               </div>
@@ -242,7 +242,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
               background:"rgba(255, 255, 255, 0.10)"
             }}
             >
-              <div className="flex space-x-2 items-center">
+              <div className="flex items-center space-x-2">
                 <img src={icons3} alt="" />
                 <p className="text-[12px] txet-[#fff] font-[400]">Your target</p>
               </div>
