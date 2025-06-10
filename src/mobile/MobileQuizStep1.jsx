@@ -39,7 +39,7 @@ const MobileQuizStep1 = () => {
 
       <div className="w-[100%]">
         <div className="w-full  mt-[1rem]">
-          <h1 className="text-[28px] text-center text-[#fff] font-bold mb-3 uppercase">
+          <h1 className="text-[28px] text-center text-[#fff] font-bold mb-3">
            The 2025 Crypto <br /> Bull Market Has <br /> Just Started
           </h1>
           <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">

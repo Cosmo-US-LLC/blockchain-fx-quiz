@@ -89,7 +89,7 @@ const QuizStep22 = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[28px]">
-            <div className="">
+            <div className="flex flex-col mb-3">
               <label
                 htmlFor=""
                 className=" text-[18px] block font-[700] leading-[222%] text-[#fff]"
@@ -113,8 +113,8 @@ const QuizStep22 = () => {
                 placeholder="$10,000"
               />
             </div>
-            <div className="h-[1px] w-[100%] bg-[#737373]"></div>
-            <div>
+            <div className="h-[1px] w-[100%] flex bg-[#737373]"></div>
+            <div className="flex flex-col">
               <label
                 htmlFor=""
                 className=" text-[18px] block font-[700] leading-[222%] text-[#fff]"

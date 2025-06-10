@@ -32,7 +32,7 @@ const QuizStep1 = () => {
       <div className="quiz-container max-w-[1240px] mx-auto min-h-screen overflow-hidden flex flex-col items-center p-4">
         <div className="flex items-center justify-between w-[100%]">
           <div className="max-w-[600px] w-full  mt-[6rem] text-center flex flex-col gap-6 items-center">
-            <h1 className="text-[30px] text-[#fff] font-bold mb-1 uppercase">
+            <h1 className="text-[30px] text-[#fff] font-bold mb-1">
               The 2025 Crypto Bull<br /> Market Has Just Started
             </h1>
             <p className="text-[16px] font-[400] text-[#fff] mb-6 ">

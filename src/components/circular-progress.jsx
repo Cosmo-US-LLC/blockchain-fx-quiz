@@ -9,7 +9,7 @@ export default function CircularProgress({
   progressColor = "#D99A26",
   textColor = "#FFFFFF",
   showPercentage = true,
-  label = "Your results are loading",
+  label = "Your are loading",
 }) {
   const [progress, setProgress] = useState(0); 
 const [displayProgress, setDisplayProgress] = useState(0); 
