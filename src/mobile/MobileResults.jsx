@@ -103,7 +103,7 @@ const MobileResults = () => {
             <p className="text-[16px] px-2  text-center font-[700] text-[#fff] mb-[13px] ">
               You’ve completed the challenge <br /> and unlocked this special offer.
               <br /> <br />
-              Here’s your limited one-time bonus <br /> code to buy $BFX
+              Here’s your limited one-time bonus code <br /> to buy $BFX
             </p>
             <div className="max-w-[618px] pt-5 px-4 pb-[1px] mx-auto bg-[#131313]">
               {/* <div className="flex items-center max-w-[506px] mx-auto mb-[25px]">

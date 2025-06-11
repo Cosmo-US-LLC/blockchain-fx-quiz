@@ -78,7 +78,7 @@ const MobileQuizStep22 = () => {
       <QuizHeader currentStep={"Earn"} totalSteps={""} />
       <QuizSteps currentStep={24} totalSteps={28} />
 
-      <div className="w-[100%] mx-auto space-y-[40px] mt-6">
+      <div className="w-[100%] mx-auto space-y-[40px]">
         <div className=" space-y-[15px] w-full ">
           <h1 className="text-[28px] text-center font-[700] leading-[120%] mb-1 ">
             Ready to see how much <br />

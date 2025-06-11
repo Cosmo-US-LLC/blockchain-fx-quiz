@@ -40,7 +40,7 @@ const MobileQuizPage = () => {
     <div className="quiz-container bg-[red] min-h-screen  flex flex-col items-center p-4">
       <QuizHeader currentStep={"Quiz"} totalSteps={18} />
       <QuizSteps currentStep={1} totalSteps={28} />
-      <div className="w-full max-w-2xl mt-8 mb-4 text-center">
+      <div className="w-full max-w-2xl mb-4 text-center">
         <div className="space-y-[15px]">
           <h1 className="text-[30px] uppercase font-[700] leading-[120%] text-[#fff]">
             What’s Your Crypto <br /> Potential in 2025?

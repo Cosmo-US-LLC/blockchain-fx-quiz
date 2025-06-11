@@ -11,8 +11,6 @@ const MobileQuizStep7 = () => {
   const [loading, setLoading] = useState(true);
   const [selectedOption, setSelectedOption] = useState();
 
- 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -22,35 +20,30 @@ const MobileQuizStep7 = () => {
   }, []);
 
   const handleNext = () => {
-   
     navigate("/quiz/step=7");
   };
 
- 
   return (
     <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
       <QuizHeader currentStep={"Facts"} totalSteps={28} />
       <QuizSteps currentStep={7} totalSteps={28} />
 
-      <div className=" max-w-[1240px] mx-auto mt-6 w-[100%]">
+      <div className=" max-w-[1240px] mx-auto w-[100%]">
         <div className="w-full text-center ">
           <h1 className="text-[28px] text-[#fff] text-center font-bold mb-4  leading-[130%]">
-          We’ve all missed some major opportunities in crypto
+            We’ve all missed some major opportunities in crypto
           </h1>
           <p className="text-[16px] font-[400] text-center text-[#fff] mb-6 ">
-           The earlier you get in, the cheaper the price. That means less risk and more growth potential. Bitcoin was once worth less than $1. <br /><br /> Many of today’s most successful crypto projects like Ethereum, Solana, and BNB started with a presale. That’s where early supporters saw the biggest gains.
+            The earlier you get in, the cheaper the price. That means less risk
+            and more growth potential. Bitcoin was once worth less than $1.{" "}
+            <br />
+            <br /> Many of today’s most successful crypto projects like
+            Ethereum, Solana, and BNB started with a presale. That’s where early
+            supporters saw the biggest gains.
           </p>
-        
         </div>
-          <div className="bg-[#252525] mt-[2rem] max-w-[300px] mx-auto h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
-            <img
-              src={Step_7}
-              className="max-h-[360px]"
-              alt=""
-            />
-        </div>
-         <div className="flex justify-center mt-12">
-             <button
+        <div className="flex justify-center mt-8">
+          <button
             onClick={handleNext}
             style={{
               borderRadius: "10px",
@@ -60,7 +53,10 @@ const MobileQuizStep7 = () => {
           >
             Continue
           </button>
-         </div>
+        </div>
+        <div className="bg-[#252525] mt-[2rem] max-w-[300px] mx-auto h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
+          <img src={Step_7} className="max-h-[360px]" alt="" />
+        </div>
       </div>
     </div>
   );

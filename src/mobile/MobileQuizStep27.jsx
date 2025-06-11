@@ -34,7 +34,7 @@ const MobileQuizStep27 = () => {
       <QuizHeader currentStep={"Loading"} totalSteps={""} />
       <QuizSteps currentStep={22} totalSteps={28} />
 
-      <div className="mt-6 w-[100%] max-w-[1240px] mx-auto ">
+      <div className="w-[100%] max-w-[1240px] mx-auto ">
         <div className="flex-col items-center justify-center bg-[#12121200] p-4">
           <CircularProgress
             percentage={100}

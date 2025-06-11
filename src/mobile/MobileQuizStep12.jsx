@@ -11,8 +11,6 @@ const MobileQuizStep12 = () => {
   const [loading, setLoading] = useState(true);
   const [selectedOption, setSelectedOption] = useState();
 
- 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -22,34 +20,28 @@ const MobileQuizStep12 = () => {
   }, []);
 
   const handleNext = () => {
-   
     navigate("/quiz/step=10");
   };
 
- 
   return (
     <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
       <QuizHeader currentStep={"Facts"} totalSteps={""} />
       <QuizSteps currentStep={12} totalSteps={28} />
 
-      <div className=" max-w-[1240px] mx-auto mt-6 w-[100%]">
+      <div className=" max-w-[1240px] mx-auto  w-[100%]">
         <div className="w-full text-center ">
           <h1 className="text-[28px] text-center text-[#fff] font-bold mb-4 ">
-       How millionaires build <br /> generational wealth
+            How millionaires build <br /> generational wealth
           </h1>
           <p className="text-[16px] max-w-[380px] text-center mx-auto font-[400] text-[#fff] mb-6 ">
-         Most millionaires and billionaires don’t rely on just one source of income. On average, they have 7 different income streams, including business earnings, investments, crypto, real estate, dividends, and more.
+            Most millionaires and billionaires don’t rely on just one source of
+            income. On average, they have 7 different income streams, including
+            business earnings, investments, crypto, real estate, dividends, and
+            more.
           </p>
         </div>
-          <div className="bg-[#252525] mx-auto relative max-w-[300px] !mt-[40px] h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
-            <img
-              src={Step_12}
-              className="max-h-[320px] mt-[-20px]"
-              alt=""
-            />
-        </div>
-        <div className="flex justify-center mt-12">
-             <button
+        <div className="flex justify-center mt-8">
+          <button
             onClick={handleNext}
             style={{
               borderRadius: "10px",
@@ -59,6 +51,9 @@ const MobileQuizStep12 = () => {
           >
             Continue
           </button>
+        </div>
+        <div className="bg-[#252525] mx-auto relative max-w-[300px] !mt-[40px] h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
+          <img src={Step_12} className="max-h-[320px] mt-[-20px]" alt="" />
         </div>
       </div>
     </div>
