@@ -42,11 +42,11 @@ const MobileQuizPage = () => {
       <QuizSteps currentStep={1} totalSteps={28} />
       <div className="w-full max-w-2xl mb-4 text-center">
         <div className="space-y-[15px]">
-          <h1 className="text-[30px] uppercase font-[700] leading-[120%] text-[#fff]">
+          <h1 className="text-[29px] uppercase font-[700] leading-[120%] text-[#fff]">
             What’s Your Crypto <br /> Potential in 2025?
           </h1>
 
-          <p className="text-[15px] font-[400] leading-[150%] uppercase text-[#fff]">
+          <p className="text-[14px] font-[400] leading-[150%] uppercase text-[#fff]">
             {" "}
             Take <span className="font-[700]">the 1-minute quiz</span> and
             discover now
