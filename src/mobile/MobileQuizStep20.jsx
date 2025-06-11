@@ -67,11 +67,11 @@ const MobileQuizStep20 = () => {
   // }
 
   return (
-    <div className="quiz-container min-h-screen flex flex-col items-center p-4 bg-black">
+    <div className="flex flex-col items-center min-h-screen p-4 bg-black quiz-container">
       <QuizHeader currentStep={16} totalSteps={18} />
       <QuizSteps currentStep={20} totalSteps={28} />
 
-      <div className="max-w-[750px] w-full text-center mt-6">
+      <div className="max-w-[750px] w-full text-center">
         <h1 className="text-[28px] font-[700] leading-[120%] mb-1 text-center text-white">
           When you look at a new crypto projects, what matters most to you?
         </h1>
@@ -89,7 +89,7 @@ const MobileQuizStep20 = () => {
               className="option-card py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer"
               onClick={() => toggleOption(index)}
             >
-              <div className="flex items-center space-x-2 gap-4">
+              <div className="flex items-center gap-4 space-x-2">
                 <img src={option.img || "/placeholder.svg"} className="h-[40px]" alt="" />
                 <p className="text-start text-[16px] font-medium text-white">{option.title}</p>
               </div>

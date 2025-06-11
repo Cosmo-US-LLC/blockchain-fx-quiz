@@ -48,11 +48,11 @@ const MobileQuizStep21 = () => {
 
 
   return (
-    <div className="quiz-container min-h-screen flex flex-col items-center p-4">
+    <div className="flex flex-col items-center min-h-screen p-4 quiz-container">
       <QuizHeader currentStep={17} totalSteps={18} />
       <QuizSteps currentStep={21} totalSteps={28} />
 
-      <div className="max-w-[1050px] w-full text-center mt-6">
+      <div className="max-w-[1050px] w-full text-center">
         <h1 className="text-[28px] font-[700] leading-[120%] mb-1  text-center">
           When you get the chance to buy into early stage crypto projects that generate continuous income, how do you usually react?
         </h1>
