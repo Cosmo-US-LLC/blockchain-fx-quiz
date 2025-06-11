@@ -26,7 +26,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
 
   return (
     <div className="flex w-full h-[60px] items-center justify-between">
-      {/* <div className="flex items-center justify-between"> */}
+      <div className="w-[10%] max-sm:w-[33%] ">
         {!isHome && !isStep1 && (
           <button
             onClick={getPrevStepUrl}
@@ -48,13 +48,13 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
             </svg>
           </button>
         )}
+      </div>
+      <div className="flex items-center justify-center w-[80%] max-sm:w-[34%]">
+        <img src={Logo} className="h-auto bg-cover " alt="" />
+      </div>
 
-        <div className="flex justify-center w-[100%] items-center">
-          <img src={Logo} className="bg-cover " alt="" />
-        </div>
-
-        <div className="text-right w-[120px]  text-white">
-          {/* {currentStep}
+      <div className="w-[10%] max-sm:w-[33%] mb-1  text-[#FFF] text-end leading-[26px] font-[400] tracking-[0.04em] text-[16px]">
+        {/* {currentStep}
           {!isFact &&
             !isStep1 &&
             !isFactStep7 &&
@@ -69,26 +69,25 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
             !isFactno9 &&
             !isFactno10 &&
             `/${totalSteps}`} */}
-          {currentStep}
-          {!isFact &&
-            !isFactStep7 &&
-            !isResults &&
-            !isFactcheck3 &&
-            !isFactno3 &&
-            !isFactno4 &&
-            !isFactno5 &&
-            !isFactno6 &&
-            !isFactno7 &&
-            !isFactno8 &&
-            !isFactno9 &&
-            !isFactno10 &&
-            !isHome &&
-            !isStep1 &&
-            // !bestCrypto &&
-            // !isFactno7_1 &&
-            `/${totalSteps}`}
-        </div>
-      {/* </div> */}
+        {currentStep}
+        {!isFact &&
+          !isFactStep7 &&
+          !isResults &&
+          !isFactcheck3 &&
+          !isFactno3 &&
+          !isFactno4 &&
+          !isFactno5 &&
+          !isFactno6 &&
+          !isFactno7 &&
+          !isFactno8 &&
+          !isFactno9 &&
+          !isFactno10 &&
+          !isHome &&
+          !isStep1 &&
+          // !bestCrypto &&
+          // !isFactno7_1 &&
+          `/${totalSteps}`}
+      </div>
     </div>
   );
 };
