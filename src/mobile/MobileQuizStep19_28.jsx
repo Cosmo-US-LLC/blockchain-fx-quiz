@@ -82,7 +82,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
         <QuizHeader currentStep={"Results"} totalSteps={28} />
         <QuizSteps currentStep={23} totalSteps={28} />
         <div className=" w-[100%] max-w-[1240px] mx-auto">
-          <h1 className="text-[28px] text-center text-[#fff] font-bold mb-6 ">
+          <h1 className="text-[27px] w-[100%] leading-[120%] text-center text-[#fff] font-[700] mb-6 ">
             Here's your crypto profile
           </h1>
           <div>

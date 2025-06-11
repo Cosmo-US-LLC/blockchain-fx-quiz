@@ -76,14 +76,13 @@ const MobileQuizPage = () => {
         </button> */}
         <div className="space-y-[70px]">
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
-            By clicking on an age group, you agree with{" "}
+            By clicking on an age group, you agree with{" "}<br />
             <a
               className="underline"
               href="https://blockchainfx.io/terms-of-service"
               target="_blank"
             >
-              Terms
-              <br /> and Conditions
+              Terms and Conditions
             </a>
             ,{" "}
             <a

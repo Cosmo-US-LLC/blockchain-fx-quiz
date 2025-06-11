@@ -33,7 +33,7 @@ const QuizStep26 = () => {
   }, [navigate]);
 
   return (
-    <div className="quiz-container min-h-screen overflow-hidden flex flex-col items-center p-4">
+    <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
       <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={26} totalSteps={28} />
 
@@ -46,7 +46,7 @@ const QuizStep26 = () => {
             backgroundColor="#353535"
             progressColor="#D99A26"
             textColor="#FFFFFF"
-            label="Your crypto profile is loading "
+            label="Your crypto profile is loading"
           />
         </div>
         <div className="max-w-[1240px] mx-auto  w-full ">

@@ -43,7 +43,7 @@ const QuizStep27 = () => {
             backgroundColor="#353535"
             progressColor="#D99A26"
             textColor="#FFFFFF"
-            label="Your are loading"
+            label="Your crypto profile is loading"
           />
         </div>
         <div className="max-w-[1020px] mx-auto  w-full ">
