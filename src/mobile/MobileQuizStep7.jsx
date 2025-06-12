@@ -24,16 +24,16 @@ const MobileQuizStep7 = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
+    <div className="flex flex-col items-center min-h-screen">
       <QuizHeader currentStep={"Facts"} totalSteps={28} />
       <QuizSteps currentStep={7} totalSteps={28} />
 
-      <div className=" max-w-[1240px] mx-auto w-[100%]">
-        <div className="w-full text-center ">
-          <h1 className="text-[28px] text-[#fff] text-center font-bold mb-4  leading-[130%]">
+      <div className="flex flex-col w-[100%] px-4 py-6 gap-6">
+        <div className="flex flex-col w-full gap-4 text-center">
+          <h1 className="text-[28px] text-[#fff] text-center font-bold leading-[130%]">
             We’ve all missed some major opportunities in crypto
           </h1>
-          <p className="text-[16px] font-[400] text-center text-[#fff] mb-6 ">
+          <p className="text-[16px] font-[400] text-center text-[#fff]">
             The earlier you get in, the cheaper the price. That means less risk
             and more growth potential. Bitcoin was once worth less than $1.{" "}
             <br />
@@ -42,20 +42,20 @@ const MobileQuizStep7 = () => {
             supporters saw the biggest gains.
           </p>
         </div>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center">
           <button
             onClick={handleNext}
             style={{
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px] w-[100%] text-[#17181D] text-[16px] leading-[24px] font-[700] uppercase`}
           >
             Continue
           </button>
         </div>
-        <div className="bg-[#252525] mt-[2rem] max-w-[300px] mx-auto h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
-          <img src={Step_7} className="max-h-[360px]" alt="" />
+        <div className="bg-[#252525] mx-auto w-[100%]  max-h-[280px] mt-4 flex justify-center items-center rounded-[8px] animate-fade-in-up">
+          <img src={Step_7} className="object-contain w-full max-w-[320px] max-h-[350px]" alt="" />
         </div>
       </div>
     </div>

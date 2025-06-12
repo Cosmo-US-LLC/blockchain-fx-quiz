@@ -25,7 +25,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
   };
 
   return (
-    <div className="flex w-full h-[60px] items-center justify-between">
+    <div className="flex w-full h-[60px] items-center justify-between px-4">
       <div className="w-[10%] max-sm:w-[33%] ">
         {!isHome && !isStep1 && (
           <button

@@ -43,9 +43,9 @@ const MobileQuizStep6 = () => {
     { title: "BGB", img: Step_6_10 },
   ];
 
-//   const row1 = options.slice(0, 4);
-//   const row2 = options.slice(4, 8);
-//   const row3 = options.slice(8);
+  //   const row1 = options.slice(0, 4);
+  //   const row2 = options.slice(4, 8);
+  //   const row3 = options.slice(8);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -57,7 +57,6 @@ const MobileQuizStep6 = () => {
   const handleNext = () => {
     navigate("/quiz/fact-check-2");
   };
-
 
   const renderCard = (option) => (
     <div
@@ -73,40 +72,34 @@ const MobileQuizStep6 = () => {
   );
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 quiz-container">
+    <div className="flex flex-col items-center min-h-screen">
       <QuizHeader currentStep={6} totalSteps={18} />
       <QuizSteps currentStep={6} totalSteps={28} />
 
-      <div className="max-w-[750px] w-full text-center">
-        <h1 className="text-[28px] font-[700] leading-[120%] mb-1 text-center">
+      <div className="flex flex-col w-full gap-4 px-4 py-6 overflow-y-auto text-center">
+        <h1 className="text-[28px] font-[700] leading-[120%]text-center">
           Did you miss any <br /> of these projects?
         </h1>
         <p className="text-[16px] text-white font-[700]">
           Choose all that apply
         </p>
 
-        <div className="mt-8 space-y-4">
+        <div className="space-y-4">
           <div className="grid grid-cols-2 max-w-[300px] mx-auto gap-y-4">
             {options.map(renderCard)}
           </div>
-          {/* <div className="grid grid-cols-4 max-w-[500px] mx-auto gap-4">
-            {row2.map(renderCard)}
-          </div>
-          <div className="grid grid-cols-2 max-w-[300px] mx-auto gap-4">
-            {row3.map(renderCard)}
-          </div> */}
 
           <div className="text-center !mt-8">
-              <button
-            onClick={handleNext}
-            style={{
-              borderRadius: "10px",
-              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
-            }}
-            className={`py-[13px] w-[100%] text-[#000] font-[500]`}
-          >
-            Continue
-          </button>
+            <button
+              onClick={handleNext}
+              style={{
+                borderRadius: "10px",
+                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+              }}
+              className={`py-[13px] w-[100%] text-[#000] font-[500]`}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </div>

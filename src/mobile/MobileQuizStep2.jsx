@@ -66,14 +66,14 @@ const handleOptionClick = (option) => {
   
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 quiz-container">
+    <div className="flex flex-col items-center min-h-screen quiz-container">
      <QuizHeader currentStep={2} totalSteps={18} />
       <QuizSteps currentStep={2} totalSteps={28} />
 
-      <div className="w-[100%] max-w-[1000px max-w-[1240px] mx-auto">
-        <h1 className="text-[28px] font-[700] leading-[120%] mb-1 text-center">What is your main goal?</h1>
+      <div className="w-[100%] flex flex-col gap-4 px-4 py-6 overflow-y-auto">
+        <h1 className="text-[28px] font-[700] leading-[120%] text-center">What is your main goal?</h1>
 
-        <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {options.map((option) => (
             <div
               key={option}
@@ -84,7 +84,7 @@ const handleOptionClick = (option) => {
               className={`option-card pr-4 flex space-x-2 items-center justify-between rounded-[8px] cursor-pointer ${selectedOption === option ? "selected" : ""}`}
               onClick={() => handleOptionClick(option)}
             >
-              <img src={option.img} className="h-[100px]" alt="" />
+              <img src={option.img} className="h-[96px]" alt="" />
               <p className="w-[60%] text-[16px] text-white font-medium">{option.title}</p>
             </div>
           ))}

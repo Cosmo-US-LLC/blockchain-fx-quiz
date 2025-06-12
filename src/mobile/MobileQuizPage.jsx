@@ -37,11 +37,11 @@ const MobileQuizPage = () => {
   };
 
   return (
-    <div className="quiz-container bg-[red] min-h-screen  flex flex-col items-center p-4">
+    <div className="relative min-h-screen">
       <QuizHeader currentStep={"Quiz"} totalSteps={18} />
       <QuizSteps currentStep={1} totalSteps={28} />
-      <div className="w-full max-w-2xl mb-4 text-center">
-        <div className="space-y-[15px]">
+      <div className="w-full px-4 pt-6 overflow-y-auto text-center pb-14 max-h-auto">
+        <div className="flex flex-col items-center gap-3">
           <h1 className="text-[29px] uppercase font-[700] leading-[120%] text-[#fff]">
             What’s Your Crypto <br /> Potential in 2025?
           </h1>
@@ -51,9 +51,9 @@ const MobileQuizPage = () => {
             Take <span className="font-[700]">the 1-minute quiz</span> and
             discover now
           </p>
-          <h2 className="text-[16px] font-[400] leading-[150%] text-[#fff]">
+          <p className="text-[16px] font-[400] mt-2 text-[#fff]">
             SELECT YOUR <span className="font-[700]">AGE</span>
-          </h2>
+          </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[4rem] gap-x-4 mb-8 mt-[4rem]">
           {ageOptions.map((option) => (
@@ -67,16 +67,16 @@ const MobileQuizPage = () => {
           ))}
         </div>
 
-        {/* <button
+         {/* <button
           onClick={handleNext}
           disabled={!selectedOption}
           className={`gold-button py-3 px-8 rounded-full font-medium ${!selectedOption ? "opacity-50" : ""}`}
         >
           Continue
-        </button> */}
-        <div className="space-y-[70px]">
+        </button>   */}
+        <div className="flex flex-col items-center">
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
-            By clicking on an age group, you agree with{" "}<br />
+            By clicking on an age group, you agree with <br />
             <a
               className="underline"
               href="https://blockchainfx.io/terms-of-service"
@@ -94,11 +94,11 @@ const MobileQuizPage = () => {
             </a>
             .
           </p>
-          <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
-            BlockchainFX 2025 ©All Rights Reserved.
-          </p>
         </div>
       </div>
+      <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%] absolute bottom-4 left-0 right-0 text-center">
+        BlockchainFX 2025 ©All Rights Reserved.
+      </p>
     </div>
   );
 };
