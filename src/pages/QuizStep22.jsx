@@ -74,27 +74,30 @@ const QuizStep22 = () => {
   }, [input1]);
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 quiz-container">
-      <QuizHeader currentStep={"Earn"} totalSteps={""} />
+    <div className="quiz-container min-h-screen flex flex-col items-center p-3">
+      <QuizHeader currentStep={""} totalSteps={""} />
       <QuizSteps currentStep={24} totalSteps={28} />
 
-      <div className="flex justify-between max-w-[1160px] w-[100%] mx-auto items-center mt-6">
+      <div className="flex justify-between max-w-[1160px] w-[100%] mx-auto items-center mt-4">
         <div className="max-w-[475px] space-y-[18px] w-full ">
           <h1 className="text-[30px] font-[700] leading-[120%] mb-1 ">
-            Ready to see how much <br /> you could earn with BFX
+           Estimate Your Potential <br /> Earnings with BFX
           </h1>
-          <div className="py-[6px]">
-            <p className="text-[16px] italic font-[700] text-[#fff] leading-[150%]">
-              Based on your Goal income: {goalIncome}
+          <span
+            className="py-[12px] "
+           
+          >
+            <p className="text-[16px] font-[600] text-[#fff] leading-[150%] text-[#000]">
+             Target Monthly Income : {goalIncome}
             </p>
-          </div>
-          <div className="flex flex-col gap-[28px]">
-            <div className="flex flex-col mb-3">
+          </span>
+          <div className="space-y-[12px]">
+            <div className="">
               <label
                 htmlFor=""
                 className=" text-[18px] block font-[700] leading-[222%] text-[#fff]"
               >
-                How much do you want to invest in BFX
+                BFX Purchase Amount:
               </label>
               <input
                 value={`${input1}`}
@@ -119,7 +122,7 @@ const QuizStep22 = () => {
                 htmlFor=""
                 className=" text-[18px] block font-[700] leading-[222%] text-[#fff]"
               >
-                How much will BFX be worth at launch?
+                Projected Value at Launch:
               </label>
 
               <p
@@ -146,7 +149,7 @@ const QuizStep22 = () => {
           
           <div>
             <p className="text-[18px] font-[700] leading-[222%] text-[#fff]">
-              Expected Monthly Revenue
+              Estimated Monthly Returns:
             </p>
             <div
               style={{
@@ -161,18 +164,20 @@ const QuizStep22 = () => {
               </p>
             </div>
           </div>
-          <div className="!mt-6 w-[]">
-            <button
-              onClick={handleNext}
-              style={{
-                borderRadius: "10px",
-                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
-              }}
-              className={`py-[13px] w-[100%] text-[#000] font-[700]`}
-            >
-              Continue
-            </button>
-          </div>
+           <div className="!mt-6 w-[]">
+        
+
+        <button
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[18px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
+          >
+          CUNLOCK YOUR SPECIAL BONUS (1/3)
+          </button>
+       </div>
         </div>
         <div className="max-w-[650.434px] w-[100%] ">
           <img src={Step_22} alt="" />

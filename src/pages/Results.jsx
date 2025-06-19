@@ -110,7 +110,7 @@ const Results = () => {
               <div className="flex items-center max-w-[506px] mx-auto mb-[25px]">
                 <p className="w-[50%] text-[16px] flex justify-start  font-[400] text-[#fff] ">
                   Your readiness:{" "}
-                  <span className="font-[700] text-[#D99A26] "> 84%</span>
+                  <span className="font-[700] text-[#D99A26] "> 87%</span>
                 </p>
               </div>
               <div className="flex justify-evenly pl-6 pt-3 items-center max-w-[506px] mx-auto w-[100%] bg-[#353535] mb-4">
@@ -191,7 +191,7 @@ const Results = () => {
                 borderRadius: "10px",
                 background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
               }}
-              className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+              className={`py-[13px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
             >
               Visit Now: BlockchainFX.com
             </button>

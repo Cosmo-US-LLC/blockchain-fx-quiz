@@ -32,7 +32,7 @@ const QuizStep16 = () => {
       <QuizHeader currentStep={"Facts"} totalSteps={28} />
       <QuizSteps currentStep={16} totalSteps={28} />
 
-      <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[4rem] w-[100%]">
+      <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[3rem] w-[100%]">
         <div className="max-w-[480px] space-y-[15px] w-full ">
           <h1 className="text-[30px] text-center text-[#fff] font-bold mb-4 ">
        It has never been easier to earn <br /> real passive income with crypto
@@ -47,13 +47,13 @@ const QuizStep16 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] hover:opacity-80  font-[700] uppercase transition transform active:scale-95`}
           >
             Continue
           </button>
          </div>
         </div>
-          <div className="bg-[#252525]  max-w-[550px] h-[390px] w-[100%] flex justify-center items-center rounded-[8px]">
+          <div className="bg-[#252525]  max-w-[550px] h-[390px] w-[100%] flex justify-center items-center rounded-[8px] animate-fade-in-up">
             <img
               src={Step_16}
               className="max-h-[580px] w-[98%] object-cover "

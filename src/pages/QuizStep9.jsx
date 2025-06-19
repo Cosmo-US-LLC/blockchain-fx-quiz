@@ -33,7 +33,7 @@ const QuizStep9 = () => {
       <QuizHeader currentStep={"Facts"} totalSteps={28} />
       <QuizSteps currentStep={9} totalSteps={28} />
 
-      <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[4rem] w-[100%]">
+      <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[3rem] w-[100%]">
         <div className="max-w-[500px] w-full text-center ">
           <h1 className="text-[30px] text-[#fff] font-bold !mb-4 ">
        Inflation reduces your real wealth
@@ -47,12 +47,13 @@ const QuizStep9 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] uppercase hover:opacity-80 w-[100%] text-[#000] transition transform
+ active:scale-95`}
           >
             Continue
           </button>
         </div>
-          <div className="bg-[#252525] max-w-[550px] h-[390px] w-[100%] flex justify-center items-center rounded-[8px]">
+          <div className="bg-[#252525] max-w-[550px] h-[390px] w-[100%] flex justify-center items-center rounded-[8px] animate-fade-in-up">
             <img
               src={Step_9}
               className="max-h-[680px]"

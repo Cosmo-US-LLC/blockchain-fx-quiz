@@ -317,7 +317,18 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
             </div>
           </div>
         </div>
-      </div>
+</div>
+        
+        <button
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] w-[100%] text-[16px] text-[#000] font-[700]`}
+          >
+           YOUR TOP CRYPTO MATCH IN 2025
+          </button>
     </div>
   );
 };

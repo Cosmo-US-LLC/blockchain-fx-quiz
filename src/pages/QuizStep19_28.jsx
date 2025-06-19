@@ -265,7 +265,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+            className={`py-[18px] w-[100%] text-[#000] font-[700] uppercase hover:opacity-80 transition transform active:scale-95`}
           >
            Discover How Much you Could Earn with BFX
           </button>

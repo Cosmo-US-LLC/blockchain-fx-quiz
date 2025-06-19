@@ -46,12 +46,13 @@ const QuizStep7 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] uppercase hover:opacity-80 w-[100%] text-[#000]  transition transform
+ active:scale-95`}
           >
             Continue
           </button>
         </div>
-          <div className="bg-[#252525] max-w-[520px] h-[400px] w-[100%] flex justify-center items-center rounded-[8px]">
+          <div className="bg-[#252525] max-w-[520px] h-[400px] w-[100%] flex justify-center items-center rounded-[8px] animate-fade-in-up">
             <img
               src={Step_7}
               className="max-h-[580px]"
