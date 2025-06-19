@@ -58,7 +58,6 @@ const QuizStep6 = () => {
     navigate("/quiz/fact-check-2");
   };
 
-
   const renderCard = (option) => (
     <div
       key={option.title}
@@ -77,7 +76,7 @@ const QuizStep6 = () => {
       <QuizHeader currentStep={6} totalSteps={18} />
       <QuizSteps currentStep={6} totalSteps={28} />
 
-      <div className="max-w-[750px] w-full text-center mt-12">
+      <div className="max-w-[750px] w-full text-center mt-6">
         <h1 className="text-[30px] font-[700] leading-[120%] mb-1 text-center">
           Did you miss any of these projects?
         </h1>
@@ -97,16 +96,17 @@ const QuizStep6 = () => {
           </div>
 
           <div className="text-center !mt-8">
-              <button
-            onClick={handleNext}
-            style={{
-              borderRadius: "10px",
-              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
-            }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500]`}
-          >
-            Continue
-          </button>
+            <button
+              onClick={handleNext}
+              style={{
+                borderRadius: "10px",
+                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+              }}
+              className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] uppercase hover:opacity-80 w-[100%] text-[#000]  transition transform
+ active:scale-95`}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </div>

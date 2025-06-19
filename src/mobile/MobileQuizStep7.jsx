@@ -41,9 +41,10 @@ const MobileQuizStep7 = () => {
             Ethereum, Solana, and BNB started with a presale. That’s where early
             supporters saw the biggest gains.
           </p>
+        
         </div>
-        <div className="flex justify-center mt-8">
-          <button
+        <div className="flex justify-center mt-12">
+             <button
             onClick={handleNext}
             style={{
               borderRadius: "10px",
@@ -53,10 +54,15 @@ const MobileQuizStep7 = () => {
           >
             Continue
           </button>
+         </div>
+          <div className="bg-[#252525] mt-[2rem] max-w-[300px] mx-auto h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
+            <img
+              src={Step_7}
+              className="max-h-[360px]"
+              alt=""
+            />
         </div>
-        <div className="bg-[#252525] mt-[2rem] max-w-[300px] mx-auto h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
-          <img src={Step_7} className="max-h-[360px]" alt="" />
-        </div>
+         
       </div>
     </div>
   );

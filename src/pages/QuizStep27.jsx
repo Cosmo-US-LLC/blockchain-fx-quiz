@@ -34,8 +34,8 @@ const QuizStep27 = () => {
       <QuizHeader currentStep={"Loading"} totalSteps={""} />
       <QuizSteps currentStep={22} totalSteps={28} />
 
-      <div className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto ">
-        <div className="flex-col items-center justify-center bg-[#12121200] p-4">
+      <div className=" w-[100%] max-w-[1240px] mx-auto ">
+        <div className="flex-col items-center justify-center bg-[#12121200] p-1">
           <CircularProgress
             percentage={100}
             size={162}
@@ -48,13 +48,13 @@ const QuizStep27 = () => {
         </div>
         <div className="max-w-[1020px] mx-auto  w-full ">
           <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
-            Analysing your profile 
+          Analysing your profile
           </h1>
           <p className="text-[16px]  text-center font-[400] text-[#fff] mb-6 ">
-           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users <br/>to become a part of its next generation crypto exchange, all within the past 4 weeks.
+           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users <br /> to become a part of its next generation crypto exchange, all within the past 4 weeks.
           </p>
           <div>
-            <div className="bg-[#4B4B4B] space-y-[5px] mx-auto rounded-[4px] p-8 mt-8 max-w-[458px] w-[100%]">
+            <div className="bg-[#4B4B4B] space-y-[5px] mx-auto rounded-[4px] p-8 mt-6 max-w-[458px] w-[100%]">
               <div>
                 <img src={step_26} alt="" />
               </div>

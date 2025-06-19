@@ -40,21 +40,26 @@ const MobileQuizStep12 = () => {
             more.
           </p>
         </div>
-        <div className="flex justify-center mt-8">
-          <button
+         <div className="flex justify-center mt-12">
+             <button
             onClick={handleNext}
             style={{
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px]  w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px]  w-[100%] text-[#000] font-[700]`}
           >
             Continue
           </button>
         </div>
-        <div className="bg-[#252525] mx-auto relative max-w-[300px] !mt-[40px] h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
-          <img src={Step_12} className="max-h-[320px] mt-[-20px]" alt="" />
+          <div className="bg-[#252525] mx-auto relative max-w-[300px] !mt-[40px] h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
+            <img
+              src={Step_12}
+              className="max-h-[320px] mt-[-20px]"
+              alt=""
+            />
         </div>
+       
       </div>
     </div>
   );

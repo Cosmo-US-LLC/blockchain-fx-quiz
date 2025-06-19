@@ -44,21 +44,26 @@ const MobileQuizStep16 = () => {
             ETFs, and more, offering access to over 500 different assets.
           </p>
         </div>
-        <div className="flex justify-center mt-8">
-          <button
+        <div className="flex justify-center mt-12">
+             <button
             onClick={handleNext}
             style={{
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px]  w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px]  w-[100%] text-[#000] font-[700]`}
           >
             Continue
           </button>
+         </div>
+          <div className="bg-[#252525] mt-8  w-[100%] flex justify-center items-center rounded-[8px]">
+            <img
+              src={Step_16}
+              className=" object-cover "
+              alt=""
+            />
         </div>
-        <div className="bg-[#252525] mt-8  w-[100%] flex justify-center items-center rounded-[8px]">
-          <img src={Step_16} className="object-cover " alt="" />
-        </div>
+          
       </div>
     </div>
   );

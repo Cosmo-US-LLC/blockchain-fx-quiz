@@ -8,19 +8,9 @@ import Step_20_2 from "../assets/step_20/step_20 (4).png";
 import Step_20_3 from "../assets/step_20/step_20 (2).png";
 import Step_20_4 from "../assets/step_20/step_20 (3).png";
 import Step_20_5 from "../assets/step_20/step_20 (1).png";
+import CheckIcon from "../components/CheckIcon";
 
 
-const CheckIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M13.5 4.5L6 12L2.5 8.5"
-      stroke="#000"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
 
 const QuizStep20 = () => {
   const [loading, setLoading] = useState(true)
@@ -82,11 +72,11 @@ const QuizStep20 = () => {
               key={index}
               style={{
                 background: "rgba(245, 245, 245, 0.15)",
-                border: selectedOptions.includes(index) ? "2px solid #E5AE00" : "2px solid transparent",
+                border: selectedOptions.includes(index) ? "1px solid #E5AE00" : "2px solid transparent",
                 color: selectedOptions.includes(index) ? "#E5AE00" : "#fff",
                 transition: "border-color 0.3s",
               }}
-              className="option-card py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer"
+              className="relative py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer"
               onClick={() => toggleOption(index)}
             >
               <div className="flex items-center gap-4">
@@ -94,11 +84,18 @@ const QuizStep20 = () => {
                 <p className="text-start font-medium text-white">{option.title}</p>
               </div>
 
-              {selectedOptions.includes(index) && (
-                <div className="bg-[#FFD551] rounded-full p-1.5 flex items-center justify-center">
-                  <CheckIcon className="w-4 h-4 text-[#000]" />
-                </div>
-              )}
+             <div
+                className={`bg-[#fcd24b] absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-1.5 flex items-center justify-center
+                              transition-all duration-150 ease-in-out
+                              ${
+                                selectedOptions.includes(index)
+                                  ? "opacity-100 scale-100"
+                                  : "opacity-0 scale-0"
+                              }
+                            `}
+              >
+                <CheckIcon className="w-4 h-4 text-[#000]" />
+              </div>
             </div>
           ))}
         </div>
@@ -111,7 +108,7 @@ const QuizStep20 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500] ${
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] ${
               selectedOptions.length === 0 ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >

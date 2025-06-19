@@ -29,36 +29,37 @@ const MobileQuizStep9 = () => {
         <QuizHeader currentStep={"Facts"} totalSteps={28} />
         <QuizSteps currentStep={9} totalSteps={28} />
 
-        <div className=" max-w-[1240px] mx-auto w-[100%]">
-          <div className="w-full text-center ">
-            <h1 className="text-[28px] text-center text-[#fff] font-bold !mb-4 ">
-              Inflation reduces <br /> your real wealth
-            </h1>
-            <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">
-              The average global inflation rate ranges <br /> between 6–8% per
-              year. <br />
-              <br /> That means if you keep $1,000 in cash, it could lose up to
-              50% its value in just 9–10 years. In the U.S. alone, $100 in 2013
-              now has the same buying power as about $65 in 2025.
-            </p>
-          </div>
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={handleNext}
-              style={{
-                borderRadius: "10px",
-                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
-              }}
-              className={`py-[13px] w-[100%] text-[#000] font-[500]`}
-            >
-              Continue
-            </button>
-          </div>
-          <div className="bg-[#252525] max-w-[300px] mx-auto mt-6 h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
-            <img src={Step_9} className="max-h-[460px]" alt="" />
-          </div>
+      <div className=" max-w-[1240px] mx-auto mt-6 w-[100%]">
+        <div className="w-full text-center ">
+          <h1 className="text-[28px] text-center text-[#fff] font-bold !mb-4 ">
+       Inflation reduces <br /> your real wealth
+          </h1>
+          <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">
+           The average global inflation rate  ranges between 6–8% per year. <br /><br/> That means if you keep $1,000 in cash, it could lose up to 50% its value in just 9–10 years. In the U.S. alone, $100 in 2013 now has the same buying power as about $65 in 2025.
+          </p>
         </div>
+         <div className="flex justify-center mt-12">
+             <button
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+          >
+            Continue
+          </button>
+        </div>
+          <div className="bg-[#252525] max-w-[300px] mx-auto mt-6 h-[300px] w-[100%] flex justify-center items-center rounded-[8px]">
+            <img
+              src={Step_9}
+              className="max-h-[460px]"
+              alt=""
+            />
+        </div>
+       
       </div>
+    </div>
     </div>
   );
 };

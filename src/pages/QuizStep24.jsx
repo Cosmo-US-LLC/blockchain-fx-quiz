@@ -41,25 +41,25 @@ const QuizStep24 = () => {
               of more than 300% before it goes live.
             </span>
           </p>
-          <div className="flex justify-center pt-[20px]">
-            <button
-              onClick={handleNext}
-              style={{
-                borderRadius: "10px",
-                background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
-              }}
-              className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700]`}
-            >
-              Unlock Special Bonus
-            </button>
-          </div>
+         <div className="flex justify-center pt-[20px]">
+             <button
+            onClick={handleNext}
+            style={{
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
+            }}
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
+          >
+           Unlock YOUR Special Bonus (3/3)
+          </button>
+         </div>
         </div>
-        <div className="  max-w-[550px] w-[100%] flex justify-center items-center rounded-[8px]">
-          <img
-            src={Step_24}
-            className="max-h-[580px] w-[98%] object-cover "
-            alt=""
-          />
+          <div className="  max-w-[550px] w-[100%] flex justify-center items-center rounded-[8px] animate-fade-in-up">
+            <img
+              src={Step_24}
+              className="max-h-[580px] w-[98%] object-cover "
+              alt=""
+            />
         </div>
       </div>
     </div>
