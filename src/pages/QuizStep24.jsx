@@ -48,7 +48,7 @@ const QuizStep24 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
+            className={`py-[13px] max-w-[460px] text-[24px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95 uppercase`}
           >
            Unlock YOUR Special Bonus (3/3)
           </button>

@@ -78,7 +78,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
   const handleNext = () => {
     const currentPath = location.pathname;
     // navigate(`${currentPath}/quiz/step=18`);
-    navigate(`/quiz/step=18`);
+    navigate(`/quiz/best-crypto-project`);
   };
 
     return(
