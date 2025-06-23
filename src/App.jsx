@@ -60,6 +60,10 @@ import MobileQuizStep19_28 from "./mobile/MobileQuizStep19_28"
 import MobileQuizStep24 from "./mobile/MobileQuizStep24"
 import MobileQuizStep27 from "./mobile/MobileQuizStep27"
 import MobileResults from "./mobile/MobileResults"
+import BestCrypto from "./pages/BestCrypto"
+import MobileBestCrypto from "./mobile/MobileBestCrypto"
+import BinanceQuiz from "./pages/BinanceQuiz"
+import BinanceQuizMobile from "./mobile/BinanceQuizMobile"
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
@@ -110,7 +114,9 @@ function App() {
         <Route path="/quiz/step=18_28" element={!isMobile ? <QuizStep18_28 /> : <MobileQuizStep18_28 />} />
         <Route path="/quiz/step=19_28" element={!isMobile ? <QuizStep19_28 /> : <MobileQuizStep19_28 />} />
         {/* <Route path="/quiz/step=19" element={<QuizStep23 />} /> */}
-        <Route path="/quiz/fact-check-no=5" element={!isMobile ? <QuizStep24 /> : <MobileQuizStep24 />} />
+         <Route path="/quiz/best-crypto-project"  element={!isMobile ? <BestCrypto /> : <MobileBestCrypto />} />
+        <Route path="/quiz/fact-check-no=5" element={!isMobile ? <BinanceQuiz /> : <BinanceQuizMobile />} />
+        <Route path="/quiz/fact-check-no=6" element={!isMobile ? <QuizStep24 /> : <MobileQuizStep24 />} />
         {/* <Route path="/quiz/fact-check-no=6" element={<QuizStep25 />} /> */}
         {/* <Route path="/quiz/fact-check-no=7_1" element={<QuizStep26 />} /> */}
         <Route path="/quiz/fact-check-no=7_2" element={!isMobile ? <QuizStep27 /> : <MobileQuizStep27 />} />

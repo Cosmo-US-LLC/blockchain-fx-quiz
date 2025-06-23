@@ -175,12 +175,13 @@ const QuizStep22 = () => {
             }}
             className={`py-[18px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
           >
-          CUNLOCK YOUR SPECIAL BONUS (1/3)
+          UNLOCK YOUR SPECIAL BONUS (1/3)
           </button>
        </div>
         </div>
         <div className="max-w-[650.434px] w-[100%] ">
           <img src={Step_22} alt="" />
+          <p className="text-[16px] text-center font-[600] text-[#fff] ">*Projected monthly returns are based on the average earnings recorded during the last 6 months of BlockchainFX’s beta testing phase. These figures are not guaranteed and actual results may vary depending on market conditions and platform activity.</p>
         </div>
       </div>
     </div>
