@@ -34,10 +34,7 @@ const MobileQuizStep12 = () => {
             How millionaires build <br /> generational wealth
           </h1>
           <p className="text-[16px] max-w-[380px] text-center mx-auto font-[400] text-[#fff] mb-6 ">
-            Most millionaires and billionaires don’t rely on just one source of
-            income. On average, they have 7 different income streams, including
-            business earnings, investments, crypto, real estate, dividends, and
-            more.
+           Most millionaires and billionaires don’t rely on just one source of income. On average, they have 7 different income streams, including business earnings, investments, crypto, real estate, dividends, and more.
           </p>
         </div>
          <div className="flex justify-center mt-12">
@@ -47,7 +44,7 @@ const MobileQuizStep12 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px]  w-[100%] text-[#000] font-[700]`}
+            className={`py-[13px]  w-[100%] text-[#000] font-[700] uppercase`}
           >
             Continue
           </button>

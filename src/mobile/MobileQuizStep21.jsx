@@ -7,6 +7,7 @@ import Step_21_1 from "../assets/step_21/step_21 (3).png";
 import Step_21_2 from "../assets/step_21/step_21 (1).png";
 import Step_21_3 from "../assets/step_21/step_21 (4).png";
 import Step_21_4 from "../assets/step_21/step_21 (2).png";
+import CheckIcon from "../components/CheckIcon";
 
 const MobileQuizStep21 = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const MobileQuizStep21 = () => {
   ];
 
   // Simulate loading
-  useEffect(() => {
+   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -41,8 +42,15 @@ const MobileQuizStep21 = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleNext = () => {
-    navigate("/quiz/step=18_28");
+  // const handleNext = () => {
+  //   navigate("/quiz/step=18_28");
+  // };
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option.title);
+    setTimeout(() => {
+       navigate("/quiz/step=18_28");
+    }, 200);
   };
 
 
@@ -54,24 +62,38 @@ const MobileQuizStep21 = () => {
 
       <div className="max-w-[1050px] w-full text-center">
         <h1 className="text-[28px] font-[700] leading-[120%] mb-1  text-center">
-          When you get the chance to buy into early stage crypto projects that generate continuous income, how do you usually react?
+          When you get the chance to buy into early stage crypto projects how do you usually react?
         </h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">
           {options.map((option) => (
             <div
-              key={option}
+              key={option.title}
               style={{
                 background: "rgba(245, 245, 245, 0.15)",
               }}
-              className={`option-card space-x-2 py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer ${
-                selectedOption === option ? "selected" : ""
+              className={` relative py-4 px-6 space-x-2 flex items-center transition-all duration-150 ease-in-out justify-between rounded-[8px] cursor-pointer ${
+                selectedOption === option.title
+                  ? "border border-[#fcd24b] bg-[#121212] opacity-100 scale-100"
+                  : "bg-[#EDEDED] border border-[#0000]"
               }`}
-              onClick={handleNext}
+             onClick={() => handleOptionClick(option)}
             >
               <img src={option.img} className="h-[40px]" alt="" />
-              <p className="w-[88%] text-[16px] text-white text-start font-medium">
+              <p className="w-[88%] text-white text-start font-medium">
                 {option.title}
               </p>
+              <div
+                className={`bg-[#fcd24b] absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-1.5 flex items-center justify-center
+                                            transition-all duration-150 ease-in-out
+                                            ${
+                                              selectedOption === option.title
+                                                ? "opacity-100 scale-100"
+                                                : "opacity-0 scale-0"
+                                            }
+                                          `}
+              >
+                <CheckIcon className="w-4 h-4 text-[#000]" />
+              </div>
             </div>
           ))}
         </div>

@@ -34,14 +34,8 @@ const MobileQuizStep16 = () => {
             It has never been easier to earn real passive income with crypto
           </h1>
           <p className="text-[16px] font-[400] text-center  text-[#fff] mb-6 ">
-            For example, people who buy the new $BFX token during the presale
-            earn rewards every time someone trades on BlockchainFX. As $BFX
-            holders, they receive a share of the trading fees without having to
-            trade themselves. <br />
-            <br />
-            BlockchainFX is a fast-growing crypto exchange and the first to
-            bridge crypto with traditional financial markets like stocks, forex,
-            ETFs, and more, offering access to over 500 different assets.
+           For example, people who buy the new $BFX token during the presale earn rewards every time someone trades on BlockchainFX. As $BFX holders, they receive a share of the trading fees without having to trade themselves. <br /><br />
+ BlockchainFX is a fast-growing crypto exchange and the first to bridge crypto with traditional financial markets like stocks, forex, ETFs, and more, offering access to over 500 different assets. 
           </p>
         </div>
         <div className="flex justify-center mt-12">
@@ -51,7 +45,7 @@ const MobileQuizStep16 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px]  w-[100%] text-[#000] font-[700]`}
+            className={`py-[13px]  w-[100%] text-[#000] font-[700] uppercase`}
           >
             Continue
           </button>

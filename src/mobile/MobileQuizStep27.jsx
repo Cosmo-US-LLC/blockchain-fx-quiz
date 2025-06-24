@@ -60,20 +60,19 @@ const MobileQuizStep27 = () => {
               </div>
               <div className="flex justify-between">
                 <p className="text-[#fff] font-[400] leading-[160%]">
-                  Like Binance at day one
-                </p>
-                <p
-                  style={{
-                    color: "rgba(255, 255, 255, 0.50)",
-                  }}
-                  className="text-[16px] font-[400] leading-[160%]"
-                >
-                  Clay
+                 Like buying into Binance at day one
                 </p>
               </div>
               <div>
                 <p className="text-[#fff] font-[400] leading-[160%]">
-                  Imagine getting into Coinbase, or Binance at day one, that`s exactly what BFX is offering right now in its presale.
+                    Imagine getting into Coinbase, or Binance at day one, that’s
+                  exactly what BFX is offering right now in its presale.
+                </p>
+                 <p
+                  style={{ color: "rgba(255, 255, 255, 0.50)" }}
+                  className="mt-3 text-[16px] font-[400]"
+                >
+                  ‐ Clay (Crypto Youtuber, 110K Followers){" "}
                 </p>
               </div>
             </div>

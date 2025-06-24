@@ -53,7 +53,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
         <img src={Logo} className="h-auto bg-cover " alt="" />
       </div>
 
-      <div className="w-[10%] max-sm:w-[33%] mb-1  text-[#FFF] text-end leading-[26px] font-[400] tracking-[0.04em] text-[16px]">
+      <div className="w-[10%] max-sm:w-[33%] mb-1  text-[#fff] text-end leading-[26px] font-[400] tracking-[0.04em] text-[16px]">
         {/* {currentStep}
           {!isFact &&
             !isStep1 &&
@@ -69,7 +69,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
             !isFactno9 &&
             !isFactno10 &&
             `/${totalSteps}`} */}
-        {currentStep}
+        <span className="text-[#EAC05E]">{currentStep}</span>
         {!isFact &&
           !isFactStep7 &&
           !isResults &&

@@ -103,7 +103,7 @@ const MobileQuizStep6 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] w-[100%] text-[#000] font-[500]`}
+            className={`py-[13px] w-[100%] text-[#000] font-[700] uppercase`}
           >
             Continue
           </button>

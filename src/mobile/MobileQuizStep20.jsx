@@ -33,7 +33,7 @@ const MobileQuizStep20 = () => {
     { title: "Daily passive income potential", img: Step_20_2 },
     { title: "Audited and secure", img: Step_20_3 },
     { title: "Early access before major growth", img: Step_20_4 },
-    { title: "Huge upside potential", img: Step_20_5 },
+    // { title: "Huge upside potential", img: Step_20_5 },
   ];
 
   const toggleOption = (index) => {
@@ -45,7 +45,6 @@ const MobileQuizStep20 = () => {
       setSelectedOptions([...selectedOptions, index])
     }
   }
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
@@ -54,7 +53,7 @@ const MobileQuizStep20 = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleContinue = () => {
+ const handleContinue = () => {
     if (selectedOptions.length > 0) {
       // In the original, this would navigate to "/quiz/step=17"
       console.log("Selected options:", selectedOptions)
@@ -77,28 +76,35 @@ const MobileQuizStep20 = () => {
         </h1>
 
         <div className="grid grid-cols-1 max-w-[560px] mx-auto gap-4 mt-8">
-          {options.map((option, index) => (
+         {options.map((option, index) => (
             <div
               key={index}
               style={{
                 background: "rgba(245, 245, 245, 0.15)",
-                border: selectedOptions.includes(index) ? "2px solid #E5AE00" : "2px solid transparent",
+                border: selectedOptions.includes(index) ? "1px solid #E5AE00" : "2px solid transparent",
                 color: selectedOptions.includes(index) ? "#E5AE00" : "#fff",
                 transition: "border-color 0.3s",
               }}
-              className="option-card py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer"
+              className="relative py-4 px-6 flex space-x-2 items-center justify-between rounded-[8px] cursor-pointer"
               onClick={() => toggleOption(index)}
             >
-              <div className="flex items-center gap-4 space-x-2">
+              <div className="flex items-center gap-4">
                 <img src={option.img || "/placeholder.svg"} className="h-[40px]" alt="" />
-                <p className="text-start text-[16px] font-medium text-white">{option.title}</p>
+                <p className="text-start font-medium text-white">{option.title}</p>
               </div>
 
-              {selectedOptions.includes(index) && (
-                <div className="bg-[#FFD551] rounded-full p-1.5 flex items-center justify-center">
-                  <CheckIcon className="w-3 h-3 text-[#000]" />
-                </div>
-              )}
+             <div
+                className={`bg-[#fcd24b] absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-1.5 flex items-center justify-center
+                              transition-all duration-150 ease-in-out
+                              ${
+                                selectedOptions.includes(index)
+                                  ? "opacity-100 scale-100"
+                                  : "opacity-0 scale-0"
+                              }
+                            `}
+              >
+                <CheckIcon className="w-4 h-4 text-[#000]" />
+              </div>
             </div>
           ))}
         </div>
@@ -111,7 +117,7 @@ const MobileQuizStep20 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[500] ${
+            className={`py-[13px] max-w-[307px] w-[100%] text-[#000] font-[700] uppercase ${
               selectedOptions.length === 0 ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >

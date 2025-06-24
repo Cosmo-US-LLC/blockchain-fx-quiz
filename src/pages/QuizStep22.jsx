@@ -88,7 +88,7 @@ const QuizStep22 = () => {
            
           >
             <p className="text-[16px] font-[600] text-[#fff] leading-[150%] text-[#000]">
-             Target Monthly Income : {goalIncome}
+             Target Monthly Income : <span className="underline italic">{goalIncome}</span>
             </p>
           </span>
           <div className="space-y-[12px]">
