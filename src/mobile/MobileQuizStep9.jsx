@@ -35,7 +35,7 @@ const MobileQuizStep9 = () => {
        Inflation reduces <br /> your real wealth
           </h1>
           <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">
-           The average global inflation rate ranges  between 6–8% per year <br /><br/> That means if you keep $1,000 in cash, it could lose up to 50% its value in just 9–10 years. In the U.S. alone, $100 in 2013 now has the same buying power as about
+          The average global inflation rate ranges  between 6–8% per year. <br /><br /> That means if you keep $1,000 in cash, it could lose up to 50% its value in just 9–10 years. In the U.S. alone, $100 in 2013 now has the same buying power as about
  $65 in 2025.
           </p>
         </div>

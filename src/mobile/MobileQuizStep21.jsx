@@ -62,7 +62,7 @@ const MobileQuizStep21 = () => {
 
       <div className="max-w-[1050px] w-full text-center">
         <h1 className="text-[28px] font-[700] leading-[120%] mb-1  text-center">
-          When you get the chance to buy into early stage crypto projects how do you usually react?
+          When you get the chance to buy into early stage crypto projects, how do you usually react?
         </h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">
           {options.map((option) => (

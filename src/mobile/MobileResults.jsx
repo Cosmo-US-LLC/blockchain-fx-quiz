@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import QuizHeader from "../components/QuizHeader";
 import QuizSteps from "../components/QuizSteps";
-
 import Loading from "../components/Loading";
 import result from "../assets/result/result.png";
 import result_icon_1 from "../assets/result/result_icons (1).png";
@@ -79,7 +78,7 @@ const MobileResults = () => {
           backgroundColor: "#000000",
         }}
       >
-        <QuizHeader currentStep={"Special Bonus"} totalSteps={28} />
+        <QuizHeader currentStep={"Bonus"} totalSteps={28} />
         <QuizSteps currentStep={28} totalSteps={28} />
         <div className="mb-4 !mt-[-22px] bg-[#D99A2633] w-[100%] flex justify-center items-center rounded-[8px]">
           <img
@@ -88,7 +87,7 @@ const MobileResults = () => {
             className=" px-[10px] text-white"
           />
           <h3 className=" text-white font-[500] text-[16px] py-[5px] ">
-            35% Bonus expires in
+            35% Special Bonus expires in
             <span className="font-[700] text-[#D99A26] text-Manrope ">
               {" "}
               {formatTime(timeLeft)} min
