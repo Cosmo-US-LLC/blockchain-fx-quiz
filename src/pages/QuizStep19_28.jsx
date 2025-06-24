@@ -13,7 +13,7 @@ import icons7 from "../assets/QuizStep19_28/19_28 (2).svg"
 import icons8 from "../assets/QuizStep19_28/19_28 (3).svg"
 import icons9 from "../assets/QuizStep19_28/19_28 (4).svg"
 
-const QuizStep19_28 = ({ targetPercentage = 60 }) => {
+const QuizStep19_28 = ({ targetPercentage = 80 }) => {
  const [image, setImage] = useState(null);
 
  const [progress, setProgress] = useState(0)
@@ -35,7 +35,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
   useEffect(() => {
    
     const duration = 2000 
-    const steps = 60 
+    const steps = 80 
     const increment = targetPercentage / steps
     const stepDuration = duration / steps
 
@@ -49,7 +49,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
       setProgress(currentProgress)
     }, stepDuration)
 
-    const readinessTarget = 84
+    const readinessTarget = 87
     const readinessIncrement = readinessTarget / steps
     let currentReadiness = 0
     const readinessTimer = setInterval(() => {
@@ -132,7 +132,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
                 <div className="absolute transform -translate-x-1/2 -top-8 left-1/2">
                   <div className="px-2 py-1 text-xs text-white bg-gray-800 rounded whitespace-nowrap">
                     {/* {getProgressLabel(progress)} */}
-                    Moderate
+                    HIGH
                   </div>
                   <div className="absolute w-0 h-0 transform -translate-x-1/2 border-t-2 border-l-2 border-r-2 border-transparent top-full left-1/2 border-t-gray-800"></div>
                 </div>
@@ -213,7 +213,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
       </div>
     </div>
     <div className="max-w-[548px]  pt-8 mx-auto text-white rounded-lg overflow-hidden">
-          <h3 className="text-[16px] font-[700] text-white mb-3">Your readiness: <span className="text-[#D99A26;]">{Math.round(readinessScore)}%</span></h3>
+          <h3 className="text-[16px] font-[700] text-white mb-3">Your readiness: <span className="text-[#D99A26;]">87%</span></h3>
        <div className="py-[20px] rounded-[8px] mb-5 pl-[20px] pr-[2rem] flex justify-between items-center"
        style={{
         border:"1px solid #C4C7CC",

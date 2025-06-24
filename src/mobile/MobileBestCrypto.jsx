@@ -105,7 +105,7 @@ export const ProgressBar = ({
       </div>
 
       <p
-        className="text-[#9190A3] text-[12px] font-[400] mt-2 leading-relaxed"
+        className="text-[#fff] text-[12px] font-[400] mt-2 leading-relaxed"
         style={{
           opacity: isVisible ? 1 : 0,
           transition: "opacity 1.5s ease-out",
@@ -191,11 +191,10 @@ const MobileBestCrypto = () => {
 
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-[28px] text-center text-[#fff] font-bold ">
-          Your Top Crypto <br /> Match is Here!
+          You’ve successfully <br /> passed the challenge!
         </h1>
         <p className="text-[16px] text-center font-[600] text-[#fff] mt-2">
-          This project aligns the most with your investment profile and goals.
-          Backed by real utility, strong tokenomics, and expert validation.
+        This is the best crypto project on the market that fits specifically your criteria
         </p>
 
         <div className="bg-[#2a2a2a] w-full rounded-[10px] mt-6 p-4">
@@ -219,10 +218,7 @@ const MobileBestCrypto = () => {
           <div className="mt-4">
             <img src={bfx_img} alt="bfx-img" className="w-full rounded" />
             <p className="text-[14px] text-[#fff] text-center mt-3">
-              BlockchainFX is the first crypto exchange to connect blockchain
-              with global finance. Imagine Binance but with over 500 assets
-              including crypto, stocks, forex, and ETFs. Earn daily USDT rewards
-              with $BFX, even during presale. Fully audited by Certik.
+             BlockchainFX is the  first crypto exchange to connect blockchain with global finance. Imagine Binance but with over 500 assets including crypo, stocks, forex, and ETFs. Earn daily USDT rewards with $BFX, even during the presale. Fully audited by Certik and recently awarded the title of fastest growing trading app of 2025.
             </p>
           </div>
 
@@ -257,10 +253,10 @@ const MobileBestCrypto = () => {
         </div>
 
         <div
-          className="overflow-hidden pb-6 mb-[4rem] mt-6 w-[100%] relative mx-auto  rounded-[6px]"
+          className="overflow-hidden pb-6 mb-[4rem] border border-[#C4C7C] mt-6 w-[100%] relative mx-auto  rounded-[8px] px-2"
           style={{}}
         >
-           <div className="flex items-center bg-[#2a2a2a] w-[100%]  justify-center mb-6">
+           <div className="flex items-center w-[100%]  justify-center mb-6">
             {image && (
               <img
                 src={image}

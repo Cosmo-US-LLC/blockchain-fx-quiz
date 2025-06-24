@@ -48,32 +48,33 @@ const QuizStep27 = () => {
         </div>
         <div className="max-w-[1020px] mx-auto  w-full ">
           <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
-          Analysing your profile
+            Analysing your profile
           </h1>
           <p className="text-[16px]  text-center font-[400] text-[#fff] mb-6 ">
-           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users <br /> to become a part of its next generation crypto exchange, all within the past 4 weeks.
+            BlockchainFX has attracted over $2.2 million and welcomed more than
+            1,500 users <br /> to become a part of its next generation crypto
+            exchange, all within the past 4 weeks.
           </p>
           <div>
-            <div className="bg-[#4B4B4B] space-y-[5px] mx-auto rounded-[4px] p-8 mt-6 max-w-[458px] w-[100%]">
+            <div className="bg-[#4B4B4B] space-y-[5px] mx-auto rounded-[4px] px-8 mt-6 pt-5 pb-3 max-w-[458px] w-[100%]">
               <div>
                 <img src={step_26} alt="" />
               </div>
               <div className="flex justify-between">
                 <p className="text-[#fff] font-[400] leading-[160%]">
-                  Like Binance at day one
-                </p>
-                <p
-                  style={{
-                    color: "rgba(255, 255, 255, 0.50)",
-                  }}
-                  className="text-[16px] font-[400] leading-[160%]"
-                >
-                  Clay
+                  Like buying into Binance at day one
                 </p>
               </div>
               <div>
                 <p className="text-[#fff] font-[400] leading-[160%]">
-                  Imagine getting into Coinbase, or Binance at day one, that`s exactly what BFX is offering right now in its presale.
+                  Imagine getting into Coinbase, or Binance at day one, that’s
+                  exactly what BFX is offering right now in its presale.
+                </p>
+                <p
+                  style={{ color: "rgba(255, 255, 255, 0.50)" }}
+                  className="mt-3 text-[16px] font-[400]"
+                >
+                  ‐ Clay (Crypto Youtuber, 110K Followers){" "}
                 </p>
               </div>
             </div>

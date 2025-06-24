@@ -7,6 +7,7 @@ import Loading from "../components/Loading"
 import Step_15_1 from "../assets/step_15/step_15 (3).png"
 import Step_15_2 from "../assets/step_15/step_15 (2).png"
 import Step_15_3 from "../assets/step_15/step_15 (1).png"
+import CheckIcon from "../components/CheckIcon"
 
 
 const MobileQuizStep15 = () => {
@@ -30,17 +31,20 @@ const MobileQuizStep15 = () => {
   ]
 
   // Simulate loading
-  useEffect(() => {
+useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1000)
+      setLoading(false);
+    }, 1000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
-  const handleNext = () => {
-    navigate("/quiz/fact-check-no=4")
-  }
+  const handleOptionClick = (option) => {
+    setSelectedOption(option.title);
+    setTimeout(() => {
+      navigate("/quiz/fact-check-no=4");
+    }, 200);
+  };
 
   
 
@@ -52,19 +56,37 @@ const MobileQuizStep15 = () => {
       <div className="max-w-[1000px] w-full text-center">
  <h1 className="text-[28px] font-[700] leading-[120%] mb-1  text-center">Do you currently earn any passive income?</h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">
-            {options.map((option) => (
-            <div
-              key={option}
-              style={{
-                background:"rgba(245, 245, 245, 0.15)"
-              }}
-              className={`option-card space-x-2 py-4 px-6 flex items-center justify-between rounded-[8px] cursor-pointer ${selectedOption === option ? "selected" : ""}`}
-              onClick={handleNext}
-            >
-              <img src={option.img} className="h-[40px]" alt="" />
-              <p className="w-[88%] text-[16px] text-white text-start font-medium">{option.title}</p>
-            </div>
-          ))}
+          {options.map((option) => (
+                    <div
+                      key={option.title}
+                      style={{
+                        background: "rgba(245, 245, 245, 0.15)",
+                      }}
+                      className={` relative py-4 px-6 space-x-2 flex items-center transition-all duration-150 ease-in-out justify-between rounded-[8px] cursor-pointer ${
+                        selectedOption === option.title
+                          ? "border border-[#fcd24b] bg-[#121212] opacity-100 scale-100"
+                          : "bg-[#EDEDED] border border-[#0000]"
+                      }`}
+                      onClick={() => handleOptionClick(option)}
+                    >
+                      <img src={option.img} className="h-[40px]" alt="" />
+                      <p className="w-[88%] text-white text-start font-medium">
+                        {option.title}
+                      </p>
+                      <div
+                        className={`bg-[#fcd24b] absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-1.5 flex items-center justify-center
+                        transition-all duration-150 ease-in-out
+                        ${
+                          selectedOption === option.title
+                            ? "opacity-100 scale-100"
+                            : "opacity-0 scale-0"
+                        }
+                      `}
+                      >
+                        <CheckIcon className="w-4 h-4 text-[#000]" />
+                      </div>
+                    </div>
+                  ))}
         </div>
       </div>
     </div>

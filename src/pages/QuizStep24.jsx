@@ -31,14 +31,11 @@ const QuizStep24 = () => {
       <div className="flex items-center max-w-[1240px] mx-auto justify-between mt-[4rem] w-[100%]">
         <div className="max-w-[500px] space-y-[15px ] w-full ">
           <h1 className="text-[30px] text-center text-[#fff] font-bold mb-4 ">
-            Get In Before the 300% Surge
+           Get In Before the 300% Surge
           </h1>
           <p className="text-[16px] max-w-[400px] w-full mx-auto text-center font-[700] text-[#fff] mb-6 ">
             <span className="font-[400]">
-              BlockchainFX’s $BFX token is still available in its presale phase
-              for under $0.015. That’s far below its upcoming launch price of
-              $0.05 on major exchanges, offering early buyers a guaranteed gain
-              of more than 300% before it goes live.
+             $BFX is still available in its presale phase for under $0.015. That’s far below its upcoming launch price of $0.05 on major exchanges, offering early buyers a guaranteed  gain of more than 300% before it goes live.
             </span>
           </p>
          <div className="flex justify-center pt-[20px]">
@@ -48,7 +45,7 @@ const QuizStep24 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] max-w-[460px] text-[24px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95 uppercase`}
+            className={`py-[13px] max-w-[460px] text-[20px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95 uppercase`}
           >
            Unlock YOUR Special Bonus (3/3)
           </button>

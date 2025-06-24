@@ -12,7 +12,7 @@ import icons7 from "../assets/QuizStep19_28/19_28 (2).svg";
 import icons8 from "../assets/QuizStep19_28/19_28 (3).svg";
 import icons9 from "../assets/QuizStep19_28/19_28 (4).svg";
 
-const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
+const MobileQuizStep19_28 = ({ targetPercentage = 80 }) => {
   const [image, setImage] = useState(null);
 
   const [progress, setProgress] = useState(0);
@@ -32,7 +32,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
 
   useEffect(() => {
     const duration = 2000;
-    const steps = 60;
+    const steps = 80;
     const increment = targetPercentage / steps;
     const stepDuration = duration / steps;
 
@@ -46,7 +46,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
       setProgress(currentProgress);
     }, stepDuration);
 
-    const readinessTarget = 84;
+    const readinessTarget = 87;
     const readinessIncrement = readinessTarget / steps;
     let currentReadiness = 0;
     const readinessTimer = setInterval(() => {
@@ -130,7 +130,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
                         <div className="absolute transform -translate-x-1/2 -top-8 left-1/2">
                           <div className="px-2 py-1 text-xs text-white bg-gray-800 rounded whitespace-nowrap">
                             {/* {getProgressLabel(progress)} */}
-                            Moderate
+                            HIGH
                           </div>
                           <div className="absolute w-0 h-0 transform -translate-x-1/2 border-t-2 border-l-2 border-r-2 border-transparent top-full left-1/2 border-t-gray-800"></div>
                         </div>
@@ -303,7 +303,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
                 </span>
               </div>
 
-              <button
+              {/* <button
                 onClick={handleNext}
                 style={{
                   borderRadius: "10px",
@@ -313,7 +313,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 60 }) => {
                 className={`py-[13px] w-[100%] text-[16px] text-[#000] font-[700]`}
               >
                 Discover How Much you Could Earn with BFX
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

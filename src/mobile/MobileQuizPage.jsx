@@ -37,8 +37,9 @@ const MobileQuizPage = () => {
   };
 
   return (
-    <div className="quiz-container bg-[red] min-h-screen  flex flex-col items-center p-4">
-      <QuizHeader currentStep={"Quiz"} totalSteps={18} />
+    <div className="quiz-container bg-[red] min-h-screen  flex flex-col items-center justify-between p-4">
+     <div className="w-[100%]">
+         <QuizHeader currentStep={"Quiz"} totalSteps={18} />
       <QuizSteps currentStep={1} totalSteps={28} />
       <div className="w-full max-w-2xl mb-4 text-center">
         <div className="space-y-[15px]">
@@ -49,13 +50,13 @@ const MobileQuizPage = () => {
           <p className="text-[15px] font-[400] leading-[150%] uppercase text-[#fff]">
             {" "}
             Take <span className="font-[700]">the 1-minute quiz</span> and
-            discover now
+            find out
           </p>
           <h2 className="text-[16px] font-[400] leading-[150%] text-[#fff]">
             SELECT YOUR <span className="font-[700]">AGE</span>
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[4rem] gap-x-4 mb-8 mt-[4rem]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[3rem] max-w-[300px] mx-auto gap-x-4 mb-8 mt-[3rem]">
           {ageOptions.map((option) => (
             <AgeOption
               key={option.range}
@@ -74,7 +75,7 @@ const MobileQuizPage = () => {
         >
           Continue
         </button> */}
-        <div className="space-y-[70px]">
+        <div className="">
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
             By clicking on an age group, you agree with{" "}<br />
             <a
@@ -94,10 +95,15 @@ const MobileQuizPage = () => {
             </a>
             .
           </p>
+        
+        </div>
+      </div>      
+     </div>
+
+      <div>
           <p className="text-[#B1B1B1] text-[12px] font-[400] leading-[133.333%]">
             BlockchainFX 2025 ©All Rights Reserved.
           </p>
-        </div>
       </div>
     </div>
   );

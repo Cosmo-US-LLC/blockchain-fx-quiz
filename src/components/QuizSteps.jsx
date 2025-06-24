@@ -8,7 +8,7 @@ const QuizSteps = ({ currentStep, totalSteps }) => {
           <div key={index} className="flex-1">
             <div
               className={`h-1 l ${
-                index < currentStep ? "bg-[#f7b955]" : "bg-[#333]"
+                index < currentStep ? "bg-[#f7b955] text-[#FFD551]" : "bg-[#333]"
               } transition-all duration-300`}
             ></div>
           </div>

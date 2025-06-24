@@ -37,7 +37,7 @@ const QuizStep1 = () => {
           <h1 className="text-[30px] text-center text-[#fff] font-bold mb-8 ">
            The 2025 crypto bull <br /> market  has just started
           </h1>
-          <p className="text-[16px] font-[400] text-[#fff] mb-6 text-center ">
+          <p className="text-[16px] font-[400] text-[#fff] max-w-[433px] mx-auto mb-6 text-center ">
          Bitcoin recently broke past its all time high of $112,000, marking the start of a new bull run. Crypto is once again leading the charge, outperforming stocks, gold, and real estate, and capturing the attention of millions. Now is your chance to position yourself early. <br /> <br />Tap continue to see how much you could earn.
           </p>
           <button

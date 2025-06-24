@@ -8,6 +8,7 @@ import Step_5_1 from "../assets/step_5/step_5 (2).png"
 import Step_5_2 from "../assets/step_5/step_5 (1).png"
 import Step_5_3 from "../assets/step_5/step_5 (4).png"
 import Step_5_4 from "../assets/step_5/step_5 (3).png"
+import CheckIcon from "../components/CheckIcon"
 
 const MobileQuizStep5 = () => {
   const navigate = useNavigate()
@@ -33,18 +34,20 @@ const MobileQuizStep5 = () => {
     },
   ]
 
-  // Simulate loading
-  useEffect(() => {
+ useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1000)
+      setLoading(false);
+    }, 1000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
-  const handleNext = () => {
-    navigate("/quiz/step=6")
-  }
+  const handleOptionClick = (option) => {
+    setSelectedOption(option.title);
+    setTimeout(() => {
+      navigate("/quiz/step=6");
+    }, 200);
+  };
 
   
 
@@ -58,15 +61,33 @@ const MobileQuizStep5 = () => {
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">
             {options.map((option) => (
             <div
-              key={option}
+              key={option.title}
               style={{
-                background:"rgba(245, 245, 245, 0.15)"
+                background: "rgba(245, 245, 245, 0.15)",
               }}
-              className={`option-card py-4 px-6 space-x-2 flex items-center justify-between rounded-[8px] cursor-pointer ${selectedOption === option ? "selected" : ""}`}
-              onClick={handleNext}
+              className={` relative py-4 px-6 space-x-2 flex items-center transition-all duration-150 ease-in-out justify-between rounded-[8px] cursor-pointer ${
+                selectedOption === option.title
+                  ? "border border-[#fcd24b] bg-[#121212] opacity-100 scale-100"
+                  : "bg-[#EDEDED] border border-[#0000]"
+              }`}
+              onClick={() => handleOptionClick(option)}
             >
               <img src={option.img} className="h-[40px]" alt="" />
-              <p className="w-[88%] text-[16px] text-white text-start font-medium">{option.title}</p>
+              <p className="w-[88%] text-white text-start font-medium">
+                {option.title}
+              </p>
+              <div
+                className={`bg-[#fcd24b] absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-1.5 flex items-center justify-center
+  transition-all duration-150 ease-in-out
+  ${
+    selectedOption === option.title
+      ? "opacity-100 scale-100"
+      : "opacity-0 scale-0"
+  }
+`}
+              >
+                <CheckIcon className="w-4 h-4 text-[#000]" />
+              </div>
             </div>
           ))}
         </div>

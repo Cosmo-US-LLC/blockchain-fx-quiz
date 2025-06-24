@@ -181,9 +181,9 @@ const MobileResults = () => {
               </div>
             </div>
           </div>
-            <div className="flex items-center justify-center mt-6 mb-6">
+            {/* <div className="flex items-center justify-center mt-6 mb-6">
                   <img src={result_icon_3} className="h-[132px]" alt="" />
-                </div>
+                </div> */}
           <div className="max-w-[578.2px] mx-auto my-6">
             <button
               onClick={handleRoute}

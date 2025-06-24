@@ -8,11 +8,11 @@ const AgeOption = ({ ageRange, imageUrl, isSelected, onClick }) => {
       }`}
       onClick={onClick}
     >
-      <div className="relative h-32 ">
+     <div className="2xl:h-32 xl:h-32 lg:h-32 md:h-32 sm:h-28 h-28 relative flex justify-center ">
         <img
           src={imageUrl || "/placeholder.svg"}
           alt={`Person age ${ageRange}`}
-          className="w-full object-cover absolute 2xl:h-[150px]  xl:h-[150px]  lg:h-[150px] md:h-[150px]  sm:h-[175px]  h-[175px]  2xl:top-[-17%] xl:top-[-17%] lg:top-[-17%] md:top-[-17%] sm:top-[-36.5%] top-[-36.5%] z-[99]"
+          className="w-full object-cover 2xl:max-w-[150px] xl:max-w-[150px] lg:max-w-[150px] md:max-w-[150px] sm:max-w-[140px] max-w-[140px] mx-auto absolute 2xl:h-[150px]  xl:h-[150px]  lg:h-[150px] md:h-[150px]  sm:h-[175px]  h-[136px]  2xl:top-[-17.5%] xl:top-[-17.5%] lg:top-[-17.5%] md:top-[-17.5%] sm:top-[-32.5%] top-[-20.5%] z-[99]"
         />
       </div>
       <div className="p-3 text-center bg-[#FCD24B] rounded-b-[5px]">

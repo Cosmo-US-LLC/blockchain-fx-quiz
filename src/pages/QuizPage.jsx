@@ -8,6 +8,7 @@ import card_img1 from "../assets/quiz/card_image (3).webp";
 import card_img2 from "../assets/quiz/card_image (1).webp";
 import card_img3 from "../assets/quiz/card_image (2).webp";
 import card_img4 from "../assets/quiz/card_image.webp";
+import giftbox from "../assets/quiz/1f381 1.png";
 
 const QuizPage = () => {
   const navigate = useNavigate();
@@ -65,6 +66,14 @@ const QuizPage = () => {
               onClick={() => handleSelect(option.range, option.image)}
             />
           ))}
+        </div>
+        <div 
+        style={{
+          background:"rgba(245, 245, 245, 0.15)"
+        }}
+        className="rounded-[8px] flex space-x-4 mb-8 items-center px-[30px] py-[15px]">
+          <img src={giftbox} alt="" />
+          <p className="text-[15px] font-[400] text-[#fff]"> Unlock an exclusive bonus when you successfully complete THE QUIZ  </p>
         </div>
 
         {/* <button

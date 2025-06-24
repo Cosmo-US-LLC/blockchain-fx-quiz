@@ -218,12 +218,10 @@ const BestCrypto = () => {
         </div>
         <div className="max-w-[1020px] mx-auto  w-full ">
           <h1 className="text-[40px] text-center text-[#fff] font-bold mt-2 mb-4 ">
-            Your Top Crypto Match is Here!
+           Does your crypto profile match with $BFX?
           </h1>
           <p className="text-[20px]  text-center font-[600] text-[#fff] mb-5 ">
-            This project aligns the most with your investment profile and
-            strategic goals.<br />It’s backed by real utility, strong tokenomics, and
-            expert validation.
+            Based on your answers, you’re eligible to buy $BFX during the presale event <br />BlockchainFX is a strong match for your crypto profile and strategic goals.
           </p>
         </div>
 
@@ -266,7 +264,7 @@ const BestCrypto = () => {
                 <div
                   className="pr-[48px] "
                   style={{
-                    borderRight: "1px solid rgba(0, 0, 0, 0.20)",
+                    borderRight: "1px solid rgba(255, 255, 255, 0.50)",
                   }}
                 >
                   <p
@@ -284,7 +282,7 @@ const BestCrypto = () => {
                 <div
                   className="pr-[48px] pl-[15px] "
                   style={{
-                    borderRight: "1px solid rgba(0, 0, 0, 0.20)",
+                    borderRight: "1px solid rgba(255, 255, 255, 0.50)",
                   }}
                 >
                   <p

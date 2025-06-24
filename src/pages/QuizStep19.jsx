@@ -15,15 +15,15 @@ const QuizStep19 = () => {
 
   const options = [
     {
-      title: "I always aim to get in early and catch the biggest upside",
+      title: "I always aim to get in early ",
       img: Step_19_1,
     },
     {
-      title: "Sometimes I’m a bit late, still trying to improve",
+      title: "Sometimes I’m a bit late",
       img: Step_19_3,
     },
     {
-      title: "Too late, I’ve already missed a lot of big opportunities",
+      title: "Too late, I’ve already missed a lot",
       img: Step_19_2,
     },
   ];
@@ -51,7 +51,7 @@ const QuizStep19 = () => {
 
       <div className="max-w-[750px] w-full text-center mt-6">
         <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">
-          When it comes to high-growth projects, <br /> how early do you usually
+          When it comes to high-growth <br /> how early do you usually
           get involved?
         </h1>
         <div className="grid grid-cols-1 max-w-[560px] mx-auto md:grid-cols-1 gap-4 mt-8">

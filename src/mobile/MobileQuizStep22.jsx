@@ -88,7 +88,8 @@ const MobileQuizStep22 = () => {
            
           >
             <p className="text-[18px] text-center font-[700] text-[#fff] leading-[150%] text-[#000]">
-                           Target Monthly Income:{goalIncome}
+              Target Monthly Income: <br />
+              <span className="italic">{goalIncome}</span>
             </p>
           </div>
           <div className="flex flex-col gap-4">
@@ -116,6 +117,8 @@ const MobileQuizStep22 = () => {
                 placeholder="$10,000"
               />
             </div>
+          <div class="h-[1px] w-[100%] bg-[#737373]" ></div>
+
             <div>
               <label
                 htmlFor=""
@@ -173,7 +176,7 @@ const MobileQuizStep22 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] w-[100%] text-[#000] font-[700]`}
+            className={`py-[13px] w-[100%] text-[#000] font-[700] uppercase`}
           >
          Claim your PERSONAL Bonus 
           </button>

@@ -82,13 +82,20 @@ const Results = () => {
         <QuizHeader currentStep={"Special Bonus"} totalSteps={28} />
         <QuizSteps currentStep={28} totalSteps={28} />
         <div className="mb-4 !mt-[-22px] bg-[#D99A2633] w-[100%] flex justify-center items-center rounded-[8px]">
-          <img
-            src={result_icon_4}
-            alt="results"
-            className=" px-[10px] text-white"
-          />
-          <h3 className=" text-white font-[500] text-[16px] py-[5px] ">
-            35% Bonus expires in
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+          >
+            <path
+              d="M11 2.20099C8.66636 2.20099 6.4283 3.12803 4.77816 4.77816C3.12803 6.4283 2.20099 8.66636 2.20099 11C2.20099 13.3336 3.12803 15.5717 4.77816 17.2218C6.4283 18.872 8.66636 19.799 11 19.799C13.3336 19.799 15.5717 18.872 17.2218 17.2218C18.872 15.5717 19.799 13.3336 19.799 11C19.799 8.66636 18.872 6.4283 17.2218 4.77816C15.5717 3.12803 13.3336 2.20099 11 2.20099ZM0 11C0 8.08262 1.15893 5.28473 3.22183 3.22183C5.28473 1.15893 8.08262 0 11 0C13.9174 0 16.7153 1.15893 18.7782 3.22183C20.8411 5.28473 22 8.08262 22 11C22 13.9174 20.8411 16.7153 18.7782 18.7782C16.7153 20.8411 13.9174 22 11 22C8.08262 22 5.28473 20.8411 3.22183 18.7782C1.15893 16.7153 0 13.9174 0 11ZM11 4.40033C11.6072 4.40033 12.1005 4.89201 12.1005 5.50082V10.5446L15.0769 13.5227C15.1879 13.6227 15.2774 13.7442 15.3399 13.8798C15.4024 14.0155 15.4366 14.1624 15.4405 14.3117C15.4444 14.461 15.4178 14.6095 15.3625 14.7482C15.3071 14.8869 15.2241 15.0129 15.1185 15.1185C15.0129 15.2241 14.8869 15.3071 14.7482 15.3625C14.6095 15.4178 14.461 15.4444 14.3117 15.4405C14.1624 15.4366 14.0155 15.4024 13.8798 15.3399C13.7442 15.2774 13.6227 15.1879 13.5227 15.0769L10.2229 11.7771C10.0164 11.5712 9.90007 11.2917 9.89951 11V5.50082C9.89951 4.89201 10.3928 4.40033 11 4.40033Z"
+              fill="white"
+            />
+          </svg>
+          <h3 className=" pl-2 text-white font-[500] text-[25px] py-[5px] ">
+            35% Your Special Bonus expires in
             <span className="font-[700] text-[#D99A26] text-Manrope ">
               {" "}
               {formatTime(timeLeft)} min
@@ -107,12 +114,12 @@ const Results = () => {
               Here’s your limited one-time bonus code to buy $BFX
             </p>
             <div className="max-w-[618px] pt-6 pb-[1px] mx-auto bg-[#131313]">
-              <div className="flex items-center max-w-[506px] mx-auto mb-[25px]">
+              {/* <div className="flex items-center max-w-[506px] mx-auto mb-[25px]">
                 <p className="w-[50%] text-[16px] flex justify-start  font-[400] text-[#fff] ">
                   Your readiness:{" "}
                   <span className="font-[700] text-[#D99A26] "> 87%</span>
                 </p>
-              </div>
+              </div> */}
               <div className="flex justify-evenly pl-6 pt-3 items-center max-w-[506px] mx-auto w-[100%] bg-[#353535] mb-4">
                 <div className="relative z-[9]">
                   <h2 className="text-white font-[500] text-[24px] mb-4">
@@ -172,29 +179,26 @@ const Results = () => {
                 </div>
               </div>
               <div className="max-w-[506px] mx-auto">
-                <p className="text-[16px] text-[#fff] font-[400] leading-[250%] text-center mb-4">
-                  *At 3insiders, our goal is to match you with the right project
-                  for your goals and secure exclusive deals you won’t find
-                  anywhere else through our industry connections. A win for
-                  everyone.{" "}
-                </p>
                 <div className="flex items-center justify-center mb-6">
                   <img src={result_icon_3} className="h-[132px]" alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="max-w-[578.2px] mx-auto my-6">
+          <div className="max-w-[578.2px] mx-auto mt-6 mb-3">
             <button
               onClick={handleRoute}
               style={{
                 borderRadius: "10px",
                 background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
               }}
-              className={`py-[13px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
+              className={`py-[13px] w-[100%] text-[#000] text-[25px] font-[700] hover:opacity-80 transition transform active:scale-95`}
             >
-              Visit Now: BlockchainFX.com
+              CLAIM YOUR BONUS NOW
             </button>
+          </div>
+          <div>
+            <p className="text-[16px] font-[400] text-[#fff] text-center">The button will redirect you to BlockchainFX.com</p>
           </div>
         </div>
       </div>
