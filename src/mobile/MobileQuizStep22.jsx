@@ -178,7 +178,7 @@ const MobileQuizStep22 = () => {
             }}
             className={`py-[13px] w-[100%] text-[#000] font-[700] uppercase`}
           >
-         Claim your PERSONAL Bonus 
+         Claim your PERSONAL Bonus (1/3)
           </button>
         </div>
       </div>

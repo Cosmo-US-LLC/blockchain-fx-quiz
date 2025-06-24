@@ -64,6 +64,7 @@ import BestCrypto from "./pages/BestCrypto"
 import MobileBestCrypto from "./mobile/MobileBestCrypto"
 import BinanceQuiz from "./pages/BinanceQuiz"
 import BinanceQuizMobile from "./mobile/BinanceQuizMobile"
+import ScrollToTop from "./components/ScrollToTop"
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
@@ -86,6 +87,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={!isMobile ? <QuizPage /> : <MobileQuizPage />}/>
         <Route path="/quiz/step=1" element={!isMobile ? <QuizPage /> : <MobileQuizPage />} />

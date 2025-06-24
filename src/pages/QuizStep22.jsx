@@ -88,7 +88,7 @@ const QuizStep22 = () => {
            
           >
             <p className="text-[16px] font-[600] text-[#fff] leading-[150%] text-[#000]">
-             Target Monthly Income : <span className="underline italic">{goalIncome}</span>
+             Target Monthly Income : <span className=" italic">{goalIncome}</span>
             </p>
           </span>
           <div className="space-y-[12px]">
@@ -116,7 +116,7 @@ const QuizStep22 = () => {
                 placeholder="$10,000"
               />
             </div>
-            <div className="h-[1px] w-[100%] flex bg-[#737373]"></div>
+            <div className="h-[1px] w-[100%] flex bg-[#737373] !mt-8 "></div>
             <div className="flex flex-col">
               <label
                 htmlFor=""
