@@ -74,7 +74,7 @@ const QuizStep22 = () => {
   }, [input1]);
 
   return (
-    <div className="quiz-container min-h-screen flex flex-col items-center px-4">
+    <div className="quiz-container min-h-screen flex flex-col items-center px-4 pb-4">
       <QuizHeader currentStep={""} totalSteps={""} />
       <QuizSteps currentStep={24} totalSteps={28} />
 
@@ -173,7 +173,7 @@ const QuizStep22 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[18px] w-[100%] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
+            className={`py-[18px] w-[100%] text-[20px] text-[#000] font-[700] hover:opacity-80 transition transform active:scale-95`}
           >
           UNLOCK YOUR SPECIAL BONUS (1/3)
           </button>

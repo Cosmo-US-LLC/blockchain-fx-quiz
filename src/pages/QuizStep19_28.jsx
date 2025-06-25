@@ -84,7 +84,7 @@ const mainGoal = localStorage.getItem("mainGoal") || "Financial freedom";
     return(
 
         <div>
-          <div className="flex flex-col items-center min-h-screen px-4 overflow-hidden quiz-container">
+          <div className="flex flex-col items-center min-h-screen pb-4 px-4 overflow-hidden quiz-container">
             <QuizHeader currentStep={"Results"} totalSteps={28} />
                     <QuizSteps currentStep={23} totalSteps={28} />
               <div  className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto">
