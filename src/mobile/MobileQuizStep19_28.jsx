@@ -94,7 +94,10 @@ const MobileQuizStep19_28 = ({ targetPercentage = 80 }) => {
             >
               {/* Header */}
               <div className="relative px-4 mb-6">
-                <div className="">
+                <div className=" flex justify-between items-center">
+                  <h2 className="text-white font-[500] text-[18px] ">
+                    Readiness Score
+                  </h2>
                   <span
                     style={{
                       background: "rgba(255, 255, 255, 0.31)",
@@ -104,9 +107,6 @@ const MobileQuizStep19_28 = ({ targetPercentage = 80 }) => {
                   >
                     Your Results
                   </span>
-                  <h2 className="text-white mt-4 font-[500] text-[18px] ">
-                    Readiness Score
-                  </h2>
                 </div>
               </div>
 

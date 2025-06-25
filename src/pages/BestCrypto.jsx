@@ -211,7 +211,7 @@ const BestCrypto = () => {
       >
         <div className="px-4 w-[100%]">
           <QuizHeader
-            currentStep={"Top Pick"}
+            currentStep={""}
             totalSteps={28}
           />
           <QuizSteps currentStep={28} totalSteps={28} />

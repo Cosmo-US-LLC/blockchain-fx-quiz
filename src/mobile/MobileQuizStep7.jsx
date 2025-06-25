@@ -30,7 +30,7 @@ const MobileQuizStep7 = () => {
 
       <div className=" max-w-[1240px] mx-auto w-[100%]">
         <div className="w-full text-center ">
-          <h1 className="text-[28px] text-[#fff] text-center font-bold mb-4  leading-[130%]">
+          <h1 className="text-[28px] text-[#fff] text-center font-bold mb-4  leading-[120%]">
             We’ve all missed some major opportunities in crypto
           </h1>
           <p className="text-[16px] font-[400] text-center text-[#fff] mb-6 ">

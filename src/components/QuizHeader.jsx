@@ -15,6 +15,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
   const isFactno8 = location.pathname === "/quiz/fact-check-no=7_2";
   const isFactno9 = location.pathname === "/quiz/step=18";
   const isFactno10 = location.pathname === "/quiz/step=19_28";
+  const isTopPick = location.pathname === "/quiz/best-crypto-project";
 
   const isResults = location.pathname === "/quiz/results";
   const isHome = location.pathname === "/";
@@ -71,6 +72,7 @@ const QuizHeader = ({ currentStep, totalSteps }) => {
             `/${totalSteps}`} */}
         <span className="text-[#EAC05E]">{currentStep}</span>
         {!isFact &&
+        !isTopPick &&
           !isFactStep7 &&
           !isResults &&
           !isFactcheck3 &&

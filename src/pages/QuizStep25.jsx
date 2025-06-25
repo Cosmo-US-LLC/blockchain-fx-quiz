@@ -34,7 +34,7 @@ useEffect(() => {
 
 
   return (
-    <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center p-4">
+    <div className="quiz-container  min-h-screen overflow-hidden flex flex-col items-center px-4">
       <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={25} totalSteps={28} />
 

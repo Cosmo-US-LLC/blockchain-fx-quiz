@@ -29,9 +29,9 @@ const MobileQuizStep9 = () => {
         <QuizHeader currentStep={"Facts"} totalSteps={28} />
         <QuizSteps currentStep={9} totalSteps={28} />
 
-      <div className=" max-w-[1240px] mx-auto mt-6 w-[100%]">
+      <div className=" max-w-[1240px] mx-auto w-[100%]">
         <div className="w-full text-center ">
-          <h1 className="text-[28px] text-center text-[#fff] font-bold !mb-4 ">
+          <h1 className="text-[28px] text-center leading-[120%] text-[#fff] font-bold !mb-4 ">
        Inflation reduces <br /> your real wealth
           </h1>
           <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">

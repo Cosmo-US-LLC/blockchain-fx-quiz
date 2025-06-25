@@ -166,10 +166,7 @@ const MobileQuizStep22 = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[650.434px] w-[100%] ">
-          <img src={Step_22} alt="" />
-        </div>
-        <div className="!mt-6 w-[100%] flex justify-center">
+        <div className="!mb-6 w-[100%] flex justify-center">
           <button
             onClick={handleNext}
             style={{
@@ -180,6 +177,9 @@ const MobileQuizStep22 = () => {
           >
          Claim your PERSONAL Bonus (1/3)
           </button>
+        </div>
+        <div className="max-w-[650.434px] w-[100%] ">
+          <img src={Step_22} alt="" />
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ const MobileQuizStep24 = () => {
 
       <div className=" max-w-[1240px] w-[100%]">
         <div className="space-y-[15px ] w-full ">
-          <h1 className="text-[28px] text-center text-[#fff] font-bold mb-4 ">
+          <h1 className="text-[28px] text-center leading-[120%] text-[#fff] font-bold mb-4 ">
             Get In Before <br /> the 300% Surge
           </h1>
           <p className="text-[16px] max-w-[400px] w-full mx-auto text-center font-[700] text-[#fff] mb-6 ">

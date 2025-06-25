@@ -186,15 +186,15 @@ const MobileBestCrypto = () => {
           backgroundColor: "#12121200",
         }}
     className="flex relative flex-col items-center min-h-screen px-4 pt-4 pb-10 bg-white">
-      <QuizHeader currentStep={"Top Pick"} totalSteps={28} />
+      <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={28} totalSteps={28} />
 
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-[28px] text-center text-[#fff] font-bold ">
+        <h1 className="text-[28px] leading-[120%] text-center text-[#fff] font-bold ">
           You’ve successfully <br /> passed the challenge!
         </h1>
         <p className="text-[16px] text-center font-[600] text-[#fff] mt-2">
-        This is the best crypto project on the market that fits specifically your criteria
+        This is the best crypto project on the market <br /> that fits specifically your criteria
         </p>
 
         <div className="bg-[#2a2a2a] w-full rounded-[10px] mt-6 p-4">
@@ -253,10 +253,10 @@ const MobileBestCrypto = () => {
         </div>
 
         <div
-          className="overflow-hidden pb-6 mb-[4rem] border border-[#C4C7C] mt-6 w-[100%] relative mx-auto  rounded-[8px] px-2"
+          className="overflow-hidden pb-6 mb-[4rem] border border-[#C4C7C] mt-6 w-[100%] relative mx-auto  rounded-[8px] "
           style={{}}
         >
-           <div className="flex items-center w-[100%]  justify-center mb-6">
+           <div className="flex items-center w-[100%] bg-[#2a2a2a] justify-center mb-6">
             {image && (
               <img
                 src={image}
@@ -266,7 +266,7 @@ const MobileBestCrypto = () => {
             )}
           </div>
        
-          <div className="grid grid-cols-2 gap-x-[2rem] gap-y-[2rem] px-2 mx-auto">
+          <div className="grid grid-cols-2 gap-x-[2rem] gap-y-[2rem] px-4 mx-auto">
             {progressData.map((item, index) => (
               <ProgressBar
                 key={index}

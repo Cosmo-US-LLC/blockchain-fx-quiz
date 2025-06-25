@@ -51,7 +51,7 @@ const MobileQuizStep27 = () => {
            Analysing your results 
           </h1>
           <p className="text-[15px] leading-[26px] text-center font-[400] text-[#fff] mb-6 ">
-           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users to become <br/> a part of its next generation crypto exchange, all within the past 4 weeks.
+           BlockchainFX has attracted over $2.2 million and welcomed more than 1,500 users to become a part of its next generation crypto exchange, all within the past 4 weeks.
           </p>
           <div>
             <div className="bg-[#4B4B4B] space-y-[5px] mx-auto rounded-[4px] p-8 mt-8 max-w-[458px] w-[100%]">
