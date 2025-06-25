@@ -38,22 +38,22 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 quiz-container">
-      <QuizHeader currentStep={"Quiz"} totalSteps={18} />
+    <div className="flex flex-col items-center min-h-screen px-4 quiz-container">
+      <QuizHeader currentStep={""} totalSteps={18} />
       <QuizSteps currentStep={1} totalSteps={28} />
       <div className="w-full max-w-2xl mt-6 mb-6 text-center">
         <div className="space-y-[10px]">
-          <h1 className="text-[40px] font-[700] uppercase leading-[120%] text-[#fff] tracking-[-2px] ">
+          <h1 className="text-[40px] font-[700] uppercase leading-[120%] text-[#fff] tracking-normal ">
             What’s Your Crypto <br /> Potential in 2025?
           </h1>
 
           <p className="text-[14px] font-[400] leading-[150%] uppercase text-[#fff]">
             {" "}
-            Take <span className="font-[700]">the 1-minute quiz:</span> and find
-            out now
+            Take <span className="font-[700]">the 1-minute quiz</span> and find
+            out
           </p>
           <h2 className="text-[16px] font-[400] leading-[150%] text-[#fff]">
-            SELECT YOUR <span className="font-[700]">AGE</span>
+            SELECT YOUR <span className="font-[700]">AGE:</span>
           </h2>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-8 mb-8 md:grid-cols-4">
@@ -73,7 +73,7 @@ const QuizPage = () => {
         }}
         className="rounded-[8px] flex space-x-4 mb-8 items-center px-[30px] py-[15px]">
           <img src={giftbox} alt="" />
-          <p className="text-[15px] font-[400] text-[#fff]"> Unlock an exclusive bonus when you successfully complete THE QUIZ  </p>
+          <p className="text-[15px] font-[400] text-[#fff]"> Unlock an exclusive bonus when you successfully complete </p>
         </div>
 
         {/* <button

@@ -33,7 +33,7 @@ const QuizStep26 = () => {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container">
+    <div className="flex flex-col items-center min-h-screen px-4 overflow-hidden quiz-container">
       <QuizHeader currentStep={""} totalSteps={28} />
       <QuizSteps currentStep={26} totalSteps={28} />
 

@@ -37,8 +37,8 @@ const MobileQuizStep1 = () => {
       <QuizSteps currentStep={2} totalSteps={28} />
     <div className="quiz-container max-w-[1240px] mx-auto overflow-hidden flex flex-col items-center">
       <div className="w-[100%]">
-        <div className="w-full  mt-[1rem]">
-          <h1 className="text-[28px] text-center text-[#fff] font-bold mb-1">
+        <div className="w-full ">
+          <h1 className="text-[28px] mb-[1rem] text-center text-[#fff] leading-[120%] font-bold mb-1">
            The 2025 crypto bull <br /> market has just started
           </h1>
           <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">

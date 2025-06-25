@@ -68,7 +68,7 @@ const QuizStep18_28 = () => {
 
   return (
     <div
-      className="flex flex-col items-center min-h-screen p-4 quiz-container"
+      className="flex flex-col items-center min-h-screen px-4 quiz-container"
       style={{
         backgroundColor: "#000000",
       }}

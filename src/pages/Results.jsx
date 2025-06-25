@@ -74,12 +74,12 @@ const Results = () => {
   return (
     <div>
       <div
-        className="flex flex-col items-center min-h-screen p-4 overflow-hidden quiz-container"
+        className="flex flex-col items-center min-h-screen px-4 overflow-hidden quiz-container"
         style={{
           backgroundColor: "#000000",
         }}
       >
-        <QuizHeader currentStep={"Special Bonus"} totalSteps={28} />
+        <QuizHeader currentStep={"Bonus"} totalSteps={28} />
         <QuizSteps currentStep={28} totalSteps={28} />
         <div className="mb-4 !mt-[-22px] bg-[#D99A2633] w-[100%] flex justify-center items-center rounded-[8px]">
           <svg
@@ -178,11 +178,11 @@ const Results = () => {
                   />
                 </div>
               </div>
-              <div className="max-w-[506px] mx-auto">
+              {/* <div className="max-w-[506px] mx-auto">
                 <div className="flex items-center justify-center mb-6">
                   <img src={result_icon_3} className="h-[132px]" alt="" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="max-w-[578.2px] mx-auto mt-6 mb-3">

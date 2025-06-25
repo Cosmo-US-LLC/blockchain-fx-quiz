@@ -39,7 +39,7 @@ const MobileQuizPage = () => {
   return (
     <div className="quiz-container bg-[red] min-h-screen  flex flex-col items-center justify-between p-4">
      <div className="w-[100%]">
-         <QuizHeader currentStep={"Quiz"} totalSteps={18} />
+         <QuizHeader currentStep={""} totalSteps={18} />
       <QuizSteps currentStep={1} totalSteps={28} />
       <div className="w-full max-w-2xl mb-4 text-center">
         <div className="space-y-[15px]">
@@ -53,7 +53,7 @@ const MobileQuizPage = () => {
             find out
           </p>
           <h2 className="text-[16px] font-[400] leading-[150%] text-[#fff]">
-            SELECT YOUR <span className="font-[700]">AGE</span>
+            SELECT YOUR <span className="font-[700]">AGE:</span>
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-[3rem] max-w-[300px] mx-auto gap-x-4 mb-8 mt-[3rem]">

@@ -67,7 +67,7 @@ const QuizStep11 = () => {
   };
 
   return (
-    <div className="quiz-container min-h-screen max-h-screen flex flex-col items-center p-4">
+    <div className="quiz-container min-h-screen max-h-screen flex flex-col items-center px-4">
       <QuizHeader currentStep={9} totalSteps={18} />
       <QuizSteps currentStep={11} totalSteps={28} />
 
