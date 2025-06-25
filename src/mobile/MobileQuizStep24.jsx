@@ -56,7 +56,7 @@ const MobileQuizStep24 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] w-[100%] text-[16px] text-[#000] font-[700]`}
+            className={`py-[13px] w-[100%] uppercase text-[16px] text-[#000] font-[700]`}
           >
             Unlock YOUR Special Bonus (3/3)
           </button>
