@@ -83,7 +83,7 @@ const BinanceQuizMobile = () => {
             }}
             className={`py-[13px] w-[100%] text-[16px] text-[#000] mt-4 font-[700] uppercase hover:opacity-80 transition transform active:scale-95`}
           >
-            Unlock your Special Bonus (2/3)
+           Unlock your Special Bonus (2/3)
           </button>
 
     </div>

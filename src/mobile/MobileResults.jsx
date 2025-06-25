@@ -182,7 +182,7 @@ const MobileResults = () => {
             {/* <div className="flex items-center justify-center mt-6 mb-6">
                   <img src={result_icon_3} className="h-[132px]" alt="" />
                 </div> */}
-          <div className="max-w-[578.2px] mx-auto my-6">
+          <div className="max-w-[578.2px] mx-auto mt-6 mb-3">
             <button
               onClick={handleRoute}
               style={{
@@ -194,7 +194,7 @@ const MobileResults = () => {
               Visit Now: BlockchainFX.com
             </button>
           </div>
-          <p className="text-[16px] font-[400] text-[#fff] text-center">The button will redirect you to BlockchainFX.com</p>
+          <p className="text-[14px] font-[400] pb-2 text-[#fff] text-center">The button will redirect you to BlockchainFX.com</p>
         </div>
       </div>
     </div>
