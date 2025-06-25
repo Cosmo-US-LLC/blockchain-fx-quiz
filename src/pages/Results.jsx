@@ -45,7 +45,7 @@ const Results = () => {
 
   const handleRoute = () => {
     window.location.href =
-      "https://presale.blockchainfx.com/?utm_source=quiz+page&utm_medium=landing&utm_campaign=Blockchain+FX+marketing";
+      "https://blockchainfx.com";
   };
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Results = () => {
   return (
     <div>
       <div
-        className="flex flex-col items-center min-h-screen px-4 overflow-hidden quiz-container"
+        className="flex flex-col items-center min-h-screen px-4 pb-4 overflow-hidden quiz-container"
         style={{
           backgroundColor: "#000000",
         }}

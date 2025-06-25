@@ -228,7 +228,7 @@ const MobileQuizStep19_28 = ({ targetPercentage = 80 }) => {
                       <img
                         src={image}
                         alt="Selected"
-                        className="flex mb-[-10px] mr-[-25px] max-w-[220px] justify-center items-center"
+                        className="flex mb-[-18px] mr-[-25px] max-w-[220px] justify-center items-center"
                       />
                     )}
                   </div>

@@ -173,7 +173,7 @@ const MobileQuizStep22 = () => {
               borderRadius: "10px",
               background: "linear-gradient(90deg, #E5AE00 0%, #FFD551 100%)",
             }}
-            className={`py-[13px] w-[100%] text-[#000] font-[700] uppercase`}
+            className={`py-[13px] w-[100%] text-[#000] text-[16px] font-[700] uppercase`}
           >
          Claim your PERSONAL Bonus (1/3)
           </button>

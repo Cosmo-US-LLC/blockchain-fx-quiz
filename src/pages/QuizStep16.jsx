@@ -37,7 +37,7 @@ const QuizStep16 = () => {
           <h1 className="text-[30px] text-center text-[#fff] font-bold mb-4 ">
        It has never been easier to earn <br /> real passive income with crypto
           </h1>
-          <p className="text-[16px] font-[400] w-[80%] mx-auto text-center  text-[#fff] mb-6 ">BlockchainFX makes it possible.Those who buy the new $BFX token during the presale earn rewards every time someone trades on the platform. As $BFX holders, they receive a share of all trading fees in USDT without having to trade themselves. 
+          <p className="text-[16px] font-[400] w-[80%] mx-auto text-center  text-[#fff] mb-6 ">BlockchainFX makes it possible.Those who buy the new $BFX token during the presale earn rewards every time someone trades on the platform. As $BFX holders, they receive a share of all trading fees in USDT without  having to trade themselves.
           </p>
          <div className="flex justify-center pt-[20px]">
              <button

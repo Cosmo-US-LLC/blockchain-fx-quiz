@@ -44,7 +44,7 @@ const MobileResults = () => {
 
   const handleRoute = () => {
     window.location.href =
-      "https://presale.blockchainfx.com/?utm_source=quiz+page&utm_medium=landing&utm_campaign=Blockchain+FX+marketing";
+      "https://blockchainfx.com";
   };
 
   useEffect(() => {
@@ -194,6 +194,7 @@ const MobileResults = () => {
               Visit Now: BlockchainFX.com
             </button>
           </div>
+          <p className="text-[16px] font-[400] text-[#fff] text-center">The button will redirect you to BlockchainFX.com</p>
         </div>
       </div>
     </div>
