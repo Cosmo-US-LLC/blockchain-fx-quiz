@@ -94,7 +94,7 @@ const Results = () => {
               fill="white"
             />
           </svg>
-          <h3 className=" pl-2 text-white font-[500] text-[25px] py-[5px] ">
+          <h3 className=" pl-2 text-white font-[500] text-[22px] py-[5px] ">
             35% Your Special Bonus expires in
             <span className="font-[700] text-[#D99A26] text-Manrope ">
               {" "}
@@ -102,13 +102,13 @@ const Results = () => {
             </span>
           </h3>
         </div>
-        <div className="mt-[2rem] w-[100%] max-w-[1240px] mx-auto">
+        <div className=" w-[100%] max-w-[1240px] mx-auto">
           <div className="max-w-[1020px] mx-auto  w-full ">
-            <h1 className="text-[40px] text-center text-[#fff] font-bold mb-4 ">
+            <h1 className="text-[40px] text-center text-[#fff] font-bold mb-2 ">
               Congratulations! 🎉 <br />
               You’ve sucessfully passed the Quiz
             </h1>
-            <p className="text-[20px]  text-center font-[700] text-[#fff] mb-[53px] ">
+            <p className="text-[20px]  text-center font-[700] text-[#fff] mb-[13px] ">
               You’ve completed the challenge and unlocked this special offer.
               <br />
               Here’s your limited one-time bonus code to buy $BFX

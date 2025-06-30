@@ -49,7 +49,7 @@ const QuizStep19 = () => {
       <QuizHeader currentStep={15} totalSteps={18} />
       <QuizSteps currentStep={19} totalSteps={28} />
 
-      <div className="max-w-[750px] w-full text-center mt-6">
+      <div className="max-w-[780px] w-full text-center mt-6">
         <h1 className="text-[30px] font-[700] leading-[120%] mb-1  text-center">
           When it comes to high-growth <br /> opportunities, how early do you usually get involved?
         </h1>

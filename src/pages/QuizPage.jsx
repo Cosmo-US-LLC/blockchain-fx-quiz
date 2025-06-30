@@ -73,7 +73,7 @@ const QuizPage = () => {
         }}
         className="rounded-[8px] flex space-x-4 mb-8 items-center justify-center px-[30px] py-[15px]">
           <img src={giftbox} alt="" />
-          <p className="text-[15px] font-[400] text-[#fff]"> Unlock an exclusive bonus when you successfully complete </p>
+          <p className="text-[15px] font-[400] text-[#fff]"> Unlock an exclusive bonus when you successfully complete the quiz </p>
         </div>
 
         {/* <button

@@ -63,7 +63,7 @@ const QuizStep20 = () => {
 
       <div className="max-w-[750px] w-full text-center mt-12">
         <h1 className="text-[30px] font-[700] leading-[120%] mb-1 text-center text-white">
-          When you look at a new crypto projects, <br /> what matters most to you?
+          When you look at new crypto projects, <br /> what matters most to you?
         </h1>
 
         <div className="grid grid-cols-1 max-w-[560px] mx-auto gap-4 mt-8">
