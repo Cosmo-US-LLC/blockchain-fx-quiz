@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom"
 import QuizHeader from "../components/QuizHeader"
 import QuizSteps from "../components/QuizSteps"
 import Loading from "../components/Loading"
-import Step_17_1 from "../assets/step_17/step_17 (1).png"
-import Step_17_2 from "../assets/step_17/step_17 (3).png"
-import Step_17_3 from "../assets/step_17/step_17 (2).png"
+import Step_17_1 from "../assets/step_17/step_17 (3).svg"
+import Step_17_2 from "../assets/step_17/step_17 (1).svg"
+import Step_17_3 from "../assets/step_17/step_17 (2).svg"
 import CheckIcon from "../components/CheckIcon"
 
 const MobileQuizStep17 = () => {
