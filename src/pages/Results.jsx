@@ -111,7 +111,7 @@ const Results = () => {
             <p className="text-[20px]  text-center font-[700] text-[#fff] mb-[13px] ">
               You’ve completed the challenge and unlocked this special offer.
               <br />
-              Here’s your limited one-time bonus code to buy $BFX
+              Here’s your limited one-time bonus code to buy $BFX.
             </p>
             <div className="max-w-[618px] pt-6 pb-[1px] mx-auto bg-[#131313]">
               {/* <div className="flex items-center max-w-[506px] mx-auto mb-[25px]">

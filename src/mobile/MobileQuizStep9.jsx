@@ -35,7 +35,7 @@ const MobileQuizStep9 = () => {
        Your cash is losing  <br /> value every year
           </h1>
           <p className="text-[16px] text-center font-[400] text-[#fff] mb-6 ">
-        The average global inflation rate ranges between 6% and 8% per year. This means that holding cash in a bank account could result in a loss of up to 50% of its value over just 9 to 10 years. In the U.S., for example, $100 in 2013 now has the same purchasing power as about $65 in 2025. Because of this, financial experts recommend diversifying your income streams to protect your wealth.
+        The average global inflation rate is 6% to 8% per year. This means cash can lose up to 50% of its value in just 9 to 10 years. In the U.S., for example, $100 in 2013 is worth about $65 in 2025. That’s why experts suggest diversifying your income to protect your wealth.
           </p>
         </div>
          <div className="flex justify-center mt-12">
